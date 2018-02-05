@@ -18,6 +18,7 @@
   <body>
   
      <?php
+     include '../header.php';
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -97,7 +98,7 @@ if($saida['arquivo']){
 
 
 
-
+<?php include '../footer.php'; ?>
     </body>
     <script>
         function semFoto()
