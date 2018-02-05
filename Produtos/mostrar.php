@@ -18,7 +18,7 @@
   <body>
   
      <?php
-     include 'header.php';
+     include '../header.php';
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -67,6 +67,6 @@ $exist = "select arquivo,nome,codigo,data,quantidade from arquivo";
   </tbody>
 </table>
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
     </body>
 </html>
