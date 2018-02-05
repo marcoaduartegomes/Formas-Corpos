@@ -21,7 +21,7 @@
   <body>
    
 <?php
-include 'header.php';
+include '../header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -45,7 +45,9 @@ if($mysqli->connect_errno)
     $sql_code = "INSERT INTO arquivo (codigo,nome, arquivo, data,quantidade) VALUES(null,'$nome_real', '$extensao', NOW(),$quantidade)";
     if($mysqli->query($sql_code)){
       $msg = "Arquivo enviado com sucesso!";
-      header('Location: mostrar.php');
+      echo "<script>
+      window.location.href='mostrar.php'
+      </script>";
     }else
       $msg = "Falha ao enviar arquivo.";
   }
@@ -72,7 +74,7 @@ if($mysqli->connect_errno)
   	<input type="file" name="arquivo" accept="image/*" class="custom-file-input" id="validatedCustomFile" required >
     <img id="preview"></img>
   	<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-  	<div class="invalid-feedback">Example invalid custom file feedback</div>
+  	<div class="invalid-feedback">Selecione uma imagem</div>
     
   	<input type="reset" value="zerar">
   </div>
@@ -111,7 +113,7 @@ if($mysqli->connect_errno)
 
 
 document.getElementById("validatedCustomFile").onchange = function () {
-  alert("galinha");
+
 
     reader.onload = function (e) {
         // get loaded data and render thumbnail.
@@ -123,6 +125,6 @@ document.getElementById("validatedCustomFile").onchange = function () {
 };
 
 </script>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
 </body>
 </html>

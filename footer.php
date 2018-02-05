@@ -20,7 +20,7 @@
   </head>
   <body>
 <footer>
-                 <div class="container" >
+                 <div class="footer" >
             
                     <div class="row">
                 

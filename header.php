@@ -27,7 +27,7 @@
             <nav class="navbar navbar-default ">
               
                 
-                <div class="container">
+                <div class="container" >
                   
                     <div class="navbar-header row">
                       <div class="col-md-6">
@@ -44,7 +44,7 @@
                   
                         <li >
                           <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary  " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Produtos
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">

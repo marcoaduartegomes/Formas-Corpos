@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
   </head>
 
-  <body>
+  <body >
   
      <?php
      include '../header.php';
@@ -30,8 +30,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $exist = "select arquivo,nome,codigo,data,quantidade from arquivo";
 
 ?>
-
-<table  class="table table-bordered table-hover">
+<div style="overflow-x:auto;max-height: 74%;">
+<table  class="table table-bordered table-hover" >
                                 <thead>
                                     <tr>
                                         <th>Imagem</th>
@@ -66,7 +66,7 @@ $exist = "select arquivo,nome,codigo,data,quantidade from arquivo";
 
   </tbody>
 </table>
-
+</div>
 <?php include '../footer.php'; ?>
     </body>
 </html>
