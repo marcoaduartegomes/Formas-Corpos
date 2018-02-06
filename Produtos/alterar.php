@@ -6,33 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Formas&Corpos</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="icon" href="../favicon.png">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     
-    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="jquery-3.2.1.min.js"></script>
+    
+    
   </head>
 
   <body>
-  
-     <?php
-     include '../header.php';
-$servername = "127.0.0.1";
+   
+<?php
+include '../header.php';
+$host = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "test";
+$conn = new mysqli($host, $username, $password, $dbname);
+if($conn->connect_errno)
+  echo "Falha na conexão: (".$conn->connect_errno.") ".$conn->connect_error;
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
- 
-  if(isset($_POST['mudando'])){
+
+if(isset($_POST['mudando'])){
    echo $_POST['codigo'];
-    $sql_code = "update arquivo set codigo=null,nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
+    $sql_code = "update arquivo set nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
     if($conn->query($sql_code)){
       echo  "Arquivo enviado com sucesso!";
-      header('Location: mostrar.php');
+      echo "<script>
+      window.location.href ='mostrar.php';
+      </script>";
     }else
       echo "Falha ao enviar arquivo.";
   }
@@ -47,6 +53,7 @@ $nome_real = $saida['nome'];
 if($saida['arquivo']){
 
   ?>
+  <div style="overflow-x:auto;max-height: 74%;">
   <body onload="caixinhacom()">
 
         <?php
@@ -77,7 +84,7 @@ if($saida['arquivo']){
     <input type="reset" value="zerar">
   </div>
  <br><br>
- <input type="text" value="<?php echo $saida['codigo']; ?>" name="codigo">
+ <input type="text" readonly="readonly" value="<?php echo $saida['codigo']; ?>" name="codigo">
  <input type='text' name="nome_real"  value ="<?php echo $nome_real ?>" required>
  <input type="number" value="<?php echo $saida['quantidade']; ?>" name="quantidade">
   <input type="submit" value="Salvar" name="mudando">
@@ -97,10 +104,10 @@ if($saida['arquivo']){
 ?>
 
 
-
+</div>
 <?php include '../footer.php'; ?>
-    </body>
-    <script>
+</body>
+<script>
         function semFoto()
 {
 
@@ -135,4 +142,5 @@ if($saida['arquivo']){
       }
 
     </script>
+
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Formas&Corpos</title>
-    <link rel="icon" href="imagens/favicon.png">
+    <link rel="icon" href="../favicon.png">
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -55,7 +55,7 @@ $exist = "select arquivo,nome,codigo,data,quantidade from arquivo";
         <td><?php echo $resultado['data']; ?></td>
            
     <td> <form action="alterar.php" method="POST"><button  type="submit" name="alterar" value="<?php echo $resultado['codigo']; ?>">Alterar</button> </form> 
-         <button class="btn btn-danger" type="button" name="codigo" onclick="javascript: location.href= 'deletaProduto.php?codigo=<?php echo $resultado['codigo']; ?>'"'; ">Apagar</button>    </td>
+         <button class="btn btn-danger" type="button" name="codigo" onclick="javascript: location.href= 'deletaProduto.php?codigo=<?php echo $resultado['codigo']; ?>&arquivo=<?php echo $resultado['arquivo']; ?>'"'; ">Apagar</button>    </td>
 
     <?php } ?>
     

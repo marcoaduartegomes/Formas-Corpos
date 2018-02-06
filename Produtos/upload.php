@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Formas&Corpos</title>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="../favicon.png">
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -46,15 +46,18 @@ if($mysqli->connect_errno)
     if($mysqli->query($sql_code)){
       $msg = "Arquivo enviado com sucesso!";
       echo "<script>
-      window.location.href='mostrar.php'
+      window.location.href ='mostrar.php';
       </script>";
     }else
       $msg = "Falha ao enviar arquivo.";
   }
 ?>
-<h1>Upload de Arquivos</h1>
-<?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"  ;  ?>
+<div style="overflow-x:auto;max-height: 74%;">
 
+<?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"  ;  ?>
+<br>
+<div class="container border border-primary" >
+  <h1>Cadastro de Protudo</h1>
 <div class="invalid-feedback">Example invalid feedback text</div>
 <form action="upload.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
 	<div class="custom-control custom-radio">
@@ -68,38 +71,73 @@ if($mysqli->connect_errno)
   </div>
 
 
-  Foto: 
-  <div class="custom-file" id ="escolha">
-
+ 
+  <div  id ="escolha">
+    <div class="col-sm-6">
+    <label for="validatedCustomFile" class="col-sm-2 col-form-label">Foto</label>
+    <div class="custom-file">
+ 
   	<input type="file" name="arquivo" accept="image/*" class="custom-file-input" id="validatedCustomFile" required >
-    <img id="preview"></img>
+
+    <img id="preview" style="height: 0px;"></img>
   	<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
   	<div class="invalid-feedback">Selecione uma imagem</div>
     
-  	<input type="reset" value="zerar">
+  	<input type="button" value="zerar" class="btn btn-danger" onclick="zerar()">
   </div>
+</div>
+</div>
  <br><br>
- Nome<input type='text' name="nome_real" required><br>
- Quantidade<input type="number"  name="quantidade">
-<input type="submit" value="Salvar" >
+
+ <div class="form-group row">
+ <label for="nome_real" >Nome</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="nome_real" id="nome_real" placeholder="Nome" required>
+    </div>
+    <br><br>
+ <label for="quantidade" >Quantidade</label>
+    <div class="col-sm-4">
+      <input type="number" class="form-control" name="quantidade" id="quantidade" placeholder="Quantidade" required>
+    </div>
+    <br><br><br>
+    <div class="col-sm-10">
+      <button type="submit" value="Salvar" class="btn btn-primary">Salvar</button>
+    </div>
+    </div>
+
 
 
 
 
 
 </form>
+</div>
 <script type="text/javascript">
   var reader = new FileReader();
+ 
+
+
 	function semFoto()
 {
 
-     
+     document.getElementById("preview").style.height = "0px";
      document.getElementById("validatedCustomFile").required=false;
      document.getElementById("escolha").style.visibility = 'hidden';
      document.getElementById("validatedCustomFile").value="";   
 
     // $("#validatedCustomFile").replaceWith($("#validatedCustomFile").clone());
      $("#preview").css('display', 'none').attr('src', '');
+
+     
+}
+function zerar()
+{
+
+     document.getElementById("preview").style.height = "0px";
+     document.getElementById("validatedCustomFile").value="";   
+
+    // $("#validatedCustomFile").replaceWith($("#validatedCustomFile").clone());
+     $("#preview").css('display', 'block').attr('src', '');
 
      
 }
@@ -114,7 +152,7 @@ if($mysqli->connect_errno)
 
 document.getElementById("validatedCustomFile").onchange = function () {
 
-
+    document.getElementById("preview").style.height = "150px";
     reader.onload = function (e) {
         // get loaded data and render thumbnail.
         document.getElementById("preview").src = e.target.result;
@@ -125,6 +163,7 @@ document.getElementById("validatedCustomFile").onchange = function () {
 };
 
 </script>
+</div>
 <?php include '../footer.php'; ?>
 </body>
 </html>
