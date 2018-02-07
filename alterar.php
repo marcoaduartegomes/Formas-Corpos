@@ -49,9 +49,9 @@ unlink("upload/".$_GET['arquivoantigo']);
     
     if($conn->query($sql_code)){
       echo  "Arquivo enviado com sucesso!";
-     // echo "<script>
-    //  window.location.href ='mostrar.php';
-     // </script>";
+     echo "<script>
+    window.location.href ='mostrar.php';
+     </script>";
     }else
       echo "Falha ao enviar arquivo.";
   }

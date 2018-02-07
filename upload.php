@@ -21,7 +21,7 @@
   <body>
    
 <?php
-include 'header.php';
+include '../header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -164,6 +164,6 @@ document.getElementById("validatedCustomFile").onchange = function () {
 
 </script>
 </div>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
 </body>
 </html>

@@ -5,14 +5,14 @@
   	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-   <!-- <script type="text/javascript">
+<script type="text/javascript">
       setTimeout(pagina,1);
       function pagina(){
         window.location.href="mostrar.php";
 
       }
-</script> <link rel="icon" href="imagens/favicon.png">-->
+</script>
+   <!--  <link rel="icon" href="imagens/favicon.png">-->
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,6 +44,7 @@ echo $_GET['arquivo'];
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+if($_GET['arquivo']==0){}else
 if (!unlink("upload/".$_GET['arquivo']))
 {
   echo ("Erro ao deletar $arquivo");
