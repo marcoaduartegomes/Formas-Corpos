@@ -5,15 +5,14 @@
   	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript">
+
+   <!-- <script type="text/javascript">
       setTimeout(pagina,1);
       function pagina(){
         window.location.href="mostrar.php";
 
       }
-</script>
-    <title>Cantinho da Vila</title>
-   <!--  <link rel="icon" href="imagens/favicon.png">-->
+</script> <link rel="icon" href="imagens/favicon.png">-->
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">

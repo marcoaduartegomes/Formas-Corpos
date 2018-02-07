@@ -33,19 +33,32 @@ if($conn->connect_errno)
 
 if(isset($_POST['mudando'])){
    echo $_POST['codigo'];
+
+   if($_POST['arquivo']){
+      $sql_code = "update produto set arquivo ='".$_POST['arquivo']."',  nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
+unlink("upload/".$_GET['arquivoantigo']);
+
+
+
+
+
+   }else{
     $sql_code = "update produto set nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
+unlink("upload/".$_GET['arquivoantigo']);
+  }
+    
     if($conn->query($sql_code)){
       echo  "Arquivo enviado com sucesso!";
-      echo "<script>
-      window.location.href ='mostrar.php';
-      </script>";
+     // echo "<script>
+    //  window.location.href ='mostrar.php';
+     // </script>";
     }else
       echo "Falha ao enviar arquivo.";
   }
 
 
 if(isset($_POST['alterar'])){
-$exist = "select arquivo,nome,codigo,data,quantidade from arquivo where codigo ='".$_POST["alterar"]."'";
+$exist = "select arquivo,nome,codigo,data,quantidade from produto where codigo ='".$_POST["alterar"]."'";
 if($conn->query($exist)){
   foreach($conn->query($exist) as $saida)
  
@@ -63,26 +76,18 @@ if($saida['arquivo']){
     }?>
 
      <form action="alterar.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
-  <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required onClick=comFoto()>
-    <label class="custom-control-label" for="customControlValidation2">Com foto</label>
-  </div>
-  <div class="custom-control custom-radio mb-3">
-    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required onClick=semFoto()>
-    <label class="custom-control-label" for="customControlValidation3">Sem foto</label>
-    <div class="invalid-feedback">More example invalid feedback text</div>
-  </div>
+ 
 
 
   Foto: 
-  <div class="custom-file" id ="escolha">
+  <?php 
 
-    <input type="file" name="arquivo" accept="image/*" class="custom-file-input" id="validatedCustomFile" required >
-    <img id="preview"></img>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
-    <input type="reset" value="zerar">
-  </div>
+
+
+
+
+  ?>
+  <img src="upload/<?php if($saida['arquivo'] !=NULL){echo $saida['arquivo']; }else{echo 'SemImagems.jpg';}?>" height="70" width="70">
  <br><br>
  <input type="text" readonly="readonly" value="<?php echo $saida['codigo']; ?>" name="codigo">
  <input type='text' name="nome_real"  value ="<?php echo $nome_real ?>" required>
