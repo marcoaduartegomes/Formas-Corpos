@@ -25,7 +25,7 @@ include '../header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "test";
+$dbname = "formas";
 $mysqli = new mysqli($host, $username, $password, $dbname);
 if($mysqli->connect_errno)
   echo "Falha na conexão: (".$mysqli->connect_errno.") ".$mysqli->connect_error;
@@ -42,7 +42,7 @@ if($mysqli->connect_errno)
     $nome_real = $_POST["nome_real"];
     $quantidade = $_POST["quantidade"];
     move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$extensao); //efetua o upload
-    $sql_code = "INSERT INTO arquivo (codigo,nome, arquivo, data,quantidade) VALUES(null,'$nome_real', '$extensao', NOW(),$quantidade)";
+    $sql_code = "INSERT INTO produto (codigo,nome, arquivo, data,quantidade) VALUES(null,'$nome_real', '$extensao', NOW(),$quantidade)";
     if($mysqli->query($sql_code)){
       $msg = "Arquivo enviado com sucesso!";
       echo "<script>

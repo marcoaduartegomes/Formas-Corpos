@@ -22,12 +22,12 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "test";
+$dbname = "formas";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$exist = "select arquivo,nome,codigo,data,quantidade from arquivo";
+$exist = "select arquivo,nome,codigo,data,quantidade from produto";
 
 ?>
 <div style="overflow-x:auto;max-height: 74%;">

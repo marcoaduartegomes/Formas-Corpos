@@ -34,7 +34,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "test";
+$dbname = "formas";
 $var1 = $_GET['codigo'];
 $var2 = $_GET['arquivo'];
 if(isset($var1)){
@@ -53,7 +53,7 @@ else
 {
   echo ("Deletado com sucesso!");
 }
-$sql = "delete from arquivo where codigo = $var1";
+$sql = "delete from produto where codigo = $var1";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 if ($stmt->errno) {

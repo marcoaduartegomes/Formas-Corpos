@@ -24,7 +24,7 @@ include '../header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "test";
+$dbname = "formas";
 $conn = new mysqli($host, $username, $password, $dbname);
 if($conn->connect_errno)
   echo "Falha na conexão: (".$conn->connect_errno.") ".$conn->connect_error;
@@ -33,7 +33,7 @@ if($conn->connect_errno)
 
 if(isset($_POST['mudando'])){
    echo $_POST['codigo'];
-    $sql_code = "update arquivo set nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
+    $sql_code = "update produto set nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
     if($conn->query($sql_code)){
       echo  "Arquivo enviado com sucesso!";
       echo "<script>
