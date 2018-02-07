@@ -21,7 +21,7 @@
   <body>
    
 <?php
-include '../header.php';
+include 'header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -46,7 +46,7 @@ if($mysqli->connect_errno)
     if($mysqli->query($sql_code)){
       $msg = "Arquivo enviado com sucesso!";
       echo "<script>
-      window.location.href ='mostrar.php';
+      window.location.href ='ProdutoMostrar.php';
       </script>";
     }else
       $msg = "Falha ao enviar arquivo.";
@@ -59,7 +59,7 @@ if($mysqli->connect_errno)
 <div class="container border border-primary" >
   <h1>Cadastro de Protudo</h1>
 <div class="invalid-feedback">Example invalid feedback text</div>
-<form action="upload.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
+<form action="ProdutoUpload.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
 	<div class="custom-control custom-radio">
     <input type="radio"  checked class="custom-control-input" id="customControlValidation2" name="radio-stacked" required onClick=comFoto()>
     <label class="custom-control-label" for="customControlValidation2">Com foto</label>
@@ -164,6 +164,6 @@ document.getElementById("validatedCustomFile").onchange = function () {
 
 </script>
 </div>
-<?php include '../footer.php'; ?>
+<?php include 'footer.php'; ?>
 </body>
 </html>

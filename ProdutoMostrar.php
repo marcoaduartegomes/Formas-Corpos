@@ -8,17 +8,20 @@
     <title>Formas&Corpos</title>
     <link rel="icon" href="../favicon.png">
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"> 
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"> 
+ 
+
   </head>
 
   <body >
   
      <?php
-     include '../header.php';
+     include 'header.php';
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -30,8 +33,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $exist = "select arquivo,nome,codigo,data,quantidade from produto";
 
 ?>
-<div style="overflow-x:auto;max-height: 74%;">
-<table  class="table table-bordered table-hover" >
+<div style="overflow-y:auto;max-height: 74%;">
+<table  id="example" class="table table-bordered table-hover" >
                                 <thead>
                                     <tr>
                                         <th>Imagem</th>
@@ -54,8 +57,8 @@ $exist = "select arquivo,nome,codigo,data,quantidade from produto";
         <td><?php echo  $resultado['quantidade']; ?>
         <td><?php echo $resultado['data']; ?></td>
            
-    <td> <form action="alterar.php" method="POST"><button  type="submit" name="alterar" value="<?php echo $resultado['codigo']; ?>">Alterar</button> </form> 
-         <button class="btn btn-danger" type="button" name="codigo" onclick="javascript: location.href= 'deletaProduto.php?codigo=<?php echo $resultado['codigo']; ?>&arquivo=<?php echo $resultado['arquivo']; ?>'"'; ">Apagar</button>    </td>
+    <td> <form action="ProdutoAlterar.php" method="POST"><button  type="submit" name="alterar" value="<?php echo $resultado['codigo']; ?>">Alterar</button> </form> 
+         <button class="btn btn-danger" type="button" name="codigo" onclick="javascript: location.href= 'ProdutoDeleta.php?codigo=<?php echo $resultado['codigo']; ?>&arquivo=<?php echo $resultado['arquivo']; ?>'"'; ">Apagar</button>    </td>
 
     <?php } ?>
     
@@ -67,6 +70,15 @@ $exist = "select arquivo,nome,codigo,data,quantidade from produto";
   </tbody>
 </table>
 </div>
-<?php include '../footer.php'; ?>
+<?php include 'footer.php'; ?>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+    $('#example').DataTable();
+} );
+            </script>
     </body>
+
 </html>

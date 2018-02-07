@@ -20,7 +20,7 @@
   <body>
    
 <?php
-include '../header.php';
+include 'header.php';
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -50,7 +50,7 @@ unlink("upload/".$_GET['arquivoantigo']);
     if($conn->query($sql_code)){
       echo  "Arquivo enviado com sucesso!";
      echo "<script>
-    window.location.href ='mostrar.php';
+    window.location.href ='ProdutoMostrar.php';
      </script>";
     }else
       echo "Falha ao enviar arquivo.";
@@ -75,7 +75,7 @@ if($saida['arquivo']){
       <?php
     }?>
 
-     <form action="alterar.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
+     <form action="ProdutoAlterar.php" method="POST" enctype="multipart/form-data" class="was-validated" id="form1" autocomplete="off">
  
 
 
@@ -110,7 +110,7 @@ if($saida['arquivo']){
 
 
 </div>
-<?php include '../footer.php'; ?>
+<?php include 'footer.php'; ?>
 </body>
 <script>
         function semFoto()

@@ -31,7 +31,7 @@
                   
                     <div class="navbar-header row">
                       <div class="col-md-6">
-                          <a  href="#">
+                          <a  href="index.php">
                     
                           <img class="imagem1"  src="LogoFormasECorpos.png" alt="logo">
 
@@ -70,9 +70,9 @@
   <script>
     function trocaPagina(x){
         if(x=="cadastrar"){
-          window.location.href ="upload.php"
+          window.location.href ="ProdutoUpload.php"
         }else if(x=="mostrar"){
-          window.location.href ="mostrar.php"
+          window.location.href ="ProdutoMostrar.php"
 
         }
 

@@ -8,7 +8,7 @@
 <script type="text/javascript">
       setTimeout(pagina,1);
       function pagina(){
-        window.location.href="mostrar.php";
+        window.location.href="ProdutoMostrar.php";
 
       }
 </script>
