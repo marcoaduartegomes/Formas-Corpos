@@ -33,6 +33,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $exist = "select arquivo,nome,codigo,data,quantidade from produto";
 
 ?>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#apagarModal">
+  Apagar
+</button>
+
+
+
+
 <div style="overflow-y:auto;max-height: 74%;">
 <table  id="example" class="table table-bordered table-hover" >
                                 <thead>
@@ -58,8 +66,27 @@ $exist = "select arquivo,nome,codigo,data,quantidade from produto";
         <td><?php echo $resultado['data']; ?></td>
            
     <td> <form action="ProdutoAlterar.php" method="POST"><button  type="submit" name="alterar" value="<?php echo $resultado['codigo']; ?>">Alterar</button> </form> 
-         <button class="btn btn-danger" type="button" name="codigo" onclick="javascript: location.href= 'ProdutoDeleta.php?codigo=<?php echo $resultado['codigo']; ?>&arquivo=<?php echo $resultado['arquivo']; ?>'"'; ">Apagar</button>    </td>
-
+         <button class="btn btn-danger" type="button" name="codigo" data-toggle="modal" data-target="#apagarModal" >Apagar</button>    </td>
+<!-- Modal -->
+<div class="modal fade" id="apagarModal" tabindex="-1" role="dialog" aria-labelledby="apagarModallLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="apagarModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Todos os dados do registro serão apagados permanentemente do sistema.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Retornar</button>
+        <button type="button" class="btn btn-primary" onclick="javascript: location.href= 'ProdutoDeleta.php?codigo=<?php echo $resultado['codigo']; ?>&arquivo=<?php echo $resultado['arquivo']; ?>'"'; ">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
     <?php } ?>
     
     </tr>
@@ -75,6 +102,10 @@ $exist = "select arquivo,nome,codigo,data,quantidade from produto";
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript">
+
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
         $(document).ready(function() {
     $('#example').DataTable();
 } );
