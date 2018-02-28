@@ -11,28 +11,30 @@ if($conn->connect_errno)
 
 
 
-if(isset($_POST['mudando'])){
-   echo $_POST['codigo'];
+if(isset($_POST['codigo'])){
+   $var1 = $_POST['codigo'];
+  $query = "SELECT * FROM produto WHERE codigo = $var1";  
+      $result = mysqli_query($conn, $query);  
+      $row = mysqli_fetch_array($result);
+ 
 
-   if($_POST['arquivo']){
-      $sql_code = "update produto set arquivo ='".$_POST['arquivo']."',  nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
-unlink("upload/".$_GET['arquivoantigo']);
+$sql = "delete from produto where codigo = $var1";
+$results = mysqli_query($conn, $sql);  
 
-
-
-
-
-   }else{
-    $sql_code = "update produto set nome='".$_POST['nome_real']."', data=NOW(),quantidade=".$_POST['quantidade']." where codigo = '".$_POST['codigo']."'";
-unlink("upload/".$_GET['arquivoantigo']);
-  }
     
-    if($conn->query($sql_code)){
-      echo  "Arquivo enviado com sucesso!";
-     echo "<script>
-    window.location.href ='ProdutoMostrar.php';
-     </script>";
-    }else
-      echo "Falha ao enviar arquivo.";
-  }
+}
+if($row['arquivo']==0){}else
+if (!unlink("upload/".$row['arquivo']))
+{
+  echo ("Erro ao deletar $arquivo");
+}
+else
+{
+  echo ("Deletado com sucesso!");
+
+}
+echo json_encode($row);
+echo $sql;
+
+   
 ?>

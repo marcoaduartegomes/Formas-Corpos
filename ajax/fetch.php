@@ -11,6 +11,7 @@ $conn = new mysqli($host, $username, $password, $dbname);
       $query = "SELECT * FROM produto WHERE codigo = '".$_POST["codigo"]."'";  
       $result = mysqli_query($conn, $query);  
       $row = mysqli_fetch_array($result);  
-      echo json_encode($row);  
+      echo json_encode($row);
+      
  }  
  ?>

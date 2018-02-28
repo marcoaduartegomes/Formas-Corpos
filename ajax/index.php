@@ -201,6 +201,32 @@ document.getElementById("validatedCustomFile").onchange = function () {
 				}  
 			});  
 
+		}); 
+		var cod_produto;
+		$(document).on('click', '.delete_data', function(){  
+			cod_produto = $(this).attr("id");
+				
+				}); 
+
+		$(document).on('click', '#deletaProduto', function(){ 
+			
+			$.ajax({  
+				url:"deletar.php",  
+				method:"POST",  
+				data:{codigo:cod_produto}, 
+				dataType:"json",   
+				success:function(data){  
+					alert("asd");
+					
+
+				 
+				}
+
+
+			 
+}); 
+			$("#returns").click();
+						$('#div_conteudo').load('ProdutoMostrar.php');
 		});  
 
 		$(document).on('click', '#insert', function(){  

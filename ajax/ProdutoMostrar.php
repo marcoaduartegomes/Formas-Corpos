@@ -55,20 +55,20 @@
 
 
         ?>
-        <tr><td> <?php echo $resultado['arquivo'];?><img src="upload/<?php if($resultado['arquivo'] !=NULL){echo $resultado['arquivo']; }else{echo 'SemImagems.jpg';}?>" height="70" width="70"> </td>
+        <tr><td> <?php echo $resultado['arquivo'];?><img src="upload/<?php if($resultado['arquivo'] !=NULL){echo $resultado['arquivo']; }else{echo 'SemImagens.jpg';}?>" height="70" width="70"> </td>
           <td><?php echo  $resultado['nome']; ?>
             <td><?php echo  $resultado['quantidade']; ?>
               <td><?php echo $resultado['data']; ?></td>
 
               <td>
-               <button class="btn btn-success edit_data" type="button" id="<?php echo $resultado["codigo"]; ?>"  name="codigo" data-toggle="modal" data-target="#apagarModal1" >Alterar</button> 
-               <button class="btn btn-danger edit_data" type="button" id="<?php echo $resultado["codigo"]; ?>"  name="codigo" data-toggle="modal" data-target="#apagarModal1" >Deletar</button>  
-                <!-- Modal Deletar -->
-<div class="modal fade" id="apagarModal1" tabindex="-1" role="dialog" aria-labelledby="apagarModallLabel" aria-hidden="true">
+               <button class="btn btn-success edit_data" type="button" id="<?php echo $resultado["codigo"]; ?>"  name="codigo" data-toggle="modal" data-target="#alterarModal" >Alterar</button> 
+               <button class="btn btn-danger delete_data" type="button" id="<?php echo $resultado["codigo"];  ?>" value= "<?php echo $resultado["codigo"];  ?>" name="codigo" data-toggle="modal" data-target="#apagarModal" >Deletar</button>  
+                <!-- Modal Alterar -->
+<div class="modal fade" id="alterarModal" tabindex="-1" role="dialog" aria-labelledby="alterarModallLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="apagarModalLabel">Modal title</h5>
+                      <h5 class="modal-title" id="alterarModallLabel">Modal title</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -92,7 +92,31 @@
                   </div>
                 </div>
               </div>
-          </div> </td>
+              <!-- Modal Deletar -->
+<div class="modal fade" id="apagarModal" tabindex="-1" role="dialog" aria-labelledby="apagarModallLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="apagarModallLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Esta ação ira apagar todos os dados deste produto!
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="returns" data-dismiss="modal">Retornar</button>
+                      <button type="submit" class="btn btn-secondary" id="deletaProduto" >Deletar</button>
+                      <input type="submit" name="asd" id="asd" value="asd" class="btn btn-success" />
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+        </td>
                
               
 
@@ -107,7 +131,7 @@
 
               </tbody>
             </table>
-
+</div> 
 
                
 
