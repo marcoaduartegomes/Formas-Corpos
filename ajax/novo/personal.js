@@ -1,18 +1,88 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
 
-	<title>Formas&Corpos</title>
+		function semFoto()
+		{
 
-	<!-- bootstrap - link cdn -->
-	<link rel="icon" href="imagens/favicon.png">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="jquery-3.2.1.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-<script type="text/javascript">
+
+			document.getElementById("validatedCustomFile").required=false;
+			document.getElementById("escolha").style.visibility = 'hidden';
+			document.getElementById("validatedCustomFile").value="";   
+
+    // $("#validatedCustomFile").replaceWith($("#validatedCustomFile").clone());
+    $("#preview").css('display', 'none').attr('src', '');
+
+
+}
+function comFoto()
+{
+	document.getElementById("validatedCustomFile").required=true;
+	document.getElementById("escolha").style.visibility = 'visible';
+    // $("#validatedCustomFile").clone().replaceWith($("#validatedCustomFile"));
+    $("#preview").css('display', 'block').attr('src', '');
+}
+function caixinhacom(){
+	comFoto();
+	document.getElementById("customControlValidation2").checked=true;   
+
+
+}
+function caixinhasem(){
+	semFoto();
+	document.getElementById("customControlValidation3").checked=true;   
+
+
+}
+
+	var reader = new FileReader();
+
+
+
+	function semFoto()
+	{
+
+		document.getElementById("preview").style.height = "0px";
+		document.getElementById("validatedCustomFile").required=false;
+		document.getElementById("escolha").style.visibility = 'hidden';
+		document.getElementById("validatedCustomFile").value="";   
+
+    // $("#validatedCustomFile").replaceWith($("#validatedCustomFile").clone());
+    $("#preview").css('display', 'none').attr('src', '');
+
+
+}
+function zerar()
+{
+
+	document.getElementById("preview").style.height = "0px";
+	document.getElementById("validatedCustomFile").value="";   
+
+    // $("#validatedCustomFile").replaceWith($("#validatedCustomFile").clone());
+    $("#preview").css('display', 'block').attr('src', '');
+
+
+}
+function comFoto()
+{
+	document.getElementById("validatedCustomFile").required=true;
+	document.getElementById("escolha").style.visibility = 'visible';
+    // $("#validatedCustomFile").clone().replaceWith($("#validatedCustomFile"));
+    $("#preview").css('display', 'block').attr('src', '');
+}
+
+
+document.getElementById("validatedCustomFile").onchange = function () {
+
+	document.getElementById("preview").style.height = "150px";
+	reader.onload = function (e) {
+        // get loaded data and render thumbnail.
+        document.getElementById("preview").src = e.target.result;
+    };
+
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+};
+
+
+
 
 	var httpRequest;
 
@@ -51,8 +121,6 @@
 
 		httpRequest.open("GET", url);
 		httpRequest.send();
-		
-
 
 	}
 
@@ -97,13 +165,12 @@
 			return false;
 		});
 
-
 	};
 
 
 		$(document).on('click', '.edit_data', function(){  
 			var cod_produto = $(this).attr("id");  
-
+			alert("asdsad");
 			$.ajax({  
 				url:"fetch.php",  
 				method:"POST",  
@@ -182,38 +249,4 @@
 
 			}  
 		});  
-  
-</script>
 
-</head>
-
-<body>
-
-	<!-- Static navbar -->
-	<?php require_once __DIR__.'/header.php'; ?>
-
-	
-
-
-		
-
-
-
-		<div  id="div_conteudo" style="height:100%;overflow:scroll;"></div>
-
-
-
-
-		<?php require_once __DIR__.'/footer.php'; ?>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed  -->
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/personal.js"></script>
-	
-	
-	   
-</script>
-</body>
-</html>

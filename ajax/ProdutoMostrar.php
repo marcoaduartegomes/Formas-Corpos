@@ -75,10 +75,10 @@
                     </div>
                     <div class="modal-body">
                       <form method="post" id="formularioEdit" name="formularioEdit" >  
-                          <label>Enter Employee Name</label>  
+                          <label>Nome</label>  
                           <input type="text" name="nome" id="nome" class="form-control" />  
                           <br />
-                          <label>Enter Employee Name</label>  
+                          <label>Quantidade</label>  
                           <input type="number" name="quantidade" id="quantidade" class="form-control" /> 
                           <input type="hidden" name="codigo" id="codigo" />  
                           <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />  
@@ -134,9 +134,10 @@
 </div> 
 
                
-
-
-         
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+         <script src="js/personal.js"></script>
         </body>
 
         </html>

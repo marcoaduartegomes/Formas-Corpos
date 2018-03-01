@@ -44,20 +44,10 @@
                   
                         <li >
                           <div class="dropdown">
-  <button class="btn btn-secondary  " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Produtos
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button value ="cadastrar" class="dropdown-item" type="button" onclick="fazerRequisicao('ProdutoUpload.php', 'div_conteudo')">Cadastrar</button>
-    <button value ="mostrar" class="dropdown-item" type="button" onclick="fazerRequisicao('ProdutoMostrar.php', 'div_conteudo')">Consultar</button>
-    <button class="dropdown-item" type="button">Something else here</button>
-  </div>
-</div>
-                        </li>
-                        <li ><a href="#ABOUT" class="nav-item">Ferramentas</a></li>
-                        <li "><a href="#FEATURES" class="nav-item">Features</a></li>
-                  </ul>
-                 </div>
+  
+  
+    
+     <a class="btn btn-default " href="Produtos.php">Produtos</a>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>

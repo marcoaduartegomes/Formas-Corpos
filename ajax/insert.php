@@ -1,10 +1,6 @@
 <?php
 
-$host = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "formas";
-$conn = new mysqli($host, $username, $password, $dbname);
+require_once __DIR__.'/connect.php';
  //fetch.php   
 $nome = $_POST["nome"];
 $quantidade = $_POST["quantidade"]; 
