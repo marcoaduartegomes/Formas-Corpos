@@ -1,7 +1,7 @@
 
-
+var table;
 $(document).ready(function() {
-    $('#tabela-Produto').DataTable( {
+    table = $('#tabela-Produto').DataTable( {
         "ajax": "getDadoTabela.php",
         "columns": [
             { "data": "arquivo" },
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                  return "<button class='btn btn-danger' type='button' id='123' value='"+data+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>" ;
+                  return "<button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>" ;
                 },
                 "targets": 4
 
@@ -28,22 +28,48 @@ $(document).ready(function() {
     } );
 } );
 
-$(document).on('click', '#123', function(){  
-			var cod_produto = $(this).attr("value"); 
-			alert(cod_produto);
+var cod_produto;
+$(document).on('click', '#botDeletar', function(){  
+			cod_produto = $(this).attr("value"); 			
 			$.ajax({  
 				url:"fetch.php",  
 				method:"POST",  
 				data:{codigo:cod_produto}, 
 				dataType:"json",   
+				beforeSend:function(data){  
+						$('#botaoModal').val("Deletar");  
+
+					},
 				success:function(data){  
 					  
 					$('#nome').val(data.nome); 
 					$('#codigo').val(data.codigo); 
 					$('#quantidade').val(data.quantidade); 
+					
 
 				 
 				}  
-			});  
+			});
 
+
+		}); 
+$(document).on('click', '#botaoModal', function(){ 
+			
+			$.ajax({  
+				url:"deletar.php",  
+				method:"POST",  
+				data:{codigo:cod_produto}, 
+				 
+
+				success:function(data){  
+				//	$('#produtoModal').hide();
+					$("#returns").click();
+					table.ajax.reload();
+						
+				}
+
+
+		
+			 
+}); 
 		}); 

@@ -19,14 +19,7 @@ $results = mysqli_query($conn, $sql);
 }
 if($row['arquivo']==0){}else
 if (!unlink("upload/".$row['arquivo']))
-{
-  echo ("Erro ao deletar $arquivo");
-}
-else
-{
-  echo ("Deletado com sucesso!");
 
-}
 echo json_encode($row);
 echo $sql;
 

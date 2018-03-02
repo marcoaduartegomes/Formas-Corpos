@@ -71,11 +71,11 @@ require_once __DIR__.'/header.php';
                           <label>Quantidade</label>  
                           <input type="number" name="quantidade" id="quantidade" class="form-control" /> 
                           <input type="hidden" name="codigo" id="codigo" />  
-                          <input type="submit" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
+                          <input type="button" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
                         </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Retornar</button>
+                      <button type="button" class="btn btn-secondary" id="returns" data-dismiss="modal">Retornar</button>
                       
 
                     </div>
