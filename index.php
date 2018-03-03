@@ -29,13 +29,6 @@
     <?php
      include 'header.php';
     ?>
-            <section style="width: 40%; float: left; margin-left: 5%; ">
-              <?php
-                include 'financeiro.php';
-              ?>
-            </section>
-
-            <section style="width: 40%; float: right; margin-right: 5%;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -62,7 +55,6 @@
                             </div>
                         </div>
                 </div>
-            </section>
            
     <?php
      include 'footer.php';
