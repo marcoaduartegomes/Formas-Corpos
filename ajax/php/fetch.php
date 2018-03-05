@@ -1,13 +1,13 @@
 <?php
 
 require_once __DIR__.'/connect.php';
- //fetch.php   
+ //fetch.php retorna do banco de dados todos os valores de um certo codigo.  
  if(isset($_POST["codigo"]))  
  {  
       $query = "SELECT * FROM produto WHERE codigo = '".$_POST["codigo"]."'";  
       $result = mysqli_query($conn, $query);  
       $row = mysqli_fetch_array($result);  
-      echo json_encode($row);
+      echo json_encode($row); // retorna os dados para conferir o json
       
  }  
  ?>

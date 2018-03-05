@@ -9,7 +9,7 @@
     <link rel="icon" href="imagens/favicon.png">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="headerFooter.css" rel="stylesheet">
+    <link href="css/headerFooter.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +33,7 @@
                           <div class="col-md-6">
                             <div class="FormatacaoImagem">
                               <p> Projetado por
-                              <img class="imagem2" src="Logo Serra.png">
+                              <img class="imagem2" src="imagens/Logo Serra.png">
                             </p>
                           </div>
                         </div>

@@ -26,7 +26,7 @@
 
  <?php
 
-require_once __DIR__.'/connect.php';
+
 require_once __DIR__.'/header.php';
 
  $exist = "select arquivo,nome,codigo,data,quantidade from produto";
@@ -36,9 +36,9 @@ require_once __DIR__.'/header.php';
 
 
 
+<div style="height:75%;overflow:scroll;">
 
-
-
+<button class='btn' type='button' id='botAdicionar' data-toggle='modal' data-target='#produtoModal'  ><img style="height: 40px"  src="icons/plus.svg"> </button>
   <table  id="tabela-Produto" class="table table-bordered table-hover" >
     <thead>
       <tr>
@@ -53,7 +53,7 @@ require_once __DIR__.'/header.php';
      
    </tbody>
             </table>
-
+</div>
  <div class="modal fade" id="produtoModal" tabindex="-1" role="dialog" aria-labelledby="produtoModallLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -69,14 +69,42 @@ require_once __DIR__.'/header.php';
                           <input type="text" name="nome" id="nome" class="form-control" />  
                           <br />
                           <label>Quantidade</label>  
-                          <input type="number" name="quantidade" id="quantidade" class="form-control" /> 
-                          <input type="hidden" name="codigo" id="codigo" />  
-                          <input type="button" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
-                        </form>
+                          <input type="number" name="quantidade" id="quantidade" class="form-control" />
+                          <input type="hidden" name="codigo" id="codigo" class="form-control" /> 
+                          
+                        
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" id="returns" data-dismiss="modal">Retornar</button>
-                      
+                      <input type="button" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
+                      <button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Retornar</button>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade" id="produtoModalDeleta" tabindex="-1" role="dialog" aria-labelledby="produtoModalDeletalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="produtoModalDeletalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" id="formularioDeleta" name="formularioEdit" >
+                         
+                          
+                          
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <input type="button" name="botaoModalDeleta" id="botaoModalDeleta" value="Deletar" class="btn btn-success" />  
+                      <button type="button" class="btn btn-secondary" id="returnDeleta" data-dismiss="modal">Retornar</button>
+                      </form>
 
                     </div>
                   </div>
@@ -88,7 +116,7 @@ require_once __DIR__.'/header.php';
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
          <script src="js/personal.js"></script>
-         <script src="produtos.js"></script>
+         <script src="js/produtos.js"></script>
          <?php require_once __DIR__.'/footer.php'; ?>
         </body>
 
