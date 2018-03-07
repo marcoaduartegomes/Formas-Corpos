@@ -36,57 +36,74 @@ require_once __DIR__.'/header.php';
 
 
 
-<div style="width: 70%;margin: auto;">
+<div style="width: 70%;">
 
 
-  <table  id="tabela-Produto" class="table table-bordered table-hover" >
+  <table  id="tabela-Cliente" class="table table-bordered table-hover" >
     
     <thead>
       <tr>
-        <th>Nome do Produto</th>
-        <th>Quantidade</th>
-        <th>Hora(ultima modificação)</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Celular</th>
+        <th>E-Mail</th>
         <th>Operações</th>
+   
       </tr>
       <tr id="pesquisar">
-        <th>Nome do Produto</th>
-        <th>Quantidade</th>
-        <th>Hora(ultima modificação)</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Celular</th>
+        <th>E-Mail</th>
         <th>Operações</th>
+     
       </tr>
     </thead>
     
 
-   <tbody id="tabela-Produto-Body">
+   <tbody id="tabela-Cliente-Body">
      
    </tbody>
             </table>
 </div>
- <div class="modal fade" id="produtoModal" tabindex="-1" role="dialog" aria-labelledby="produtoModallLabel" aria-hidden="true">
+ <div class="modal fade" data-backdrop="static" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModallLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="produtoModallLabel">Modal title</h5>
+                      <h5 class="modal-title" id="clienteModallLabel">Modal title</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
                       <form method="post" id="formularioEdit" name="formularioEdit" >  
-                          <label for="nome">Nome</label>  
-                          <input type="text" name="nome" id="nome" class="form-control is-valid" required />
-                          <div class="invalid-feedback">
-                            Este Nome ja existe. Por favor escolha outro.
-                          </div>  
+                          <label>Nome</label>  
+                          <input type="text" name="nome" id="nome" class="form-control " />
                           <br />
-                          <label>Quantidade</label>  
-                          <input type="number" name="quantidade" id="quantidade" class="form-control " required />
+                          <label for="nome">CPF</label>  
+
+                          <input type="number" name="cpf" id="cpf" class="form-control is-valid" />
+                          <div class="invalid-feedback">
+                            CPF INVALIDO. Insira novamente ou confira os dados.
+                          </div>
+                          <br />
+                          <label ">Email</label>  
+                          <input type="email" name="email" id="email" class="form-control " />
+                          <br />
+                          <label>Telefone</label>  
+                          <input type="text" name="telefone" id="telefone" class="form-control " />
+                          <br />
+                          <label>Celular</label>  
+                          <input type="text" name="celular" id="celular" class="form-control " />
+                           
                           <input type="hidden" name="codigo" id="codigo" class="form-control" /> 
                           
                         
                     </div>
                     <div class="modal-footer">
-                      <input type="button" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
+                      <input type="submit" name="botaoModal" id="botaoModal" value="Insert" class="btn btn-success" />  
                       <button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Retornar</button>
                       </form>
 
@@ -94,40 +111,13 @@ require_once __DIR__.'/header.php';
                   </div>
                 </div>
               </div>
-
-
-              <div class="modal fade" id="produtoModalDeleta" tabindex="-1" role="dialog" aria-labelledby="produtoModalDeletalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="produtoModalDeletalLabel">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form method="post" id="formularioDeleta" name="formularioEdit" >
-                         
-                          
-                          
-                        
-                    </div>
-                    <div class="modal-footer">
-                      <input type="button" name="botaoModalDeleta" id="botaoModalDeleta" value="Deletar" class="btn btn-success" />  
-                      <button type="button" class="btn btn-secondary" id="returnDeleta" data-dismiss="modal">Retornar</button>
-                      </form>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
                
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
          <script src="js/personal.js"></script>
-         <script src="js/produtos.js"></script>
+         <script src="js/clientes.js"></script>
       
         </body>
 

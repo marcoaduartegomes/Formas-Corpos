@@ -48,6 +48,7 @@
   
     
      <a class="btn btn-default " href="Produtos.php">Produtos</a>
+     <a class="btn btn-default " href="Clientes.php">Clientes</a>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>

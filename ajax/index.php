@@ -24,7 +24,39 @@
 	
 
 
-
+	<section style="width: 40%; float: left; margin-left: 5%; ">
+		<?php
+		include 'financeiro.php';
+		?>
+	</section>
+	<section style="width: 40%; float: right; margin-right: 5%;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="botoes">
+						<a  href="#" class="btn btn-default AlinhamentoBtn">Consultas</a>
+						<a href="CLientes.php" class="btn btn-default">Clientes</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="botoes">
+						<a  href="#" class="btn btn-default AlinhamentoBtn ">Faturamento</a>
+						<a href="Produtos.php" class="btn btn-default ">Produtos</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="botoes">
+						<a href="#" class="btn btn-default AlinhamentoBtn ">Modificações</a>
+						<a href="#" class="btn btn-defaultS">Modificações</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 

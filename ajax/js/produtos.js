@@ -1,10 +1,44 @@
 
 var table;
-$(document).ready(function() { // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
+$(document).ready(function() {
+// Setup - add a text input to each footer cell
+    $('#tabela-Produto thead tr#pesquisar th').each( function () {
+       var title = $(this).text();
+        if (title == 'Quantidade') {
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+        }
+        if (title == 'Nome do Produto') {
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+        }
+        if (title == 'Hora(ultima modificação)') {
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+        }
+        if (title == 'Operações') {
+            $(this).html( '' );       
+        }
+    } ); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
+
+
+
 	table = $('#tabela-Produto').DataTable( {
-		"ajax": "php/getDadoTabela.php",
+		orderCellsTop: true,
+		language: {
+			search: "Procurar",
+			"info": "Mostrando Pagina _PAGE_ de _PAGES_",
+			searchPlaceholder: "Procurar produtos...",
+			"paginate": {
+				"first":      "Primeiro",
+				"last":       "Ultimo",
+				"next":       "Proximo",
+				"previous":   "Anterior"
+			},
+			"lengthMenu":     "Mostrar _MENU_ Produtos",
+		},
+		
+		"dom": '<"top"l><"toolbar">rt<"bottom"pi><"clear">',
+
+		"ajax": "php/Produtos/getDadoTabela.php",
 		"columns": [
-		{ "data": "arquivo" },
 		{ "data": "nome" },
 		{ "data": "quantidade" },
 		{ "data": "data" },
@@ -18,15 +52,34 @@ $(document).ready(function() { // DataTable carregado por ajax  https://datatabl
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<button class='btn ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' >Alterar</button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta' >Deletar</button>" ;
+                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' >Alterar</button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta' >Deletar</button>" ;
                 },
-                "targets": 4
+                "targets": 3,
+                "orderable": false
 
             },
             
             ]
+
         } );
+// Apply the search
+    $("#tabela-Produto thead input").on( 'keyup change', function () {
+        table
+            .column( $(this).parent().index()+':visible' )
+            .search( this.value )
+            .draw();
+    } );
+
+	$("div.toolbar").html("<button style='position:fixed;bottom:0;left: 85%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#produtoModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
 } );
+
+function stopPropagation(evt) {
+		if (evt.stopPropagation !== undefined) {
+			evt.stopPropagation();
+		} else {
+			evt.cancelBubble = true;
+		}
+	}
 
 var cod_produto;
 $(document).on('click', '#botDeletar', function(){ // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
@@ -38,7 +91,7 @@ $(document).on('click', '#botDeletar', function(){ // Ao clicar no botão deleta
 $(document).on('click', '#botaoModalDeleta', function(){ // ao clicar no botão deletar do modal, o produto sera de fato deletado
 
 	$.ajax({  
-		url:"php/deletar.php",  
+		url:"php/Produtos/deletar.php",  
 		method:"POST",  
 		data:{codigo:cod_produto}, 
 
@@ -55,10 +108,13 @@ $(document).on('click', '#botaoModalDeleta', function(){ // ao clicar no botão 
 
 	}); 
 }); 
+var valorAntigo;
 $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
-	cod_produto = $(this).attr("value"); 			
+	cod_produto = $(this).attr("value"); 	
+
+
 	$.ajax({  
-		url:"php/fetch.php",  
+		url:"php/Produtos/fetch.php",  
 		method:"POST",  
 		data:{codigo:cod_produto}, 
 		dataType:"json",   
@@ -68,10 +124,13 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 
 		},
 		success:function(data){  
-
+			valorAntigo = data.nome;
 			$('#nome').val(data.nome); 
 			$('#codigo').val(data.codigo); 
-			$('#quantidade').val(data.quantidade); 
+			$('#quantidade').val(data.quantidade);
+			$('#botaoModal').removeAttr('disabled');
+				$('#nome').removeClass('is-invalid');
+				$('#nome').addClass('is-valid'); 
 
 
 
@@ -83,12 +142,13 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 $(document).on('click', '#botaoModal', function(){ //Altera os dados da tabela do produto que foi selecionado
 
 	$.ajax({  
-		url:"php/insert.php",  
+		url:"php/Produtos/insert.php",  
 		method:"POST",  
 		data:$('#formularioEdit').serialize(), 
 
 
-		success:function(data){  
+		success:function(data){
+
 			$('#produtoModal').hide();
 			$("#return").click();
 			table.ajax.reload();
@@ -110,3 +170,32 @@ $(document).on('click', '#botAdicionar', function(){  //Aletera os dados do form
 },
 
 );
+
+
+$( "#nome" ).keyup(function() {
+	var value = $('#nome').val();
+	$.ajax({  
+		url:"php/Produtos/validaNome.php",  
+		method:"POST",  
+		data:{nome:value},
+		dataType:"json", 
+
+		success:function(data){
+			if(value==valorAntigo){}else{
+				$('#nome').removeClass('is-valid');
+				$('#botaoModal').attr('disabled', 'disabled');
+				$('#nome').addClass('is-invalid');}
+
+
+			},
+			error: function(data) { 
+				$('#botaoModal').removeAttr('disabled');
+				$('#nome').removeClass('is-invalid');
+				$('#nome').addClass('is-valid');
+			} 
+
+
+
+
+		}); 
+});
