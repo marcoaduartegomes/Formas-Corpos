@@ -2,6 +2,8 @@ var httpRequest;
 
 function fazerRequisicao(url,destino){
 
+    document.getElementById(destino).innerHTML = '<center> <img src="ajax/loader.gif"/> </center>';
+
     if(window.XMLHttpRequest){
         httpRequest = new XMLHttpRequest();
     }
