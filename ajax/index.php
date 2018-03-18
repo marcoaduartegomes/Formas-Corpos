@@ -21,15 +21,7 @@
 	<!-- Static navbar -->
 	<?php require_once __DIR__.'/header.php'; ?>
 
-	
-
-
-	<section style="width: 40%; float: left; margin-left: 5%; ">
-		<?php
-		include 'financeiro.php';
-		?>
-	</section>
-	<section style="width: 40%; float: right; margin-right: 5%;">
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
