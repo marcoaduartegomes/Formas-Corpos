@@ -1,0 +1,64 @@
+#tela-ajuda{
+    box-sizing: border-box;
+    width: 45%;
+    margin-right: 5%;
+    float: right;
+    padding: 10px;
+}
+
+#tela-ajuda img{
+    width: 50%;
+    margin: 5px;
+}
+
+#opcoes-ajuda{
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 10px;
+}
+
+.topicos-ajuda{
+    box-sizing: border-box;
+    width: 30%;
+    height: 50%;
+    margin-top: 1%;
+    margin-left: 1%;
+    float: left;
+}
+
+.topicos-ajuda img{
+    height: 40%;
+    width: 100%;
+}
+
+/* Tipografia */
+#tela-ajuda h2{
+    font-family: "Verdana", Arial, sans-serif;
+    text-align: center;
+    width: 45%;
+    margin-top: 10px;
+    float: right;
+}
+
+#tela-ajuda p{
+    font-family: "Verdana", Arial, sans-serif;
+    text-align: justify;
+    display: block;
+}
+
+.topicos-ajuda h4{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color:rgb(189, 36, 107);
+    border: 1px solid lightgray;
+    transition: border 0.15s linear 0s;
+    transition: color 0.15s linear 0s;
+}
+
+.topicos-ajuda h4:hover{
+    border:1px solid gray;
+    color: gray;
+}
