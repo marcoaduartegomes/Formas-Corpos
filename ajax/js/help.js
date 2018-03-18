@@ -1,9 +1,31 @@
-function telaAjuda(){
-    var topico=document.getElementById(clique);
+var httpRequest;
 
-    document.getElementById(topico).style.backgroundColor="black";
+function fazerRequisicao(url,destino){
 
-    if(topico == "consultas"){
-        
+    if(window.XMLHttpRequest){
+        httpRequest = new XMLHttpRequest();
+    }
+    else {
+        alert('Erro ao instanciar objeto XMLHttpRequest neste navegador!');
+    }
+
+    if(!httpRequest){
+        alert('Erro ao instanciar objeto XMLHttpRequest neste navegador!');
+        return false;
+    }
+
+    httpRequest.onreadystatechange = situacaoRequisicao;
+
+    httpRequest.open('GET', url);
+    httpRequest.send();
+
+}
+
+function situacaoRequisicao(){
+
+    if(httpRequest.readyState == 4){
+        if(httpRequest.status == 200){
+            document.getElementById('tela-ajuda').innerHTML = httpRequest.responseText;
+        }
     }
 }

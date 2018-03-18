@@ -37,27 +37,27 @@
     <div class="container">
 
         <div id="opcoes-ajuda">
-            <div class="topicos-ajuda" id="consultas" onClick="telaAjuda()">
+            <div class="topicos-ajuda" id="consultas" onClick="fazerRequisicao('help_Consultas.php','tela-ajuda')">
                 <img src="teste.jpg">
                 <h4> Consultas </h4>
             </div>
 
-            <div class="topicos-ajuda" id="clientes" onClick="telaAjuda(clientes)">
+            <div class="topicos-ajuda" id="clientes" onClick="fazerRequisicao('help_Clientes.php','tela-ajuda')">
                 <img src="teste.jpg">
                 <h4> Clientes </h4>
             </div>
 
-            <div class="topicos-ajuda" id="faturamentos" onClick="telaAjuda(faturamentos)">
+            <div class="topicos-ajuda" id="faturamentos" onClick="fazerRequisicao('help_Faturamentos.php','tela-ajuda')">
                 <img src="teste.jpg">
                 <h4> Faturamentos </h4>
             </div>
 
-            <div class="topicos-ajuda" id="produtos" onClick="telaAjuda(produtos)">
+            <div class="topicos-ajuda" id="produtos" onClick="fazerRequisicao('help_Produtos.php','tela-ajuda')">
                 <img src="teste.jpg">
                 <h4> Produtos </h4>
             </div>
 
-            <div class="topicos-ajuda" id="modificacoes" onClick="telaAjuda(modificacoes)">
+            <div class="topicos-ajuda" id="modificacoes" onClick="fazerRequisicao('help_Modificacoes.php','tela-ajuda')">
                 <img src="teste.jpg">
                 <h4> Modificações </h4>
             </div>
@@ -65,38 +65,14 @@
         </div>
 
         <div id="tela-ajuda">
-            <div>
-                <img src="favicon.png'" class="img-ajuda">
-                <h2> Titulo </h2>
-                <p>
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                    • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl 
-                </p>
-            </div>
-            <div>
-                <p>
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                    • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                    • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-                </p>
-            </div>
+            
+        
+
         </div>
 
     </div> <!-- Container -->
 
-    <footer>
-      <?php 
-        include('footer.php');
-      ?>
-    </footer>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  <?php require_once __DIR__.'/footer.php'; ?>
+  
   </body>
 </html>
