@@ -28,11 +28,8 @@
   </head>
   <body>
 
-    <header>
-      <?php
-      include 'header.php';
-      ?>
-    </header>
+    <!-- Static navbar -->
+    <?php require_once __DIR__.'/header.php'; ?>
 
     <div class="container">
 
@@ -73,6 +70,6 @@
     </div> <!-- Container -->
 
   <?php require_once __DIR__.'/footer.php'; ?>
-  
+
   </body>
 </html>

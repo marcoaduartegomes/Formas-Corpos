@@ -49,6 +49,7 @@
     
      <a class="btn btn-default " href="Produtos.php">Produtos</a>
      <a class="btn btn-default " href="Clientes.php">Clientes</a>
+     <a class="btn btn-default " href="help.php">Ajuda</a>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
