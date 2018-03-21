@@ -9,7 +9,7 @@ $celular = $_POST["celular"];
 $email = $_POST["email"];
 $codigo = $_POST["codigo"];
 $vetor = NULL;
- 
+
 
   if($codigo>0){ // se o produto ja existir, sera executado uma query de alterar o produto
    $query = "  
@@ -29,12 +29,12 @@ $vetor = NULL;
 
 
   } $result = mysqli_query($conn, $query);   
-       $query = "SELECT * FROM cliente WHERE codigo = '".$_POST["codigo"]."'";  
-      $result = mysqli_query($conn, $query);  
-      $row = mysqli_fetch_array($result);  
+  $query = "SELECT * FROM cliente WHERE codigo = '".$_POST["codigo"]."'";  
+  $result = mysqli_query($conn, $query);  
+  $row = mysqli_fetch_array($result);  
       echo json_encode($row); // retorna os dados para conferir o json
 
 
 
 
-?>
+      ?>
