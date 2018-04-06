@@ -11,12 +11,15 @@
     <link rel="icon" href="imagens/favicon.png">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+    
+    <script src="js/financeiro.js"></script>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">    
     <link href="CapaMelhorado.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/Financeiro.css">
+    <link rel="stylesheet" href="css/Financeiro.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,20 +46,54 @@
 
       <!-- Conteúdo das Abas -->
       <div class="tab-content">
-        <!-- Aba Informações -->
+        <!-- Aba Consulta -->
         <div class="tab-pane active" role="tabpanel" id="consulta">
           <h3> Serviços: </h3>
-          <p>
-            
-          </p>
+          
+          <table id="tabela-servicos" class="table table-bordered" width="100%">
+              <thead>
+                  <tr>
+                      <th>Column 1</th>
+                      <th>Column 2</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Row 1 Data 1</td>
+                      <td>Row 1 Data 2</td>
+                  </tr>
+                  <tr>
+                      <td>Row 2 Data 1</td>
+                      <td>Row 2 Data 2</td>
+                  </tr>
+              </tbody>
+          </table>
+
         </div>
 
-        <!-- Aba Avaliações -->
+        <!-- Aba Comparar -->
         <div class="tab-pane" role="tabpanel" id="comparar">
           <h3> Escolha o tipo de comparação: </h3>
-          <p>
-            
-          </p>
+          
+          <table id="tabela-comparar" class="table table-bordered" width="100%">
+              <thead>
+                  <tr>
+                      <th>Column 1</th>
+                      <th>Column 2</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Row 1 Data 1</td>
+                      <td>Row 1 Data 2</td>
+                  </tr>
+                  <tr>
+                      <td>Row 2 Data 1</td>
+                      <td>Row 2 Data 2</td>
+                  </tr>
+              </tbody>
+          </table>
+        
         </div>
 
       </div>
