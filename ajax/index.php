@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="botoes">
-						<a  href="#" class="btn btn-default AlinhamentoBtn">Consultas</a>
+						<a  href="consultas.php" class="btn btn-default AlinhamentoBtn">Consultas</a>
 						<a href="CLientes.php" class="btn btn-default">Clientes</a>
 					</div>
 				</div>
