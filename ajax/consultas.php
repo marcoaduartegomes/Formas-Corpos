@@ -36,7 +36,7 @@
       ?>
     </header>
 
-    <div class="container" id="container-financeiro">
+    <div class="container" id="container-consultas">
 
       <!-- Criação das Abas -->
       <ul class="nav nav-tabs">
@@ -50,24 +50,36 @@
         <div class="tab-pane active" role="tabpanel" id="consulta">
           <h3> Consultas: </h3>
           
-          <table id="tabela-consultas" class="table table-bordered" width="100%">
-              <thead>
-                  <tr>
-                      <th>Column 1</th>
-                      <th>Column 2</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Row 1 Data 1</td>
-                      <td>Row 1 Data 2</td>
-                  </tr>
-                  <tr>
-                      <td>Row 2 Data 1</td>
-                      <td>Row 2 Data 2</td>
-                  </tr>
-              </tbody>
-          </table>
+          <div id="conteudo-consulta">
+            <table id="tabela-consultas" class="table table-bordered" width="70%">
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <div id="informacoes">
+            <center>
+              <img src="imagens/user.png"/>
+              <h4> Ficha do Cliente </h4>
+              <br>
+              <img src="imagens/arquivos.png"/>
+              <h4> Outros Arquivos </h4>
+            </center>
+          </div>
 
         </div>
 
