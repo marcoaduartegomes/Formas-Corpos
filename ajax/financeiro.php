@@ -50,24 +50,40 @@
         <div class="tab-pane active" role="tabpanel" id="consulta">
           <h3> Serviços: </h3>
           
-          <table id="tabela-servicos" class="table table-bordered" width="100%">
-              <thead>
-                  <tr>
-                      <th>Column 1</th>
-                      <th>Column 2</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Row 1 Data 1</td>
-                      <td>Row 1 Data 2</td>
-                  </tr>
-                  <tr>
-                      <td>Row 2 Data 1</td>
-                      <td>Row 2 Data 2</td>
-                  </tr>
-              </tbody>
-          </table>
+          <div id="container-table-servicos">
+            <table id="tabela-servicos" class="table table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo de Serviço</th>
+                        <th>Cliente</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2001</td>
+                        <td>Maquiagem</td>
+                        <td>Marco A Gomes</td>
+                        <td>R$ 80,00</td>
+
+                    </tr>
+                    <tr>
+                        <td>03/02/2001</td>
+                        <td>Depilação</td>
+                        <td>Buzininha Lopes</td>
+                        <td>R$ 25,00</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <div id="container-dash-servicos">
+            <div id="grafico"></div>
+            <div id="legenda-grafico">
+              
+            </div>
+          </div>
 
         </div>
 
