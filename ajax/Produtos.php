@@ -113,7 +113,7 @@ require_once __DIR__.'/header.php';
                         
                     </div>
                     <div class="modal-footer">
-                      <input type="button" name="botaoModalDeleta" id="botaoModalDeleta" value="Deletar" class="btn btn-success" />  
+                      <input type="button" name="botaoModalDeleta" id="botaoModalDeleta" value="Deletar" class="btn btn-danger" />  
                       <button type="button" class="btn btn-secondary" id="returnDeleta" data-dismiss="modal">Retornar</button>
                       </form>
 
