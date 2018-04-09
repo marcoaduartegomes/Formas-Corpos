@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Fev-2018 às 23:36
+-- Generation Time: 09-Abr-2018 às 02:38
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -25,6 +25,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `cliente`
+--
+
+CREATE TABLE `cliente` (
+  `codigo` int(11) NOT NULL,
+  `Nome` varchar(150) NOT NULL,
+  `CPF` varchar(11) NOT NULL,
+  `Telefone` bigint(20) NOT NULL,
+  `Celular` bigint(20) NOT NULL,
+  `email` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`codigo`, `Nome`, `CPF`, `Telefone`, `Celular`, `email`) VALUES
+(3, 'marco araujo', '16936908705', 3213, 321321, 'marco@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `produto`
 --
 
@@ -41,12 +63,18 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`codigo`, `arquivo`, `quantidade`, `data`, `nome`) VALUES
-(14, '', 54, '2018-02-07 02:03:54', 'dsa'),
-(15, '', 123, '2018-02-07 20:21:35', 'marco');
+(87, '', 321321, '2018-04-08 21:28:48', 'marcos');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`codigo`),
+  ADD UNIQUE KEY `CPF` (`CPF`);
 
 --
 -- Indexes for table `produto`
@@ -59,10 +87,16 @@ ALTER TABLE `produto`
 --
 
 --
+-- AUTO_INCREMENT for table `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
