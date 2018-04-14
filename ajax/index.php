@@ -34,7 +34,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="botoes">
-						<a  href="#" class="btn btn-default AlinhamentoBtn ">Faturamento</a>
+						<a  href="faturamento.php" class="btn btn-default AlinhamentoBtn ">Faturamento</a>
 						<a href="Produtos.php" class="btn btn-default ">Produtos</a>
 					</div>
 				</div>

@@ -1,0 +1,58 @@
+body{
+	background-color: gray;
+} 
+
+#container-faturamento{
+	width: 100%;
+	height: 100%;
+}
+
+.nav-tabs{
+	margin-top: 10px;
+	padding: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.tab-pane{ 
+	background-color: white;
+	overflow-y: auto;
+	padding: 5px;
+}
+
+.nav-tabs .nav-item{
+	background-color: white;
+}
+
+.nav-item a{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.nav-link{
+	width: 100%;
+}
+
+#container-table-servicos{
+	padding: 15px;
+	overflow-y: auto;
+}
+
+#graficos-faturamento{
+	height: 100%;
+	width: 100%;
+}
+
+#legenda-graficos{
+	float: left;
+	height: 300px;
+	width: 40%;
+	border: 0.5px solid lightgrey;
+}
+
+#graficos{
+	float: right;
+	height: 300px;
+	width: 60%;
+	border: 0.5px solid lightgrey;
+}
