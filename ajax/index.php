@@ -20,44 +20,22 @@
 
 	<!-- Static navbar -->
 	<?php require_once __DIR__.'/header.php'; ?>
+<!-- Corpo do sistema -->
+        <div id="corpo-principal">
+<div id="corpo-index">
+    <div id="menu-index">
+        <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Consultas',1)">
+        <img src="img/icone-servicos.png" class="icone-index" id="servicos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Serviços',1)">
+        <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Produtos',1)">
+        <br>
+        <img src="img/icone-clientes.png" class="icone-index" id="clientes" onclick="window.location.href='Clientes.php'">
+        <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Calendário',1)">
+        <img src="img/icone-financeiro.png" class="icone-index" id="financeiro" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Financeiro',1)">
+    </div>
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="botoes">
-						<a  href="consultas.php" class="btn btn-default AlinhamentoBtn">Consultas</a>
-						<a href="CLientes.php" class="btn btn-default">Clientes</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="botoes">
-						<a  href="faturamento.php" class="btn btn-default AlinhamentoBtn ">Faturamento</a>
-						<a href="Produtos.php" class="btn btn-default ">Produtos</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="botoes">
-						<a href="#" class="btn btn-default AlinhamentoBtn ">Modificações</a>
-						<a href="#" class="btn btn-defaultS">Modificações</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
+</div>
+        </div> 
 	
-
-
-
-
-	<?php require_once __DIR__.'/footer.php'; ?>
 
 </body>
 </html>

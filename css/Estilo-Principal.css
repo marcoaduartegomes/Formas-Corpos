@@ -1,0 +1,127 @@
+
+/* Barra Superior */
+#barra-superior{
+    height: 10%;
+    width: 100%;
+    z-index: 2;
+    background-color: #6e3596;
+    position: fixed;
+    box-shadow: 0 5px 6px rgba(0,0,0, 0.85);
+}
+
+
+
+.icones-caixaMenu{
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 30px;
+}
+
+/* Corpo Principal */
+#corpo-principal{
+    position: fixed;
+    z-index: 0;
+    margin-top: 5%;
+    height: 90%;
+    width: 100%;
+/*  background: url('../img/background.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: bottom; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#corpo-index{
+    background: url('../img/background.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.corpo-paginas-menu{
+    background: url('../img/background2.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+#menu-index{
+    float: left;
+}
+
+.icone-index{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 150px;
+    box-shadow: 4px 4px 6px rgba(0,0,0, 0.65);
+    transition: box-shadow 0.10s linear 0s,margin 0.10s linear 0s;
+    height: 150px;
+}
+
+.icone-index:hover{
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.75);
+    margin-top: -2px;
+}
+
+.icone-index:active{
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.85);
+    margin-bottom: -10px;
+}
+
+#aba-lembretes{
+    width: 25%;
+    height: 100%;
+    float: right;
+    margin-right: -24%;
+    border-left: 1px groove gray;
+    box-shadow: 0px -3px 5px black;
+    background-color: rgb(241, 241, 241);
+    transition: margin 0.5s linear 0s;
+    position: relative;
+}
+
+#aba-lembretes:hover{
+    margin-right: 0px;
+}
+#conteudo-lembretes{
+    z-index: 1;
+    width: 100%;
+    height: 84%;
+    margin-bottom: 15%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#rodape-lembretes{
+    width: 100%;
+    height:15%;
+    z-index: 2;
+    bottom: 0;
+    background-color: rgb(241, 241, 241);
+    position: absolute;
+}
+
+.botao-adicionar{
+    border-radius: 50px;
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.65);
+    position: absolute;
+    transition: box-shadow 0.10s linear 0s, margin 0.1s linear 0s;
+}
+
+.botao-adicionar:hover{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.75);
+    margin-bottom: 10px;
+}
+
+.botao-adicionar:active{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);
+    margin-bottom: 5px;
+}

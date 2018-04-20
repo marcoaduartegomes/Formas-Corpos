@@ -1,0 +1,119 @@
+<style>
+
+    /*-------------------------------- Tela Ajuda ------------------------*/
+    #tela-ajuda{
+        box-sizing: border-box;
+        width: 49%;
+        margin-right: 1%;
+        float: right;
+        padding: 10px;
+    }
+
+    #tela-ajuda img{
+        width: 50%;
+        margin: 5px;
+    }
+
+    #opcoes-ajuda{
+        box-sizing: border-box;
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding: 10px;
+    }
+
+    .topicos-ajuda{
+        box-sizing: border-box;
+        width: 30%;
+        height: 50%;
+        margin-top: 1%;
+        margin-left: 1%;
+        float: left;
+    }
+
+    .topicos-ajuda img{
+        height: 40%;
+        width: 100%;
+    }
+
+    /* Tipografia */
+    #tela-ajuda h2{
+        font-family: "Verdana", Arial, sans-serif;
+        text-align: center;
+        width: 45%;
+        margin-top: 10px;
+        float: right;
+    }
+
+    #tela-ajuda p{
+        font-family: "Verdana", Arial, sans-serif;
+        text-align: justify;
+        display: block;
+    }
+
+    .topicos-ajuda h4{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        color:rgb(189, 36, 107);
+        border: 1px solid lightgray;
+        transition: border 0.15s linear 0s;
+        transition: color 0.15s linear 0s;
+    }
+
+    .topicos-ajuda h4:hover{
+        border:1px solid gray;
+        color: gray;
+    }
+
+    /*-------------------------------- Fim Tela Ajuda ------------------------*/
+
+</style>
+
+<div style="width:100%;height:100%;">
+    <div id="opcoes-ajuda">
+        <div class="linha-opcao">
+            <div class="topicos-ajuda" id="consultas" onClick="fazerRequisicaoAjuda('help_Consultas.html','tela-ajuda')">
+                <img src="teste.jpg">
+                <h4> Consultas </h4>
+            </div>
+
+            <div class="topicos-ajuda" id="servicos" onClick="fazerRequisicaoAjuda('help_Servicos.html','tela-ajuda')">
+                <img src="teste.jpg">
+                <h4> Serviços </h4>
+            </div>
+
+            <div class="topicos-ajuda" id="produtos" onClick="fazerRequisicaoAjuda('help_Produtos.html','tela-ajuda')">
+                <img src="img/ajuda/.jpg">
+                <h4> Produtos </h4>
+            </div>
+
+        </div>
+        
+        <div class="linha-opcao">
+
+            <div class="topicos-ajuda" id="clientes" onClick="fazerRequisicaoAjuda('help_Clientes.html','tela-ajuda')">
+                <img src="teste.jpg">
+                <h4> Clientes </h4>
+            </div>
+
+            <div class="topicos-ajuda" id="modificacoes" onClick="fazerRequisicaoAjuda('help_Calendario.html','tela-ajuda')">
+                <img src="teste.jpg">
+                <h4> Calendário </h4>
+            </div>
+
+            <div class="topicos-ajuda" id="faturamentos" onClick="fazerRequisicaoAjuda('help_Faturamentos.html','tela-ajuda')">
+                <img src="teste.jpg">
+                <h4> Faturamentos </h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="tela-ajuda">
+        
+
+
+    </div>
+</div>

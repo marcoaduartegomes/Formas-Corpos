@@ -127,7 +127,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 		data:{codigo:cod_produto}, 
 		dataType:"json",   
 		beforeSend:function(data){  
-			$('#botaoModal').val("Inserir");  
+			$('#botaoModal').val("Inserirr");  
 
 
 		},
