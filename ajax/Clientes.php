@@ -31,7 +31,7 @@
  ?>
  <!-- Button trigger modal -->
  <!-- Corpo do sistema -->
- <div id="corpo-principal">
+ <div id="corpo-principal" style="font-size: 13px;">
 
 
    <div class="row">

@@ -26,7 +26,7 @@
     <div id="menu-index">
         <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Consultas',1)">
         <img src="img/icone-servicos.png" class="icone-index" id="servicos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Serviços',1)">
-        <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Produtos',1)">
+        <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="window.location.href='Produtos.php'">
         <br>
         <img src="img/icone-clientes.png" class="icone-index" id="clientes" onclick="window.location.href='Clientes.php'">
         <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Calendário',1)">
