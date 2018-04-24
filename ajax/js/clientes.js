@@ -127,7 +127,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 		data:{codigo:cod_produto}, 
 		dataType:"json",   
 		beforeSend:function(data){  
-			$('#botaoModal').val("Inserirr");  
+			$('#botaoModal').val("Inserir");  
 
 
 		},
@@ -156,13 +156,13 @@ $(document).on('click', '#botAdicionar', function(){  //Aletera os dados do form
 	$('#codigo').val("0"); 
 	$('#formularioEdit')[0].reset();
 	$('#botaoModal').val("Novo");  
-
+	value=0;
 },
 
 );
 
-
-$( "#cpf" ).keyup(function() {
+$(function(){
+$("#cpf").keyup(function() {
 	value = $('#cpf').val();
 	$.ajax({  
 		url:"php/Clientes/validaCPF.php",  
@@ -173,7 +173,7 @@ $( "#cpf" ).keyup(function() {
 		success:function(data){
 			
 			if(value==valorAntigo){
-				
+				alert("dsad");
 			}else{
 				$('#cpf').removeClass('is-valid');
 				$('#botaoModal').attr('disabled', 'disabled');
@@ -192,7 +192,7 @@ $( "#cpf" ).keyup(function() {
 
 		}); 
 });
-
+});
 jQuery.validator.addMethod("cpf", function (value, element) {
 	value = jQuery.trim(value);
 
@@ -273,12 +273,12 @@ $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.ph
 			
 			valorAntigo = data.CPF;
 			
-			$('#nome').val(data.Nome); 
-			$('#cpf').val(data.CPF); 
-			$('#telefone').val(data.Telefone);
-			$('#celular').val(data.Celular); 
-			$('#email').val(data.email);
-			$('#codigo').val(data.codigo); 
+			$('#Modalnome').val(data.Nome); 
+			$('#Modalcpf').val(data.CPF); 
+			$('#Modaltelefone').val(data.Telefone);
+			$('#Modalcelular').val(data.Celular); 
+			$('#Modalemail').val(data.email);
+			$('#Modalcodigo').val(data.codigo); 
 		}  
 	});
 

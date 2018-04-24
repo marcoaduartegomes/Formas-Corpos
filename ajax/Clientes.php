@@ -68,31 +68,31 @@
 
 
       <label>Nomes</label>  
-      <input type="text" name="nome" id="nome" class="form-control form-control-sm" Readonly/>
+      <input type="text" name="nome" id="Modalnome" class="form-control form-control-sm" Readonly/>
 
-      <label for="nome">CPF</label>  
+      <label>CPF</label>  
 
-      <input type="text" name="cpf" id="cpf" class="form-control form-control-sm" Readonly/>      
+      <input type="text" name="cpf" id="Modalcpf" class="form-control form-control-sm" Readonly/>      
       <label ">Email</label>  
-      <input type="email" name="email" id="email" class="form-control form-control-sm" Readonly/>
+      <input type="email" name="email" id="Modalemail" class="form-control form-control-sm" Readonly/>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>Telefone</label>
-          <input type="text" name="telefone" id="telefone" class="form-control form-control-sm" Readonly/>
+          <input type="text" name="telefone" id="Modaltelefone" class="form-control form-control-sm" Readonly/>
         </div>
         <div class="form-group col-md-6">
           <label>Celular</label> 
-          <input type="text" name="celular" id="celular" class="form-control form-control-sm" Readonly/>
+          <input type="text" name="celular" id="Modalcelular" class="form-control form-control-sm" Readonly/>
         </div>
       </div> 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>Ultima Consulta</label>
-          <input type="date" name="telefone" id="telefone" class="form-control form-control-sm" Readonly/>
+          <input type="date" name="telefone" id="Modaltelefone" class="form-control form-control-sm" Readonly/>
         </div>
         <div class="form-group col-md-6">
           <label>Proxima Consulta</label> 
-          <input type="date" name="celular" id="celular" class="form-control form-control-sm" Readonly/>
+          <input type="date" name="celular" id="Modalcelular" class="form-control form-control-sm" Readonly/>
         </div>
       </div> 
       <div class="form-row">
@@ -102,7 +102,7 @@
 
         </div>
       </div> 
-      <input type="hidden" name="codigo" id="codigo" class="form-control form-control-sm" Readonly/>
+      <input type="hidden" name="codigo" id="Modalcodigo" class="form-control form-control-sm" Readonly/>
 
 
 
@@ -144,7 +144,7 @@
             <label>Nome</label>  
             <input type="text" name="nome" id="nome" class="form-control " />
             <br />
-            <label for="nome">CPF</label>  
+            <label>CPF</label>  
 
             <input type="text" name="cpf" id="cpf" class="form-control is-valid" />
             <div class="invalid-feedback">
