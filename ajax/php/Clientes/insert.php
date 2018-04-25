@@ -11,7 +11,8 @@ $codigo = $_POST["codigo"];
 $vetor = NULL;
 
 
-  if($codigo>0){ // se o produto ja existir, sera executado uma query de alterar o produto
+  if($codigo>0){
+  // se o produto ja existir, sera executado uma query de alterar o produto
    $query = "  
    UPDATE cliente  
    SET Nome='$nome',   
