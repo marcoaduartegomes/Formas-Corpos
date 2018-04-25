@@ -68,31 +68,31 @@
 
 
       <label>Nomes</label>  
-      <input type="text" name="nome" id="Modalnome" class="form-control form-control-sm" Readonly/>
+      <input type="text" name="nome" id="Fichanome" class="form-control form-control-sm" Readonly/>
 
       <label>CPF</label>  
 
-      <input type="text" name="cpf" id="Modalcpf" class="form-control form-control-sm" Readonly/>      
+      <input type="text" name="cpf" id="Fichacpf" class="form-control form-control-sm" Readonly/>      
       <label ">Email</label>  
-      <input type="email" name="email" id="Modalemail" class="form-control form-control-sm" Readonly/>
+      <input type="email" name="email" id="Fichaemail" class="form-control form-control-sm" Readonly/>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>Telefone</label>
-          <input type="text" name="telefone" id="Modaltelefone" class="form-control form-control-sm" Readonly/>
+          <input type="text" name="telefone" id="Fichatelefone" class="form-control form-control-sm" Readonly/>
         </div>
         <div class="form-group col-md-6">
           <label>Celular</label> 
-          <input type="text" name="celular" id="Modalcelular" class="form-control form-control-sm" Readonly/>
+          <input type="text" name="celular" id="Fichacelular" class="form-control form-control-sm" Readonly/>
         </div>
       </div> 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>Ultima Consulta</label>
-          <input type="date" name="telefone" id="Modaltelefone" class="form-control form-control-sm" Readonly/>
+          <input type="date" name="telefone" id="FichaUltimaConsulta" class="form-control form-control-sm" Readonly/>
         </div>
         <div class="form-group col-md-6">
           <label>Proxima Consulta</label> 
-          <input type="date" name="celular" id="Modalcelular" class="form-control form-control-sm" Readonly/>
+          <input type="datetime" name="celular" id="FichaProximaConsulta" class="form-control form-control-sm" Readonly/>
         </div>
       </div> 
       <div class="form-row">
@@ -102,7 +102,7 @@
 
         </div>
       </div> 
-      <input type="hidden" name="codigo" id="Modalcodigo" class="form-control form-control-sm" Readonly/>
+      <input type="hidden" name="codigo" id="Fichacodigo" class="form-control form-control-sm" Readonly/>
 
 
 

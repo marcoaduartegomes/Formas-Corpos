@@ -257,8 +257,6 @@ $(document).ready(function(){
 
 $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
 	cod_produto = $(this).attr("value"); 	
-
-
 	$.ajax({  
 		url:"php/Clientes/fetch.php",  
 		method:"POST",  
@@ -266,19 +264,21 @@ $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.ph
 		dataType:"json",   
 		beforeSend:function(data){  
 			$('#batata').val("Inserir");  
-
+			
 
 		},
 		success:function(data){  
 			
 			valorAntigo = data.CPF;
-			
-			$('#Modalnome').val(data.Nome); 
-			$('#Modalcpf').val(data.CPF); 
-			$('#Modaltelefone').val(data.Telefone);
-			$('#Modalcelular').val(data.Celular); 
-			$('#Modalemail').val(data.email);
-			$('#Modalcodigo').val(data.codigo); 
+		
+			$('#Fichanome').val(data.Nome); 
+			$('#Fichacpf').val(data.cpf); 
+			$('#Fichatelefone').val(data.Telefone);
+			$('#Fichacelular').val(data.Celular); 
+			$('#Fichaemail').val(data.email);
+			$('#Fichacodigo').val(data.codigo);
+			$('#FichaProximaConsulta').val(data.dataFim);
+
 		}  
 	});
 
