@@ -1,6 +1,9 @@
 var table;
 $(document).ready(function() {
 // Setup - add a text input to each footer cell
+
+document.getElementById('titulo-pagina').innerHTML="Clientes";
+
 $('#tabela-Cliente thead tr#pesquisar th').each( function () {
 	var title = $(this).text();
 	if (title == 'Nome') {
