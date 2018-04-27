@@ -12,10 +12,11 @@
   <script src="jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"> 
-  <link rel="stylesheet" type="text/css" href="css/Clientes.css"> 
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+  
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
-
+  
+  <link rel="stylesheet" type="text/css" href="css/Clientes.css"> 
   <!-- Bootstrap-->
   
 
@@ -35,8 +36,8 @@
 
    <div class="row">
 
-    <div class="col-7">
-      <table  id="tabela-Cliente" class="table table-bordered" width="100%">
+    <div style="margin:auto auto;" class="col-11">
+      <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>
           <tr>
@@ -44,7 +45,7 @@
             <th>CPF</th>
 
             <th>E-Mail</th>
-            <th width="20%" >Operações</th>
+            <th width="20%" border="none"></th>
 
           </tr>
           <tr id="pesquisar">
@@ -52,7 +53,7 @@
             <th>CPF</th>
 
             <th>E-Mail</th>
-            <th width="20%" >Operações</th>
+            <th width="auto"  border="none"></th>
 
           </tr>
         </thead>
@@ -62,60 +63,6 @@
 
         </tbody>
       </table>
-    </div>
-    <div class="col-5">
-
-
-      <label>Nomes</label>  
-      <input type="text" name="nome" id="Fichanome" class="form-control form-control-sm" Readonly/>
-
-      <label>CPF</label>  
-
-      <input type="text" name="cpf" id="Fichacpf" class="form-control form-control-sm" Readonly/>      
-      <label ">Email</label>  
-      <input type="email" name="email" id="Fichaemail" class="form-control form-control-sm" Readonly/>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Telefone</label>
-          <input type="text" name="telefone" id="Fichatelefone" class="form-control form-control-sm" Readonly/>
-        </div>
-        <div class="form-group col-md-6">
-          <label>Celular</label> 
-          <input type="text" name="celular" id="Fichacelular" class="form-control form-control-sm" Readonly/>
-        </div>
-      </div> 
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Ultima Consulta</label>
-          <input type="date" name="telefone" id="FichaUltimaConsulta" class="form-control form-control-sm" Readonly/>
-        </div>
-        <div class="form-group col-md-6">
-          <label>Proxima Consulta</label> 
-          <input type="datetime" name="celular" id="FichaProximaConsulta" class="form-control form-control-sm" Readonly/>
-        </div>
-      </div> 
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Consultas</label>
-
-
-        </div>
-      </div> 
-      <input type="hidden" name="codigo" id="Fichacodigo" class="form-control form-control-sm" Readonly/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   </div>
 
@@ -127,7 +74,62 @@
   <script src="js/personal.js"></script>
   <script src="js/clientes.js"></script>
 </div>
-<div class="modal fade" data-backdrop="static" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModallLabel" aria-hidden="true">
+
+<div class="modal fade" id="fichaClienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModallLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> Ficha do Cliente </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <label>Nomes</label>  
+          <input type="text" name="nome" id="Fichanome" class="form-control form-control-sm" Readonly/>
+
+          <label>CPF</label>  
+
+          <input type="text" name="cpf" id="Fichacpf" class="form-control form-control-sm" Readonly/>      
+          <label ">Email</label>  
+          <input type="email" name="email" id="Fichaemail" class="form-control form-control-sm" Readonly/>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Telefone</label>
+              <input type="text" name="telefone" id="Fichatelefone" class="form-control form-control-sm" Readonly/>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Celular</label> 
+              <input type="text" name="celular" id="Fichacelular" class="form-control form-control-sm" Readonly/>
+            </div>
+          </div> 
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Ultima Consulta</label>
+              <input type="date" name="telefone" id="FichaUltimaConsulta" class="form-control form-control-sm" Readonly/>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Proxima Consulta</label> 
+              <input type="datetime" name="celular" id="FichaProximaConsulta" class="form-control form-control-sm" Readonly/>
+            </div>
+          </div> 
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Consultas</label>
+
+
+            </div>
+          </div> 
+          <input type="hidden" name="codigo" id="Fichacodigo" class="form-control form-control-sm" Readonly/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModallLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">

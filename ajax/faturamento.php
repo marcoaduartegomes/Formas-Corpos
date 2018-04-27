@@ -13,9 +13,8 @@
     <script src="jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"> </script>
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     
     <!-- Bootstrap-->
@@ -42,7 +41,7 @@
         <div id="tabela-faturamento" >
           
           <center>
-            <table id="faturamento-por-servico" class="compact stripe hover order-column" style="border:1px solid rgba(0,0,0,0.3);">
+            <table id="faturamento-por-servico" class="compact stripe hover order-column">
               <thead>
                 <tr>
                   <td> Serviço </td>
@@ -80,12 +79,6 @@
                   <td id="serv-4-nome"> Buzinaço </td>
                   <td> R$ 85,00 </td>
                   <td id="serv-4-preco"> R$ 170,00 </td>
-                </tr>
-
-                <tr id="serv-5">
-                  <td id="serv-5-nome"> Se Marco der spoiler eu largo a Serra </td>
-                  <td> R$ 85,00 </td>
-                  <td id="serv-5-preco"> R$ 1000,00 </td>
                 </tr>
                 
               </tbody>

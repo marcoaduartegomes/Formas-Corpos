@@ -7,13 +7,13 @@ document.getElementById('titulo-pagina').innerHTML="Clientes";
 $('#tabela-Cliente thead tr#pesquisar th').each( function () {
 	var title = $(this).text();
 	if (title == 'Nome') {
-		$(this).html( '<input type="text" size="9" placeholder="'+title+'" />' );       
+		$(this).html( '<input class="pesquisar-tabela" type="text" size="9" placeholder=" '+title+'" />' );       
 	}
 	if (title == 'CPF') {
-		$(this).html( '<input type="text" size="5" placeholder="'+title+'" />' );       
+		$(this).html( '<input class="pesquisar-tabela type="text" size="5" placeholder=" '+title+'" />' );       
 	}
 	if (title == 'E-Mail') {
-		$(this).html( '<input type="text"  placeholder="'+title+'" />' );       
+		$(this).html( '<input class="pesquisar-tabela type="text" placeholder=" '+title+'" />' );       
 	}
 	
 	if (title == 'Operações') {
@@ -58,7 +58,7 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' >Alterar</button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' >Deletar</button><button class='btn btn-primary ' type='button' id='botFicha' value='"+data+"'>Ficha</button>" ;
+                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-danger' 'type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' > <img style='height:20px;' src='img/deletar-dados.png'> </button><button style='margin-left:5px;' class='btn btn-primary '  data-toggle='modal' data-target='#fichaClienteModal'  type='button' id='botFicha' value='"+data+"'> <img style='height:20px;' src='img/ficha-cliente.png'> </button>" ;
                 },
                 "targets": 3,
                 "orderable": false
@@ -79,7 +79,7 @@ $("#tabela-Cliente thead input").on( 'keyup change', function () {
 	.draw();
 } );
 
-$("div.toolbar").html("<button style='position:fixed;bottom:0;left: 85%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#clienteModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
+$("div.toolbar").html("<button style='height:60px;position:fixed;bottom:10px;left: 85%; border-radius:50%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#clienteModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
 } );
 
 function stopPropagation(evt) {

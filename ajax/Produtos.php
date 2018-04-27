@@ -46,13 +46,13 @@ require_once __DIR__.'/header.php';
         <th>Nome do Produto</th>
         <th>Quantidade</th>
         <th>Hora(ultima modificação)</th>
-        <th>Operações</th>
+        <th border="none"></th>
       </tr>
       <tr id="pesquisar">
         <th>Nome do Produto</th>
         <th>Quantidade</th>
         <th>Hora(ultima modificação)</th>
-        <th>Operações</th>
+        <th border="none">Operações</th>
       </tr>
     </thead>
     

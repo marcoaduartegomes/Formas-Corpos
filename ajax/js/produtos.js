@@ -8,13 +8,13 @@ $(document).ready(function() {
     $('#tabela-Produto thead tr#pesquisar th').each( function () {
        var title = $(this).text();
         if (title == 'Quantidade') {
-            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+            $(this).html( '<input class="pesquisar-tabela" type="text" placeholder=" '+title+'" />' );       
         }
         if (title == 'Nome do Produto') {
-            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+            $(this).html( '<input class="pesquisar-tabela" type="text" placeholder=" '+title+'" />' );       
         }
         if (title == 'Hora(ultima modificação)') {
-            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );       
+            $(this).html( '<input class="pesquisar-tabela" type="text" placeholder=" '+title+'" />' );       
         }
         if (title == 'Operações') {
             $(this).html( '' );       
@@ -55,7 +55,7 @@ $(document).ready(function() {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' >Alterar</button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta' >Deletar</button>" ;
+                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta'> <img style='height:20px;' src='img/deletar-dados.png'> </button>" ;
                 },
                 "targets": 3,
                 "orderable": false
@@ -73,7 +73,7 @@ $(document).ready(function() {
             .draw();
     } );
 
-	$("div.toolbar").html("<button style='position:fixed;bottom:0;left: 85%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#produtoModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
+	$("div.toolbar").html("<button style='height:60px;position:fixed;bottom:10px;left: 85%; border-radius:50%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#produtoModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
 } );
 
 function stopPropagation(evt) {

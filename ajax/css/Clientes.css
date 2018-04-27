@@ -1,3 +1,30 @@
+.pesquisar-tabela {
+    padding: 5px;
+    border: #6e3596 groove 2px; 
+    border-radius: 5px;
+    width: 100%;
+    transition: box-shadow 0.15s linear 0s,background-color 0.15s linear 0s;
+}
+
+.pesquisar-tabela:focus{
+    box-shadow:2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
+    background-color: rgb(247, 239, 247);
+}
+
+#botAdicionar{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.65);
+    transition: box-shadow 0.10s linear 0s, margin 0.1s linear 0s;
+}
+
+#botAdicionar:hover{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);
+    margin-bottom: 7px;
+}
+
+#botAdicionar:active{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);  
+}
+ 
  th, td { white-space: nowrap;
 max-width: 200px;
     overflow: hidden;
