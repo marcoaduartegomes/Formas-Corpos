@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Formas&Corpos</title>
+	<title>Formas &#38; Corpos</title>
 
 	<!-- bootstrap - link cdn -->
 	<link rel="icon" href="imagens/favicon.png">

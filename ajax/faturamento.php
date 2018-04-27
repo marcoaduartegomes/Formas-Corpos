@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Formas e Corpos</title>
+    <title>Formas &#38; Corpos</title>
     
     <link rel="icon" href="imagens/favicon.png">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -42,7 +42,7 @@
         <div id="tabela-faturamento" >
           
           <center>
-            <table id="faturamento-por-servico" class="compact stripe hover order-column row-border" style="border:1px solid rgba(0,0,0,0.3);">
+            <table id="faturamento-por-servico" class="compact stripe hover order-column" style="border:1px solid rgba(0,0,0,0.3);">
               <thead>
                 <tr>
                   <td> Serviço </td>
