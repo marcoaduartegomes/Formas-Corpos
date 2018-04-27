@@ -1,5 +1,20 @@
 $(document).ready( function () {
-    $('#faturamento-por-servico').DataTable();
+    $('#faturamento-por-servico').DataTable({
+            orderCellsTop: true,
+            language: {
+                search: "Procurar",
+                "info": "Mostrando _PAGE_ de _PAGES_",
+                searchPlaceholder: "Procurar serviços...",
+                "paginate": {
+                    "first":      "Primeiro",
+                    "last":       "Ultimo",
+                    "next":       "Proximo",
+                    "previous":   "Anterior"
+                },
+                "lengthMenu":     "Mostrar _MENU_",
+            },
+            
+    });
 
     document.getElementById('titulo-pagina').innerHTML="Faturamento";
 

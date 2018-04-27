@@ -31,8 +31,7 @@
  ?>
  <!-- Button trigger modal -->
  <!-- Corpo do sistema -->
- <div id="corpo-principal" style="font-size: 13px;">
-
+ <div id="corpo-principal" style="font-size: 13px;width:95%;margin-left:3%;">
 
    <div class="row">
 
@@ -119,8 +118,6 @@
 
     </div>
   </div>
-
-
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
