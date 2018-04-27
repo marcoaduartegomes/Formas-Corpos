@@ -24,6 +24,10 @@
 #botAdicionar:active{
     box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);  
 }
+
+.modal-header{
+    background-color: #9370DB; 
+}
  
  th, td { white-space: nowrap;
 max-width: 200px;
