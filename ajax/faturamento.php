@@ -31,7 +31,7 @@
 
   </head>
 
-  <body onload="draw()">
+  <body>
     <header>
       <?php
       include 'header.php';
@@ -52,28 +52,40 @@
               </thead>
 
               <tbody>
-                <tr>
-                  <td> Maquiagem </td>
+                <tr id="serv-0">
+                  <td id="serv-0-nome"> Maquiagem </td>
                   <td> R$ 25,00 </td>
-                  <td> R$ 250,00 </td>
+                  <td id="serv-0-preco"> R$ 250,00 </td>
                 </tr>
 
-                <tr>
-                  <td> Depilação </td>
+                <tr id="serv-1">
+                  <td id="serv-1-nome"> Depilação </td>
                   <td> R$ 35,00 </td>
-                  <td> R$ 700,00 </td>
+                  <td id="serv-1-preco"> R$ 700,00 </td>
                 </tr>
 
-                <tr>
-                  <td> Cabelo </td>
+                <tr id="serv-2">
+                  <td id="serv-2-nome"> Cabelo </td>
                   <td> R$ 15,00 </td>
-                  <td> R$ 300,00 </td>
+                  <td id="serv-2-preco"> R$ 300,00 </td>
                 </tr>
 
-                <tr>
-                  <td> Podologia </td>
+                <tr id="serv-3">
+                  <td id="serv-3-nome"> Podologia </td>
                   <td> R$ 85,00 </td>
-                  <td> R$ 370,00 </td>
+                  <td id="serv-3-preco"> R$ 370,00 </td>
+                </tr>
+
+                <tr id="serv-4">
+                  <td id="serv-4-nome"> Buzinaço </td>
+                  <td> R$ 85,00 </td>
+                  <td id="serv-4-preco"> R$ 170,00 </td>
+                </tr>
+
+                <tr id="serv-5">
+                  <td id="serv-5-nome"> Se Marco der spoiler eu largo a Serra </td>
+                  <td> R$ 85,00 </td>
+                  <td id="serv-5-preco"> R$ 1000,00 </td>
                 </tr>
                 
               </tbody>
