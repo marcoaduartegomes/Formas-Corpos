@@ -76,12 +76,12 @@
 </div>
 
 <div class="modal fade" id="fichaClienteModal" tabindex="-1" role="dialog" aria-labelledby="clienteModallLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title"> Ficha do Cliente </h4>
+          <h5 class="modal-title" style="color:white;"> Ficha do Cliente </h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
@@ -133,7 +133,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="clienteModallLabel">Modal title</h5>
+          <h5 class="modal-title" id="clienteModallLabel" style="color:white;"> Dados do Cliente </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -177,7 +177,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="clienteModalDeletalLabel">Deseja realmente excluir este cliente?</h5>
+          <h5 class="modal-title" id="clienteModalDeletalLabel" style="color:white;">Deseja realmente excluir este cliente?</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

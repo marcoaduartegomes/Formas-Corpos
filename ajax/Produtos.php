@@ -65,10 +65,10 @@ require_once __DIR__.'/header.php';
 </div>
 
  <div class="modal fade" id="produtoModal" tabindex="-1" role="dialog" aria-labelledby="produtoModallLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="produtoModallLabel">Modal title</h5>
+                      <h5 class="modal-title" id="produtoModallLabel" style="color:white;"> Dados do Produto </h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -102,7 +102,7 @@ require_once __DIR__.'/header.php';
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="produtoModalDeletalLabel">Deseja realmente excluir este produto?</h5>
+                      <h5 class="modal-title" id="produtoModalDeletalLabel" style="color:white;">Deseja realmente excluir este produto?</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
