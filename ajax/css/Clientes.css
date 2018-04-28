@@ -38,6 +38,15 @@ body{
     background-color: #9370DB; 
 }
 
+.labelFicha{
+    font-family: 'Verdana', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding: 5px; 
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }

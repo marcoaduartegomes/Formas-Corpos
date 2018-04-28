@@ -87,37 +87,37 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-          <label>Nomes</label>  
+          <label class="labelFicha">Nomes</label>  
           <input type="text" name="nome" id="Fichanome" class="form-control form-control-sm" Readonly/>
 
-          <label>CPF</label>  
+          <label class="labelFicha">CPF</label>  
 
           <input type="text" name="cpf" id="Fichacpf" class="form-control form-control-sm" Readonly/>      
-          <label ">Email</label>  
+          <label class="labelFicha">Email</label>  
           <input type="email" name="email" id="Fichaemail" class="form-control form-control-sm" Readonly/>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label>Telefone</label>
+              <label class="labelFicha">Telefone</label>
               <input type="text" name="telefone" id="Fichatelefone" class="form-control form-control-sm" Readonly/>
             </div>
             <div class="form-group col-md-6">
-              <label>Celular</label> 
+              <label class="labelFicha">Celular</label> 
               <input type="text" name="celular" id="Fichacelular" class="form-control form-control-sm" Readonly/>
             </div>
           </div> 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label>Ultima Consulta</label>
+              <label class="labelFicha">Ultima Consulta</label>
               <input type="date" name="telefone" id="FichaUltimaConsulta" class="form-control form-control-sm" Readonly/>
             </div>
             <div class="form-group col-md-6">
-              <label>Proxima Consulta</label> 
+              <label class="labelFicha">Proxima Consulta</label> 
               <input type="datetime" name="celular" id="FichaProximaConsulta" class="form-control form-control-sm" Readonly/>
             </div>
           </div> 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label>Consultas</label>
+              <label class="labelFicha">Consultas</label>
 
 
             </div>
@@ -150,7 +150,7 @@
               CPF INVALIDO. Insira novamente ou confira os dados.
             </div>
             <br />
-            <label ">Email</label>  
+            <label>Email</label>  
             <input type="email" name="email" id="email" class="form-control " />
             <br />
             <label>Telefone</label>  
