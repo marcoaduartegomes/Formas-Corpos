@@ -36,7 +36,7 @@
 
    <div class="row">
 
-    <div style="margin:auto auto;" class="col-11">
+    <div style="width: 70%;margin: auto;">
       <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>

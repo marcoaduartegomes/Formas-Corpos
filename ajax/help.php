@@ -39,14 +39,9 @@
                 <h4> Consultas </h4>
             </div>
 
-            <div class="topicos-ajuda" id="clientes" onClick="fazerRequisicao('help_Clientes.php','tela-ajuda')">
-                <img src="img/icone-clientes.png">
-                <h4> Clientes </h4>
-            </div>
-
-            <div class="topicos-ajuda" id="faturamentos" onClick="fazerRequisicao('help_Faturamentos.php','tela-ajuda')">
-                <img src="img/icone-financeiro.png">
-                <h4> Faturamentos </h4>
+            <div class="topicos-ajuda" id="servicos" onClick="fazerRequisicao('help_Servicos.php','tela-ajuda')">
+                <img src="img/icone-servicos.png">
+                <h4> Serviços </h4>
             </div>
 
             <div class="topicos-ajuda" id="produtos" onClick="fazerRequisicao('help_Produtos.php','tela-ajuda')">
@@ -54,14 +49,19 @@
                 <h4> Produtos </h4>
             </div>
 
-            <div class="topicos-ajuda" id="servicos" onClick="fazerRequisicao('help_Servicos.php','tela-ajuda')">
-                <img src="img/icone-servicos.png">
-                <h4> Serviços </h4>
+            <div class="topicos-ajuda" id="clientes" onClick="fazerRequisicao('help_Clientes.php','tela-ajuda')">
+                <img src="img/icone-clientes.png">
+                <h4> Clientes </h4>
             </div>
             
             <div class="topicos-ajuda" id="calendario" onClick="fazerRequisicao('help_Calendario.php','tela-ajuda')">
                 <img src="img/icone-calendario.png">
                 <h4> Calendário </h4>
+            </div>
+
+            <div class="topicos-ajuda" id="faturamentos" onClick="fazerRequisicao('help_Faturamentos.php','tela-ajuda')">
+                <img src="img/icone-financeiro.png">
+                <h4> Faturamentos </h4>
             </div>
 
         </div>

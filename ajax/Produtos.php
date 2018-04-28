@@ -37,7 +37,7 @@ require_once __DIR__.'/header.php';
 
 <div id="corpo-principal" class="fadeIn">
 
-<div style="width: 70%;margin: auto; margin-bottom:20px;">
+<div style="width: 70%;margin: auto;">
 
 
   <table  id="tabela-Produto" class="table stripe table-bordered table-hover" >
