@@ -12,7 +12,16 @@
 	<script src="jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
 
+        .fadeIn{
+            animation: fadeIn 0.15s ease-in-out;
+        }
+    </style>
 
 </head>
 
@@ -21,21 +30,20 @@
 	<!-- Static navbar -->
 	<?php require_once __DIR__.'/header.php'; ?>
 <!-- Corpo do sistema -->
-        <div id="corpo-principal">
-<div id="corpo-index">
-    <div id="menu-index">
-        <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Consultas',1)">
-        <img src="img/icone-servicos.png" class="icone-index" id="servicos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Serviços',1)">
-        <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="window.location.href='Produtos.php'">
-        <br>
-        <img src="img/icone-clientes.png" class="icone-index" id="clientes" onclick="window.location.href='Clientes.php'">
-        <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Calendário',1)">
-        <img src="img/icone-financeiro.png" class="icone-index" id="financeiro" onclick="window.location.href='faturamento.php'">
-    </div>
+        <div id="corpo-principal" class="fadeIn">
+            <div id="corpo-index">
+                <div id="menu-index">
+                    <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Consultas',1)">
+                    <img src="img/icone-servicos.png" class="icone-index" id="servicos" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Serviços',1)">
+                    <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="window.location.href='Produtos.php'">
+                    <br>
+                    <img src="img/icone-clientes.png" class="icone-index" id="clientes" onclick="window.location.href='Clientes.php'">
+                    <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Calendário',1)">
+                    <img src="img/icone-financeiro.png" class="icone-index" id="financeiro" onclick="window.location.href='faturamento.php'">
+                </div>
 
-</div>
+            </div>
         </div> 
-	
 
 </body>
 </html>

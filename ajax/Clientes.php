@@ -32,7 +32,7 @@
  ?>
  <!-- Button trigger modal -->
  <!-- Corpo do sistema -->
- <div id="corpo-principal" style="font-size: 13px;width:95%;margin-left:3%;">
+ <div id="corpo-principal" class="fadeIn" style="font-size: 13px;width:95%;margin-left:3%;">
 
    <div class="row">
 
@@ -53,7 +53,7 @@
             <th>CPF</th>
 
             <th>E-Mail</th>
-            <th width="auto"  border="none"></th>
+            <th width="10%"  border="none"></th>
 
           </tr>
         </thead>

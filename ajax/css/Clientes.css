@@ -1,3 +1,8 @@
+body{
+    font-family: 'Verdana', Arial, sans-serif;
+    font-size: 18px;
+}
+
 .pesquisar-tabela {
     padding: 5px;
     border: #6e3596 groove 2px; 
@@ -25,8 +30,21 @@
     box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);  
 }
 
+#tabela-Cliente-Body td{
+    vertical-align: middle;
+}
+
 .modal-header{
     background-color: #9370DB; 
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fadeIn{
+    animation: fadeIn 0.5s linear;
 }
  
  th, td { white-space: nowrap;

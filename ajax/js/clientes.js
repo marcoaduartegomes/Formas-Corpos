@@ -21,7 +21,7 @@ $('#tabela-Cliente thead tr#pesquisar th').each( function () {
 	}
     } ); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
 
-
+	
 
 table = $('#tabela-Cliente').removeAttr('width').DataTable( {
 	
@@ -31,6 +31,9 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
 	language: {
 		search: "Procurar",
 		"info": "Mostrando Pagina _PAGE_ de _PAGES_",
+		"infoEmpty":"Mostrando de 0 a 0 de 0 entradas",
+		"infoFiltered":   "(filtrado de _MAX_ entradas no total)",
+		"zeroRecords":"Não encontrado",
 		searchPlaceholder: "Procurar clientes...",
 		"paginate": {
 			"first":      "Primeiro",
@@ -58,7 +61,7 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-danger' 'type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' > <img style='height:20px;' src='img/deletar-dados.png'> </button><button style='margin-left:5px;' class='btn btn-primary '  data-toggle='modal' data-target='#fichaClienteModal'  type='button' id='botFicha' value='"+data+"'> <img style='height:20px;' src='img/ficha-cliente.png'> </button>" ;
+                	return "<center> <button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-warning'  data-toggle='modal' data-target='#fichaClienteModal'  type='button' id='botFicha' value='"+data+"'> <img style='height:20px;' src='img/ficha-cliente.png'> </button>  <button class='btn btn-danger' 'type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' > <img style='height:20px;' src='img/deletar-dados.png'> </button> </center>" ;
                 },
                 "targets": 3,
                 "orderable": false

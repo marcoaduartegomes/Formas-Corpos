@@ -1,4 +1,7 @@
 $(document).ready( function () {
+
+    document.getElementById('titulo-pagina').innerHTML="Faturamentos";
+
     $('#faturamento-por-servico').DataTable({
             orderCellsTop: true,
             language: {

@@ -94,3 +94,8 @@ body,html {
     margin-left: 10px;
     height: 30px;
 }
+
+.modal-header{
+    background-color:#6e3596;
+    color:white;
+}

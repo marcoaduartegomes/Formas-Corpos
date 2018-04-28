@@ -28,6 +28,9 @@ $(document).ready(function() {
 		language: {
 			search: "Procurar",
 			"info": "Mostrando Pagina _PAGE_ de _PAGES_",
+			"infoEmpty":"Mostrando de 0 a 0 de 0 entradas",
+			"infoFiltered":   "(filtrado de _MAX_ entradas no total)",
+			"zeroRecords":"Não encontrado",
 			searchPlaceholder: "Procurar produtos...",
 			"paginate": {
 				"first":      "Primeiro",
@@ -55,7 +58,7 @@ $(document).ready(function() {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta'> <img style='height:20px;' src='img/deletar-dados.png'> </button>" ;
+                	return "<center> <button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#produtoModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-danger' type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#produtoModalDeleta'> <img style='height:20px;' src='img/deletar-dados.png'> </button> </center>" ;
                 },
                 "targets": 3,
                 "orderable": false

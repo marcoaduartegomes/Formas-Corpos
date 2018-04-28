@@ -11,7 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <link rel="stylesheet" type="text/css" href="css/produtos.css"> 
+ <link rel="stylesheet" type="text/css" href="css/produtos.css">
+ 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"> 
      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
 
@@ -34,12 +35,12 @@ require_once __DIR__.'/header.php';
  ?>
  <!-- Button trigger modal -->
 
-<div id="corpo-principal">
+<div id="corpo-principal" class="fadeIn">
 
-<div style="width: 70%;margin: auto;">
+<div style="width: 70%;margin: auto; margin-bottom:20px;">
 
 
-  <table  id="tabela-Produto" class="table table-bordered table-hover" >
+  <table  id="tabela-Produto" class="table stripe table-bordered table-hover" >
     
     <thead>
       <tr>
@@ -76,7 +77,7 @@ require_once __DIR__.'/header.php';
                     <div class="modal-body">
                       <form method="post" id="formularioEdit" name="formularioEdit" >  
                           <label for="nome">Nome</label>  
-                          <input type="text" name="nome" id="nome" class="form-control is-valid" required />
+                          <input type="text" name="nome" id="nome" class="form-control is-valid" required/>
                           <div class="invalid-feedback">
                             Este Nome ja existe. Por favor escolha outro.
                           </div>  

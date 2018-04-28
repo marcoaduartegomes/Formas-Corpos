@@ -37,7 +37,7 @@
       ?>
     </header>
 
-      <div id="container-faturamento">
+      <div id="container-faturamento" class="fadeIn">
         <div id="tabela-faturamento" >
           
           <center>

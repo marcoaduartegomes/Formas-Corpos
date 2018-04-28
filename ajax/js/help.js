@@ -1,8 +1,12 @@
 var httpRequest;
 
+$(document).ready(function(){
+    document.getElementById('titulo-pagina').innerHTML="Ajuda";
+});
+
 function fazerRequisicao(url,destino){
 
-    document.getElementById(destino).innerHTML = '<center> <img src="ajax/loader.gif"/> </center>';
+    document.getElementById(destino).innerHTML = '<center> <img src="img/loader1.gif"/> </center>';
 
     if(window.XMLHttpRequest){
         httpRequest = new XMLHttpRequest();
