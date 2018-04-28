@@ -54,9 +54,14 @@
                 <h4> Produtos </h4>
             </div>
 
-            <div class="topicos-ajuda" id="modificacoes" onClick="fazerRequisicao('help_Modificacoes.php','tela-ajuda')">
-                <img src="img/editar-dados.png">
-                <h4> Modificações </h4>
+            <div class="topicos-ajuda" id="servicos" onClick="fazerRequisicao('help_Servicos.php','tela-ajuda')">
+                <img src="img/icone-servicos.png">
+                <h4> Serviços </h4>
+            </div>
+            
+            <div class="topicos-ajuda" id="calendario" onClick="fazerRequisicao('help_Calendario.php','tela-ajuda')">
+                <img src="img/icone-calendario.png">
+                <h4> Calendário </h4>
             </div>
 
         </div>
