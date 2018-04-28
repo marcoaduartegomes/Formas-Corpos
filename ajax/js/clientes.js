@@ -139,7 +139,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 			valorAntigo = data.CPF;
 			
 			$('#nome').val(data.Nome); 
-			$('#cpf').val(data.CPF); 
+			$('#cpf').val(data.cpf); 
 			$('#telefone').val(data.Telefone);
 			$('#celular').val(data.Celular); 
 			$('#email').val(data.email);

@@ -31,31 +31,31 @@
     <!-- Static navbar -->
     <?php require_once __DIR__.'/header.php'; ?>
 
-    <div class="container">
+    <div id="corpo-principal">
 
         <div id="opcoes-ajuda">
             <div class="topicos-ajuda" id="consultas" onClick="fazerRequisicao('help_Consultas.php','tela-ajuda')">
-                <img src="teste.jpg">
+                <img src="img/icone-consulta.png">
                 <h4> Consultas </h4>
             </div>
 
             <div class="topicos-ajuda" id="clientes" onClick="fazerRequisicao('help_Clientes.php','tela-ajuda')">
-                <img src="teste.jpg">
+                <img src="img/icone-clientes.png">
                 <h4> Clientes </h4>
             </div>
 
             <div class="topicos-ajuda" id="faturamentos" onClick="fazerRequisicao('help_Faturamentos.php','tela-ajuda')">
-                <img src="teste.jpg">
+                <img src="img/icone-financeiro.png">
                 <h4> Faturamentos </h4>
             </div>
 
             <div class="topicos-ajuda" id="produtos" onClick="fazerRequisicao('help_Produtos.php','tela-ajuda')">
-                <img src="teste.jpg">
+                <img src="img/icone-produtos.png">
                 <h4> Produtos </h4>
             </div>
 
             <div class="topicos-ajuda" id="modificacoes" onClick="fazerRequisicao('help_Modificacoes.php','tela-ajuda')">
-                <img src="teste.jpg">
+                <img src="img/editar-dados.png">
                 <h4> Modificações </h4>
             </div>
 
@@ -69,7 +69,6 @@
 
     </div> <!-- Container -->
 
-  <?php require_once __DIR__.'/footer.php'; ?>
 
   </body>
 </html>

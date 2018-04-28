@@ -1,5 +1,5 @@
 <div>
-    <img src="favicon.png'" class="img-ajuda">
+    <img src="favicon.png" class="img-ajuda">
     <h2> Clientes </h2>
     <p>
         • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;

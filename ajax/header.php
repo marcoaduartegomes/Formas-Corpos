@@ -34,10 +34,10 @@
 
           <div id="caixa-menu">
             <center>
-              <img id="botao-home" src='img/home_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/home_menu-clicked.png'" onmouseout="this.src='img/home_menu.png'"onclick="window.location.href='index.php'"/>
+              <img id="botao-home" src='img/home_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/home_menu-clicked.png'" onmouseout="this.src='img/home_menu.png'" onclick="window.location.href='index.php'"/>
               <img id="botao-contatos" src='img/contatos_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/contatos_menu-clicked.png'" onmouseout="this.src='img/contatos_menu.png'" data-toggle="modal" data-target="#modal-contatos"/>
               <img id="botao-notificacao" src='img/notification_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/notification_menu-clicked.png'" onmouseout="this.src='img/notification_menu.png'"/>
-              <img id="help" src='img/help_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/help_menu-clicked.png'" onmouseout="this.src='img/help_menu.png'" onClick="fazerRequisicao('help.html','corpo-principal','Ajuda',1)"/>
+              <img id="help" src='img/help_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/help_menu-clicked.png'" onmouseout="this.src='img/help_menu.png'" onclick="window.location.href='help.php'"/>
             </center>
           </div>
         </div>
