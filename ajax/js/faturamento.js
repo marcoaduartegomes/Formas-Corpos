@@ -61,7 +61,6 @@ function draw(){
         data: {
           labels: nomes ,
           datasets: [{
-            label: "Population (millions)",
             backgroundColor: cores,
             data: precos
             }]},
@@ -70,6 +69,11 @@ function draw(){
                 title: {
                   display: false,
                   text: 'Distribuição de ganho por serviços'
+                },
+                legend:{
+                    labels:{
+                        fontSize:15
+                    }
                 }
             }
         });
