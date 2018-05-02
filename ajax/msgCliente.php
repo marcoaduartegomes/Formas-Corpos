@@ -4,6 +4,6 @@
   $assunto = $_POST['assunto'];
   mail($email,$assunto,$mensagem,'From: teste.formas.gostosas@gmail.com');
 
-  include("Clientes.php");
+  header('Location: Clientes.php');
 
 ?>
