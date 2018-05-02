@@ -209,14 +209,22 @@
           </button>
         </div>
         <div class="modal-body">
-          <form method="post" id="formularioDeleta" name="formularioEdit" >
+          <form method="post" id="formularioMsg" name="formularioEmail" action="msgCliente.php">
+            <label class="labelFicha"> Email </label>  
+            <input type="email" name="email" id="Fichaemail2" class="form-control form-control-sm" Readonly/>
+
+            <label class="labelFicha"> Assunto </label>  
+            <input type="text" name="assunto" id="AssuntoEmail" class="form-control form-control-sm"/>
+
+            <label class="labelFicha"> Enviar Mensagem </label>
+            <textarea class="form-control" rows="5" id="mensagem" name="mensagem"></textarea>
 
 
-
-          </form>
+          
         </div>
         <div class="modal-footer">
-          <input type="button" name="botaoModalMsgEnvia" id="botaoModalMsgEnvia" value="Enviar" class="btn btn-success" />  
+          <button type="submit" name="botaoModalMsgEnvia" id="botaoModalMsgEnvia" value="Enviar" class="btn btn-success"> Enviar </button>
+          </form>
           <button type="button" class="btn btn-secondary" id="returnDeleta" data-dismiss="modal">Retornar</button>
         </div>
       </div>

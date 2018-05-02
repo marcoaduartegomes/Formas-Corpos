@@ -61,7 +61,7 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
                 //"<button class='btn btn-danger' type='button' id='123' value='"+arquivo+"' data-toggle='modal' data-target='#produtoModal' >Deletar</button>"
                 "render": function ( data, type, row ) {
                 	
-                	return "<center> <button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-warning'  data-toggle='modal' data-target='#fichaClienteModal'  type='button' id='botFicha' value='"+data+"'> <img style='height:20px;' src='img/ficha-cliente.png'> </button>  <button class='btn btn-danger' 'type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' > <img style='height:20px;' src='img/deletar-dados.png'> </button> </center>" ;
+                	return "<center> <button class='btn btn-success'  data-toggle='modal' data-target='#clienteModalMsg'  type='button' id='botMsg' value='"+data+"'> <img style='height:20px;' src='img/enviar-msg.png'> </button> <button class='btn btn-primary ' type='button' id='botAlterar' value='"+data+"' data-toggle='modal' data-target='#clienteModal' > <img style='height:20px;' src='img/editar-dados.png'> </button> <button class='btn btn-warning'  data-toggle='modal' data-target='#fichaClienteModal'  type='button' id='botFicha' value='"+data+"'> <img style='height:20px;' src='img/ficha-cliente.png'> </button>  <button class='btn btn-danger' 'type='button' id='botDeletar' value='"+data+"' data-toggle='modal' data-target='#clienteModalDeleta' > <img style='height:20px;' src='img/deletar-dados.png'> </button> </center>" ;
                 },
                 "targets": 3,
                 "orderable": false
@@ -155,7 +155,6 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 
 
 }); 
-
 
 
 $(document).on('click', '#botAdicionar', function(){  //Aletera os dados do formulario para ser criado um novo produto
@@ -284,6 +283,29 @@ $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.ph
 			$('#Fichaemail').val(data.email);
 			$('#Fichacodigo').val(data.codigo);
 			$('#FichaProximaConsulta').val(data.dataFim);
+
+		}  
+	});
+
+
+}); 
+
+
+$(document).on('click', '#botMsg', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
+	cod_produto = $(this).attr("value"); 	
+	$.ajax({  
+		url:"php/Clientes/fetch.php",  
+		method:"POST",  
+		data:{codigo:cod_produto}, 
+		dataType:"json",   
+		beforeSend:function(data){  
+			$('#batata').val("Inserir");  
+			
+
+		},
+		success:function(data){  
+			
+			$('#Fichaemail2').val(data.email);
 
 		}  
 	});
