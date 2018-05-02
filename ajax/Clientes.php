@@ -209,7 +209,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form method="post" id="formularioMsg" name="formularioEmail" action="msgCliente.php">
+          <form method="post" id="formularioMsg" name="formularioEmail" action="php/Clientes/msgCliente.php">
             <label class="labelFicha"> Email </label>  
             <input type="email" name="email" id="Fichaemail2" class="form-control form-control-sm" Readonly/>
 
