@@ -213,7 +213,7 @@
             <label class="labelFicha"> Email </label>  
             <input type="email" name="email" id="Fichaemail2" class="form-control form-control-sm" Readonly/>
 
-            <label class="labelFicha"> Assunto </label>  
+            <label class="labelFicha"> Assunto </label>
             <input type="text" name="assunto" id="AssuntoEmail" class="form-control form-control-sm"/>
 
             <label class="labelFicha"> Enviar Mensagem </label>
