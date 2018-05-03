@@ -9,7 +9,7 @@ require_once __DIR__.'/connect.php';
  	  $resultVerifica = mysqli_query($conn, $verificaConsulta);
  	  $rowcount = mysqli_num_rows($resultVerifica);
  	  if($rowcount>0){  
-      $query = "SELECT Celular,cliente.codigo,cpf,email,Nome,Telefone,dataFim from cliente inner join consulta on cliente.codigo = consulta.codCliente WHERE cliente.codigo = '".$_POST["codigo"]."' and dataFim = (Select max(dataFim) from consulta where cliente.codigo='".$_POST["codigo"]."')"; 
+      $query = "SELECT Celular,cliente.codigo,cpf,email,Nome,Telefone,dataFim FROM cliente INNER JOIN consulta ON cliente.codigo = consulta.codCliente WHERE cliente.codigo = '".$_POST["codigo"]."' AND dataFim = (SELECT min(dataFim) FROM consulta WHERE cliente.codigo='".$_POST["codigo"]."' AND dataFim > CURDATE())"; 
       }else{
 		$query = "SELECT Celular,cliente.codigo,cpf,email,Nome,Telefone from cliente WHERE codigo = '".$_POST["codigo"]."'"; 
 
