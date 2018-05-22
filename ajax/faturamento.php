@@ -41,6 +41,8 @@
         <div id="tabela-faturamento" >
           
           <center>
+            <input type ="datetime-local" id="data">
+            <button id="muda" value=grafico onclick="reloadTable()">uhm</button>
             <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>

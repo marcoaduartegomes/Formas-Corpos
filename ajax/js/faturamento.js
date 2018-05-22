@@ -35,8 +35,12 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
     ajax: {
             url: "php/Faturamentos/getDadoTabela.php",
             type: "POST",
-           
+            data: function ( d ) {
+                d.dia = document.getElementById("data").value;
+                
+            }, 
         },
+       
        
 
 
@@ -135,8 +139,8 @@ function draw(){
   }
 
 function reloadTable() {
-    limpar();
-    table.ajax.reload();
+    
+    table.ajax.reload();   
     
     draw();
    
