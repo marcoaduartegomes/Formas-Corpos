@@ -41,48 +41,24 @@
         <div id="tabela-faturamento" >
           
           <center>
-            <table id="faturamento-por-servico" class="compact stripe hover order-column">
-              <thead>
-                <tr>
-                  <td> Serviço </td>
-                  <td> Preço </td>
-                  <td> Montante </td>
-                </tr>
-              </thead>
+            <table  id="tabela-Cliente" class="table" width="100%">
 
-              <tbody>
-                <tr id="serv-0">
-                  <td id="serv-0-nome"> Maquiagem </td>
-                  <td> R$ 25,00 </td>
-                  <td id="serv-0-preco"> R$ 250,00 </td>
-                </tr>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
 
-                <tr id="serv-1">
-                  <td id="serv-1-nome"> Depilação </td>
-                  <td> R$ 35,00 </td>
-                  <td id="serv-1-preco"> R$ 700,00 </td>
-                </tr>
+            <th>Total</th>
+            <th width="20%" border="none"></th>
+          </tr>
+        </thead>
 
-                <tr id="serv-2">
-                  <td id="serv-2-nome"> Cabelo </td>
-                  <td> R$ 15,00 </td>
-                  <td id="serv-2-preco"> R$ 300,00 </td>
-                </tr>
 
-                <tr id="serv-3">
-                  <td id="serv-3-nome"> Podologia </td>
-                  <td> R$ 85,00 </td>
-                  <td id="serv-3-preco"> R$ 370,00 </td>
-                </tr>
+        <tbody id="tabela-Cliente-Body">
 
-                <tr id="serv-4">
-                  <td id="serv-4-nome"> Buzinaço </td>
-                  <td> R$ 85,00 </td>
-                  <td id="serv-4-preco"> R$ 170,00 </td>
-                </tr>
-                
-              </tbody>
-            </table>
+
+        </tbody>
+      </table>
           </center>
         </div>
         
