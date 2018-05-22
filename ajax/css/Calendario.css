@@ -1,0 +1,48 @@
+body{
+    background-color: gray;
+}
+#container-calendario {
+    margin-top: 100px;
+}
+.TextInfo {
+    font-family: "Verdana", Arial, sans-serif;
+    font-size: 17px;
+    margin-left: 10px;
+    font-weight:bold;
+    margin-top:12px; 
+    color:#6e3596;
+}
+.TextInput{
+    margin-top: 10px;
+    margin-bottom:10px; 
+}
+.TextInput:hover{
+    border-color:rgba(110,53,150, 0.65); 
+}
+.TextArea{
+    margin-top:10px;
+    margin-left:25px; 
+}
+.TextArea:hover{
+    border-color:rgba(110,53,150, 0.65); 
+}
+.Botao {
+    margin-left:35px;
+    margin-top:20px;
+    background-color: #6e3596; 
+    color: white;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    display: inline-block;
+}
+.Botao:hover{
+    box-shadow: 2px 5px 5px rgba(110,53,150, 0.85);
+    margin-bottom: 7px;
+}
+/*----Modal---*/
+.EstiloModal{
+    margin-top:100px;
+}
