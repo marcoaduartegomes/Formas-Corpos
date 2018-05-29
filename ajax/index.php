@@ -38,7 +38,7 @@
                     <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="window.location.href='Produtos.php'">
                     <br>
                     <img src="img/icone-clientes.png" class="icone-index" id="clientes" onclick="window.location.href='Clientes.php'">
-                    <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Calendário',1)">
+                    <img src="img/icone-calendario.png" class="icone-index" id="calendario" onclick="window.location.href='fullcalendar.html'">
                     <img src="img/icone-financeiro.png" class="icone-index" id="financeiro" onclick="window.location.href='faturamento.php'">
                 </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Abr-2018 às 02:38
+-- Generation Time: 29-Maio-2018 às 02:58
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -42,7 +42,33 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`codigo`, `Nome`, `CPF`, `Telefone`, `Celular`, `email`) VALUES
-(3, 'marco araujo', '16936908705', 3213, 321321, 'marco@gmail.com');
+(13, 'marco', '15565177774', 3213, 3213, 'maroc@gmail.com'),
+(14, 'caio', '15592295782', 3213, 321, 'caio@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `consulta`
+--
+
+CREATE TABLE `consulta` (
+  `codigo` int(11) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  `codServico` int(11) NOT NULL,
+  `codCliente` int(11) NOT NULL,
+  `allDay` tinyint(1) NOT NULL,
+  `className` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `consulta`
+--
+
+INSERT INTO `consulta` (`codigo`, `start`, `end`, `codServico`, `codCliente`, `allDay`, `className`) VALUES
+(7, '2018-05-11 06:00:00', '2018-05-11 10:00:00', 1, 13, 0, 'important'),
+(8, '2018-05-11 06:00:00', '2018-05-11 07:00:00', 1, 13, 0, 'important'),
+(9, '2018-05-12 06:00:00', '2018-05-12 07:00:00', 2, 13, 0, 'important');
 
 -- --------------------------------------------------------
 
@@ -63,7 +89,33 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`codigo`, `arquivo`, `quantidade`, `data`, `nome`) VALUES
-(87, '', 321321, '2018-04-08 21:28:48', 'marcos');
+(87, '', 321321, '2018-04-28 00:01:08', 'coisas'),
+(88, '', 321, '2018-04-24 00:02:07', 'sadsad'),
+(89, '', 3213, '2018-04-28 00:00:48', 'linha'),
+(90, '', 4324, '2018-04-28 00:00:39', 'remedio'),
+(91, '', 4324, '2018-04-28 00:01:03', 'chave'),
+(92, '', 656, '2018-04-28 00:00:51', 'bola'),
+(93, '', 4324, '2018-04-24 00:02:24', 'tgret');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `servico`
+--
+
+CREATE TABLE `servico` (
+  `codigo` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `preco` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `servico`
+--
+
+INSERT INTO `servico` (`codigo`, `nome`, `preco`) VALUES
+(1, 'Cabelo', 10),
+(2, 'Unha', 5);
 
 --
 -- Indexes for dumped tables
@@ -77,9 +129,23 @@ ALTER TABLE `cliente`
   ADD UNIQUE KEY `CPF` (`CPF`);
 
 --
+-- Indexes for table `consulta`
+--
+ALTER TABLE `consulta`
+  ADD PRIMARY KEY (`codigo`),
+  ADD KEY `codServiço` (`codServico`),
+  ADD KEY `codCliente` (`codCliente`);
+
+--
 -- Indexes for table `produto`
 --
 ALTER TABLE `produto`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- Indexes for table `servico`
+--
+ALTER TABLE `servico`
   ADD PRIMARY KEY (`codigo`);
 
 --
@@ -90,13 +156,36 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `consulta`
+--
+ALTER TABLE `consulta`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+
+--
+-- AUTO_INCREMENT for table `servico`
+--
+ALTER TABLE `servico`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `consulta`
+--
+ALTER TABLE `consulta`
+  ADD CONSTRAINT `consulta_ibfk_1` FOREIGN KEY (`codCliente`) REFERENCES `cliente` (`codigo`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `consulta_ibfk_2` FOREIGN KEY (`codServico`) REFERENCES `servico` (`codigo`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

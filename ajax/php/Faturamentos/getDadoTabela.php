@@ -3,7 +3,7 @@
 require_once __DIR__.'/connect.php';
  //getDadoTabela.php retorna do banco de dados todos os valores de um certo codigo para preencher a tabela via ajax 
 $datas = $_POST["dia"];
-      $query = "SELECT servico.nome, preco, sum(preco) as montante from consulta inner join servico on codServico = servico.codigo where datafim ='$datas' group by servico.nome";  
+      $query = "SELECT servico.nome, preco, sum(preco) as montante from consulta inner join servico on codServico = servico.codigo where start ='$datas' group by servico.nome";  
       $result = mysqli_query($conn, $query);
       $rowcount=mysqli_num_rows($result);
       

@@ -1,6 +1,6 @@
 var table;
 var dias;
-dias = "2018-05-02";
+dias = "2018-05-11 06:00:00";
 $(document).ready(function() {
 // Setup - add a text input to each footer cell
 
