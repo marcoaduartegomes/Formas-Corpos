@@ -139,12 +139,9 @@ function draw(){
   }
 
 function reloadTable() {
-    
-    table.ajax.reload();   
-    
-    draw();
-   
+    table.ajax.reload();
 }
+
 function limpar() {
     context.rect(0, 0, canvas.width, canvas.height);
     context.clearRect(0, 0, canvas.width, canvas.height);

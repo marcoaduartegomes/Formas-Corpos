@@ -42,7 +42,7 @@
           
           <center>
             <input type ="datetime-local" id="data">
-            <button id="muda" value=grafico onclick="reloadTable()">uhm</button>
+            <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">uhm</button>
             <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>
