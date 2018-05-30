@@ -80,6 +80,8 @@ document.getElementById('titulo-pagina').innerHTML="Faturamento";
 
 } );
 
+var tagcenter = "<canvas id='grafico-donut' style='width:800px; height:400px; margin-top:10%;'>Seu navegador não é compatível </canvas>";
+
 var context;
 var canvas;
 function draw(){
@@ -139,7 +141,9 @@ function draw(){
   }
 
 function reloadTable() {
+    document.getElementById('tagCenterChart').innerHTML = "";
     table.ajax.reload();
+    document.getElementById('tagCenterChart').innerHTML = tagcenter;
 }
 
 function limpar() {

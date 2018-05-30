@@ -35,7 +35,7 @@
       <?php
       include 'header.php';
       ?>
-    </header>
+    </header> 
 
       <div id="container-faturamento" class="fadeIn">
         <div id="tabela-faturamento" >
@@ -66,7 +66,7 @@
         
         <div id="graficos-faturamento" >
           
-          <center>
+          <center id="tagCenterChart">
             <canvas id="grafico-donut" style="width:800px; height:400px; margin-top:10%;">
               Seu navegador não é compatível
             </canvas>
