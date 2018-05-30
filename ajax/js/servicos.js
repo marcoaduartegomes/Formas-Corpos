@@ -112,7 +112,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 		dataType:"json",   
         
         beforeSend:function(data){  
-			$('#botaoModal').val("Inserir");  
+			$('#botaoModal').val("Alterar");  
         },
         
 		success:function(data){  

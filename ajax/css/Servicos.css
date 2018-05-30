@@ -30,6 +30,17 @@ body{
     box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);  
 }
 
+
+#titulosTabela{
+    font-size: 20px;
+    text-align: center;
+}
+
+#tabela-Servicos-Body{
+    font-size: 17px;
+    vertical-align: middle;
+}
+
 #tabela-Cliente-Body td{
     vertical-align: middle;
 }

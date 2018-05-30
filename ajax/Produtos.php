@@ -40,14 +40,14 @@ require_once __DIR__.'/header.php';
 <div style="width: 70%;margin: auto;">
 
 
-  <table  id="tabela-Produto" class="table stripe table-bordered table-hover" >
+  <table  id="tabela-Produto" class="table compact stripe hover" >
     
     <thead>
-      <tr>
+      <tr id="titulosTabela">
         <th>Nome do Produto</th>
-        <th>Quantidade</th>
-        <th>Hora(ultima modificação)</th>
-        <th border="none"></th>
+        <th style="width:19%;">Quantidade</th>
+        <th style="width:27%;">Última Modificação</th>
+        <th style="width:15%;"></th>
       </tr>
       <tr id="pesquisar">
         <th>Nome do Produto</th>

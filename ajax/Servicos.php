@@ -45,13 +45,13 @@
    <div class="row">
 
     <div style="width: 70%;margin: auto;">
-      <table  id="tabela-servico" class="table stripe hover order-column" width="100%">
+      <table  id="tabela-servico" class="table compact stripe hover" width="100%">
 
         <thead>
-          <tr>
+          <tr id="titulosTabela">
             <th>Nome</th>
-            <th>Preço</th>
-            <th border="none"></th>
+            <th style="width:15%;">Preço</th>
+            <th style="width:10%"></th>
 
           </tr>
           <tr id="pesquisar">
@@ -81,7 +81,7 @@
 </div>
 
 <div class="modal fade" id="servicoModal" tabindex="-1" role="dialog" aria-labelledby="servicoModallLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="servicoModallLabel" style="color:white;"> Descrição do Serviço </h5>
