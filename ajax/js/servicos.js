@@ -3,7 +3,7 @@ var table;
 $(document).ready(function(){
     document.getElementById('titulo-pagina').innerHTML="Serviços";
 
-    $('#tabela-servicos thead tr#pesquisar th').each( function () {
+    $('#pesquisar th').each( function () {
         var title = $(this).text();
          if (title == 'Nome') {
              $(this).html( '<input class="pesquisar-tabela" type="text" placeholder=" '+title+'" />' );       
@@ -128,7 +128,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 }); 
 
 $(document).on('click', '#botaoModal', function(){ //Altera os dados da tabela do servico que foi selecionado
-
+ 
 	$.ajax({  
 		url:"php/Servicos/insert.php",  
 		method:"POST",  
