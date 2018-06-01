@@ -38,7 +38,7 @@
               <img id="botao-home" src='img/home_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/home_menu-clicked.png'" onmouseout="this.src='img/home_menu.png'" onclick="window.location.href='index.php'"/>
               <img id="botao-contatos" src='img/contatos_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/contatos_menu-clicked.png'" onmouseout="this.src='img/contatos_menu.png'" data-toggle="modal" data-target="#modal-contatos"/>
               <img id="botao-notificacao"  data-toggle="popover" data-placement="bottom" data-html="true" src='img/notification_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/notification_menu-clicked.png'" onmouseout="this.src='img/notification_menu.png'"/>
-              <img id="help" src='img/help_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/help_menu-clicked.png'" onmouseout="this.src='img/help_menu.png'" onclick="window.location.href='help.php'"/>
+              <img id="help" style="cursor:help;" src='img/help_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/help_menu-clicked.png'" onmouseout="this.src='img/help_menu.png'" onclick="window.location.href='help.php'"/>
             </center>
           </div>
         </div>
@@ -96,6 +96,24 @@
               </div>
             </div>
         </div>
+
+
+  <div class="modal fade" id="modal-notificacao" tabindex="-1" role="dialog" aria-labelledby="notificacaoModallLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notificacaoModallLabel" style="color:white;"> Notificação </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <h3> Temos uma Acunpultura marcada para as 07:00, para a cliente Caio dos Anjos </h3>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/header.js"> </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>

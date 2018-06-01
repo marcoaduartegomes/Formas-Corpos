@@ -40,7 +40,7 @@
       <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>
-          <tr>
+          <tr id="titulosTabela">
             <th>Nome</th>
             <th>CPF</th>
 

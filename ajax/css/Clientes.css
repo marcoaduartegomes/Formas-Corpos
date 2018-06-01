@@ -38,6 +38,21 @@ body{
     background-color: #9370DB; 
 }
 
+#titulosTabela{
+    font-size: 20px;
+    text-align: center;
+}
+
+#tabela-Cliente-Body{
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+#tabela-Cliente-Body td{
+    vertical-align: middle;
+}
+
+
 .labelFicha{
     font-family: 'Verdana', Arial, sans-serif;
     font-size: 15px;
@@ -46,7 +61,7 @@ body{
     margin-bottom: 2px;
     padding: 5px; 
 }
-
+ 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }

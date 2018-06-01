@@ -22,5 +22,5 @@ $(document).ready(function(){
 
 $('#botao-notificacao').popover({
     title:'Notificações',
-    content:'<div style="width:300px;"> <style> .linhaNotific{ padding:10px; border-bottom: 1px solid black; list-style-type:none; margin:0px;box-sizing:border-box; width:100%;} </style> <ul style="width:270px;margin:-10px; cursor: pointer;"> <li class="linhaNotific"> <a style="text-decoration:none;"> Acunpultura às 07:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Maquiagem às 10:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Pedicure às 13:00 </a> </li> </ul> </div>',
+    content:'<div style="width:300px;"> <style> .linhaNotific{ padding:10px; border-bottom: 1px solid black; list-style-type:none; margin:0px;box-sizing:border-box; width:100%;} </style> <ul style="width:270px;margin:-10px; cursor: pointer;"> <li  data-toggle="modal" data-target="#modal-notificacao" class="linhaNotific"> <a style="text-decoration:none;"> Acunpultura às 07:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Maquiagem às 10:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Pedicure às 13:00 </a> </li> </ul> </div>',
 });
