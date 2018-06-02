@@ -42,7 +42,7 @@
           
           <center>
             <label id="periodo" for="data"> Digite o Período </label>
-            <input type ="datetime-local" id="data" name="data" class="pesquisar-tabela">
+            <input type ="text" id="data" name="data" class="pesquisar-tabela">
             <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
             <table  id="tabela-Cliente" class="table" width="100%">
 

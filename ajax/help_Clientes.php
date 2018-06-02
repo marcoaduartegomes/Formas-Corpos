@@ -1,18 +1,16 @@
 <div>
-    <img src="favicon.png" class="img-ajuda">
-    <h2> Clientes </h2>
-    <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl 
-    </p>
+    <center> <img src="img/Ajuda/Faturamento.jpg" class="img-ajuda"> </center>
+    <br>
+    
 </div>
 <div>
     <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
+        • Nesta opção você pode ver uma lista dos clientes já cadastrados, adicionar novos clientes, visualizar as fichas, deletar, 
+        editar e mandar mensagens para o e-mail cadastrado de algum cliente. <br>
+        Descrição dos botões da tabela, por cores: <br>
+        • Verde - Enviar e-mail para o cliente;<br>
+        • Azul - Editar dados do cliente;<br>
+        • Amarelo - Visualizar ficha do cliente;<br>
+        • Vermelho - Deletar cliente.
     </p>
 </div>

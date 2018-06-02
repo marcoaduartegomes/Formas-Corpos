@@ -4,11 +4,8 @@ dias = "2018-05-11 06:00:00";
 $(document).ready(function() {
 // Setup - add a text input to each footer cell
 
-document.getElementById('titulo-pagina').innerHTML="Faturamentos";
+document.getElementById('titulo-pagina').innerHTML="Faturamento";
  // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
-
-
-
 
 table = $('#tabela-Cliente').removeAttr('width').DataTable( {
     
@@ -39,16 +36,14 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
                 d.dia = document.getElementById("data").value;
                 
             }, 
-        },
-       
-       
-
+    },
 
     "columns": [
-    { "data": "nome" },
-    { "data": "preco" },  
-    { "data": "montante" }
+        { "data": "nome" },
+        { "data": "preco" },  
+        { "data": "montante" }
     ],
+
     'createdRow': function( row, data, dataIndex ) {
             $(row).attr('id', 'serv-' + dataIndex);
         },
@@ -66,16 +61,13 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
                 }
             }
         ],
-"initComplete": function(settings, json) {
-    draw();
-  }
+    "initComplete": function(settings, json) {
+        draw();
+    }
 
             
 
         } );
-document.getElementById('titulo-pagina').innerHTML="Faturamento";
-
-
 // Apply the search
 
 } );

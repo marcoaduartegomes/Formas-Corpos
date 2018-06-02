@@ -1,18 +1,14 @@
 <div>
-    <img src="favicon.png'" class="img-ajuda">
-    <h2> Produtos </h2>
-    <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl 
-    </p>
+    <center> <img src="img/Ajuda/Faturamento.jpg" class="img-ajuda"> </center>
+    <br>
+    
 </div>
 <div>
     <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
+        • Nesta opção você pode ver uma lista de todos os produtos cadastrados, podendo editar as informações destes, como 
+        quantidade, nome, e é exibida a data e hora da última modificação realizada. <br>
+        Descrição dos botões da tabela, por cores: <br>
+        • Azul - Editar dados do produto;<br>
+        • Vermelho - Deletar produto.
     </p>
 </div>

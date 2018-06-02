@@ -1,18 +1,14 @@
 <div>
-    <img src="favicon.png'" class="img-ajuda">
-    <h2> Serviços </h2>
-    <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl 
-    </p>
+    <center> <img src="img/Ajuda/Faturamento.jpg" class="img-ajuda"> </center>
+    <br>
+    
 </div>
 <div>
     <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
+        • Nesta opção você pode ver uma lista de todos os serviços cadastrados, podendo editar informações destes, como 
+        nome e preço.Tais informações serão usadas nas funções de controle de consultas e faturamento. <br>
+        Descrição dos botões da tabela, por cores: <br>
+        • Azul - Editar dados do serviço;<br>
+        • Vermelho - Deletar serviço.
     </p>
 </div>

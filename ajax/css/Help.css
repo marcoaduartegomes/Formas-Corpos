@@ -1,13 +1,18 @@
+#corpo-principal{
+    overflow: hidden;
+}
+
 #tela-ajuda{
     box-sizing: border-box;
     width: 45%;
     margin-right: 5%;
     float: right;
     padding: 10px;
+    overflow-y: auto;
 }
 
-#tela-ajuda img{
-    width: 50%;
+.img-ajuda{
+    width: 80%;
     margin: 5px;
 }
 
@@ -39,7 +44,6 @@
     text-align: center;
     width: 45%;
     margin-top: 10px;
-    float: right;
 }
 
 #tela-ajuda p{

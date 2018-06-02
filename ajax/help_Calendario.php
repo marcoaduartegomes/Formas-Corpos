@@ -1,18 +1,12 @@
 <div>
-    <img src="favicon.png'" class="img-ajuda">
-    <h2> Calendário </h2>
-    <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl 
-    </p>
+    <center> <img src="img/Ajuda/Faturamento.jpg" class="img-ajuda"> </center>
+    <br>
+    
 </div>
 <div>
     <p>
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem xaneda jsdnjkxmio jsahdjjakdnnzmdiijioejkdzl
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
-        • Lorem ipsidum ajkmsjsmka lakasmxom lksammkxmlkxalm;
+        • Nesta opção você pode um calendário, onde são mostradas as consultas marcadas para cada dia e seus respectivos 
+        horários. Poderá ser adicionado uma consulta a partir do calendário, clicando num dia e horário no qual a consulta será marcada. <br>
+        Os dados serão sincronizados com a tabela de consultas.
     </p>
 </div>
