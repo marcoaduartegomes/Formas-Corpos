@@ -28,7 +28,7 @@ table = $('#tabela-Cliente').removeAttr('width').DataTable( {
             "next":       "Proximo",
             "previous":   "Anterior"
         },
-        "lengthMenu":     "Mostrar _MENU_ Clientes",
+        "lengthMenu":     "Mostrar _MENU_",
     },
     
     "dom": '<"top"l><"toolbar">rt<"bottom"pi><"clear">',

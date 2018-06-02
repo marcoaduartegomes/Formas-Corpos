@@ -109,7 +109,7 @@
         </div>
         
         <div class="modal-body">
-          <h3> Temos uma Acunpultura marcada para as 07:00, para a cliente Caio dos Anjos </h3>
+          <h3> Temos uma <b> Acunpultura </b> marcada para as <b> 07:00</b>, para a cliente <b> Caio dos Anjos</b> </h3>
         </div>
       </div>
     </div>

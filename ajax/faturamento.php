@@ -48,11 +48,9 @@
 
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Quantidade</th>
-
-            <th>Total</th>
-            <th width="20%" border="none"></th>
+            <th style="width:50%;">Nome</th>
+            <th style="width:25%;">Quantidade</th>
+            <th style="width:25%;">Total</th>
           </tr>
         </thead>
 
