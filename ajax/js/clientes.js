@@ -19,7 +19,7 @@ $('#tabela-Cliente thead tr#pesquisar th').each( function () {
 	if (title == 'Operações') {
 		$(this).html( '' );      
 	}
-    } ); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
+    }); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
 
 	
 
@@ -129,7 +129,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 
 	$.ajax({  
 		url:"php/Clientes/fetch.php",  
-		method:"POST",  
+		method:"POST",   
 		data:{codigo:cod_produto}, 
 		dataType:"json",   
 		beforeSend:function(data){  

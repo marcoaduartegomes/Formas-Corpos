@@ -5,7 +5,7 @@
 body,html {
 
 	height: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Verdana', sans-serif;
     overflow-y: hidden;
     background-color: white;
 }
@@ -34,6 +34,45 @@ nav{
     box-shadow: 3px 3px 5px rgba(0,0,0, 0.85);
     margin-bottom: -10px;
 }
+.popover-header{
+    color:white;
+    background-color: #7f4697;
+}
+
+.popover-header h4{
+    font-weight: 800;
+}
+
+.ulNotificacao{
+    width:270px;
+    margin:-10px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+.linhasNotificacao{
+    padding:10px;
+    border-bottom: 1px groove black;
+    list-style-type:none;
+    margin:0px;
+    box-sizing:border-box;
+    width:100%;
+    transition: color 0.35s ,background-color 0.25s linear;
+    border-radius: 3.5px;
+}
+
+.linhasNotificacao:hover{
+    background-color: #9f6899;
+    color:white;
+    
+}
+
+
+
+
+
+
+
 /* Corpo Principal */
 #corpo-principal{
     position: absolute;

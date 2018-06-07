@@ -18,9 +18,20 @@ $(document).ready(function(){
     });
 
     $('[data-toggle="popover"]').popover();
+
+    $(document).on('click', '.linhasNotificacao', function(){
+        $('#modal-notificacao').modal('show');
+        document.getElementById('notificacaoServico').innerHTML = this.getAttribute("data-servico");
+        document.getElementById('notificacaoHora').innerHTML = this.getAttribute("data-horario");
+        document.getElementById('notificacaoCliente').innerHTML = this.getAttribute("data-cliente");
+    });
 });
 
 $('#botao-notificacao').popover({
-    title:'Notificações',
-    content:'<div style="width:300px;"> <style> .linhaNotific{ padding:10px; border-bottom: 1px solid black; list-style-type:none; margin:0px;box-sizing:border-box; width:100%;} </style> <ul style="width:270px;margin:-10px; cursor: pointer;"> <li  data-toggle="modal" data-target="#modal-notificacao" class="linhaNotific"> <a style="text-decoration:none;"> Acunpultura às 07:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Maquiagem às 10:00 </a> </li> <li class="linhaNotific"> <a style="text-decoration:none;"> Pedicure às 13:00 </a> </li> </ul> </div>',
+    title:'<h4> Notificações </h4>',
+    content: function() {
+        return $('#conteudoNotificacao').html();
+    },
 });
+
+

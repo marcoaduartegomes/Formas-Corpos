@@ -109,11 +109,20 @@
         </div>
         
         <div class="modal-body">
-          <h3> Temos uma <b> Acunpultura </b> marcada para as <b> 07:00</b>, para a cliente <b> Caio dos Anjos</b> </h3>
+          <h3> Temos um(a) <b id="notificacaoServico"> Acunpultura </b> marcado(a) para às <b id="notificacaoHora"> 07:00</b>, para o(a) cliente <b id="notificacaoCliente"></b> </h3>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="conteudoNotificacao" style="display:none;">
+    <ul class="ulNotificacao">
+      <?php
+        include 'php/Notificacao/getDadoTabela.php';
+      ?>
+    </ul>
+  </div>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/header.js"> </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
