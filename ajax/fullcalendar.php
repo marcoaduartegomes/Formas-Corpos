@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset='utf-8' />
-
+<link rel="icon" href="imagens/favicon.png">
 <link href='css/fullcalendar.css' rel='stylesheet' />
 <link href='css/fullcalendar.min.css' rel='stylesheet' />
 <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
