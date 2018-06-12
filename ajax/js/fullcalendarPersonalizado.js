@@ -14,6 +14,7 @@ $(document).ready(function(){
 				
 				success: function( data )
 				{
+						document.getElementById("formConsulta").reset();
 						$('#modalConsulta').hide(); // esconde o modal
 						$("#return").click(); // fecha o modal de fato
 						$('#calendar').fullCalendar( 'refetchEvents' ); // reload na DataTable para não recarregar a tabela
@@ -81,7 +82,8 @@ $("#nssome").keyup(function() {
       },
       minLength: 2,
       select: function( event, ui ) {
-        alert("dsadsa");
+      	//$('#nome').val(ui.item.label); 
+        alert(ui.item.label);
        //log( "Selected: " + ui.item.nome);
       }
     } );

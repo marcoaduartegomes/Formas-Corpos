@@ -43,10 +43,10 @@
 		
 		*/		
 		
-		
+
 		/* initialize the external events
 		-----------------------------------------------------------------*/
-		
+
 		$('#external-events .fc-event').each(function() {
 
       // store data so the calendar knows to render an event upon drop
@@ -63,13 +63,13 @@
     });
 
   });
-		
-		
+
+
 		/* initialize the calendar
 		-----------------------------------------------------------------*/
 		
 		$('#calendar').fullCalendar({
-			
+
 			header: {
 				left: 'title',
 				center: 'agendaDay,agendaWeek,month',
@@ -84,10 +84,10 @@
 			nowIndicator: true,
 			locale: 'pt-br',
 			
-			
-			
 
-			
+
+
+
 			allDaySlot: false,
 			selectHelper: true,
 			select: function(start, end, allDay) {
@@ -101,7 +101,7 @@
 			},
 			droppable: true, // this allows things to be dropped onto the calendar !!!
 			drop: function(date, allDay) { // this function is called when something is dropped
-				
+
 				// retrieve the dropped element's stored Event Object
 				var originalEventObject = $(this).data('eventObject');
 				
@@ -132,7 +132,7 @@
 		
 		
 	});
-
+ 
 </script>
 <style>
 
@@ -219,11 +219,11 @@ body {
 					</button>
 				</div>
 				<div class="modal-body">
-					<form  id="formConsulta" method="post" name="formConsulta">
+					<form  id="formConsulta" method="POST" name="formConsulta">
 						<input type="datetime" id="inicio" name="inicio" >
 						<input type="datetime" id="final" name="final">
 						<label for="nome">Nome: </label>
-						<input id="nome">
+						<input id="nome" name="nome" value="">
 						<select id="servico" name="servico">
 							<?php
 							require_once __DIR__.'/php/Produtos/connect.php';
@@ -233,7 +233,7 @@ body {
 								echo  '  
 								<option value="'.$row["codigo"].'"> '.$row["nome"].' </option>';
 							}
-							
+
 							?>
 
 							<input type="submit" value="batata" id="botaoConsulta">
