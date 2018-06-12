@@ -33,7 +33,7 @@
         <div id="corpo-principal" class="fadeIn">
             <div id="corpo-index">
                 <div id="menu-index">
-                    <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="fazerRequisicao(this.id+'.html','corpo-principal','Consultas',1)">
+                    <img src="img/icone-consulta.png" class="icone-index" id="consultas" onclick="window.location.href='Consultas.php'">
                     <img src="img/icone-servicos.png" class="icone-index" id="servicos" onclick="window.location.href='Servicos.php'">
                     <img src="img/icone-produtos.png" class="icone-index" id="produtos" onclick="window.location.href='Produtos.php'">
                     <br>
