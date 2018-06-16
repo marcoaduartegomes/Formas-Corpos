@@ -9,18 +9,18 @@ $(document).ready(function(){
 				type: "POST",
 				url: "php/Calendario/insert.php",
 				data: dados,
-			
+				
 
 				
 				success: function( data )
 				{
-						document.getElementById("formConsulta").reset();
+					document.getElementById("formConsulta").reset();
 						$('#modalConsulta').hide(); // esconde o modal
 						$("#return").click(); // fecha o modal de fato
 						$('#calendar').fullCalendar( 'refetchEvents' ); // reload na DataTable para não recarregar a tabela
 					},
-				error: function( data )
-				{
+					error: function( data )
+					{
 						alert("error mano");						
 					},
 				});
@@ -31,61 +31,79 @@ $(document).ready(function(){
 });
 var value;
 $(function(){
-$("#nssome").keyup(function() {
-	value = $('#nome').val();
-	$.ajax({  
-		url:"php/Calendario/validaCPF.php",  
-		method:"POST",  
-		data:{nome:value},
-		dataType:"json", 
+	$("#nssome").keyup(function() {
+		value = $('#nome').val();
+		$.ajax({  
+			url:"php/Calendario/validaCPF.php",  
+			method:"POST",  
+			data:{nome:value},
+			dataType:"json", 
 
-		success:function(data){
-			
-			if(value==valorAntigo){
-				alert("dsad");
-			}else{
-				$('#cpf').removeClass('is-valid');
-				$('#botaoModal').attr('disabled', 'disabled');
-				$('#cpf').addClass('is-invalid');}
-
-
-			},
-			error: function(data) { 
-				$('#botaoModal').removeAttr('disabled');
-				$('#cpf').removeClass('is-invalid');
-				$('#cpf').addClass('is-valid');
-			} 
+			success:function(data){
+				
+				if(value==valorAntigo){
+					alert("dsad");
+				}else{
+					$('#cpf').removeClass('is-valid');
+					$('#botaoModal').attr('disabled', 'disabled');
+					$('#cpf').addClass('is-invalid');}
 
 
+				},
+				error: function(data) { 
+					$('#botaoModal').removeAttr('disabled');
+					$('#cpf').removeClass('is-invalid');
+					$('#cpf').addClass('is-valid');
+				} 
 
 
-		}); 
+
+
+			}); 
+	});
 });
-});
-  $( function() {
+$( function() {
 
-    $( "#nome" ).autocomplete({
-      source: function( request, response ) {
-        $.ajax( {
-          url: "php/Calendario/autoComplete.php",
-          method:"POST", 
-          dataType: "json",
-          data: {
-            nome: request.term
-          },
-          success: function( data ) {
+	$( "#nome" ).autocomplete({
+		source: function( request, response ) {
+			$.ajax( {
+				url: "php/Calendario/autoComplete.php",
+				method:"POST", 
+				dataType: "json",
+				data: {
+					nome: request.term
+				},
+				success: function( data ) {
            // alert(data[0].nome);
-            response( data );
+           response( data );
 
-          }
-        } );
-      },
-      minLength: 2,
-      select: function( event, ui ) {
+       }
+   } );
+		},
+		minLength: 2,
+		select: function( event, ui ) {
       	//$('#nome').val(ui.item.label); 
-        alert(ui.item.label);
+    
        //log( "Selected: " + ui.item.nome);
-      }
-    } );
-    $( "#nome" ).autocomplete( "option", "appendTo", ".eventInsForm" );
-  } );
+   }
+} );
+	$( "#nome" ).autocomplete( "option", "appendTo", ".eventInsForm" );
+} );
+$(document).on('click', '#deletar', function(){  //Aletera os dados do formulario para ser criado um novo produto
+
+	codConsulta = $('#codConsulta').val();
+	$.ajax( {
+				url: "php/Calendario/deletar.php",
+				method:"POST", 
+				
+				data: {
+					codConsulta: codConsulta
+				},
+				success: function( data ) {
+				
+						$('#modalConsulta').hide(); // esconde o modal
+						$("#return").click(); // fecha o modal de fato
+						$('#calendar').fullCalendar( 'refetchEvents' ); // reload na DataTable para não recarregar a tabela
+       }
+   } );
+}); 

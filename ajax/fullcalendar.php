@@ -90,39 +90,69 @@
 
 			allDaySlot: false,
 			selectHelper: true,
-			select: function(start, end, allDay) {
-
+			eventClick: function(calEvent, jsEvent, view) {
 				document.getElementById( "modalteste" ).click();
-				dataInicio = moment(start).format('YYYY-MM-DD hh:mm:ss');
-				dataFinal = moment(end).format('YYYY-MM-DD hh:mm:ss');
+
+				dataInicio = moment(calEvent.start).format('YYYY-MM-DD hh:mm:ss');
+				dataFinal = moment(calEvent.end).format('YYYY-MM-DD hh:mm:ss');
+				descricao = calEvent.description;
+				nome = calEvent.title;
 				$('#inicio').val(dataInicio); 
 				$('#final').val(dataFinal); 
+				$('#descricao').val(descricao); 
+				$('#nome').val(nome); 
+				$('#alterando').val("1"); 
+				$('#codConsulta').val(calEvent.codigo); 
+				$('#deletar').attr('type', 'button');
+
+    // change the border color just for fun
+    $(this).css('border-color', 'red');
+
+},
+eventDrop: function(calEvent, delta, revertFunc) {
+	codConsulta = calEvent.codigo;
+	dataInicio = moment(calEvent.start).format('YYYY-MM-DD hh:mm:ss');
+	dataFinal = moment(calEvent.end).format('YYYY-MM-DD hh:mm:ss');
+	alert(calEvent.title + " foi alterado para " + calEvent.start.format('YYYY-MM-DD hh:mm:ss'));
+
+	if (!confirm("Deseja realizar esta alteração de horario?")) {
+		revertFunc();
+	}else{
+		$.ajax({  
+			url:"php/Calendario/updateData.php",  
+			method:"POST",   
+			data:{start:dataInicio,end:dataFinal,codConsulta:codConsulta}, 
+			dataType:"json",   
+			beforeSend:function(data){  
+
+
 
 			},
+			success:function(data){  
+
+			}  
+		});
+
+
+	}
+
+},
+
+
+
+
+select: function(start, end, allDay) {
+	document.getElementById("formConsulta").reset();
+	document.getElementById( "modalteste" ).click();
+	dataInicio = moment(start).format('YYYY-MM-DD hh:mm:ss');
+	dataFinal = moment(end).format('YYYY-MM-DD hh:mm:ss');
+	$('#inicio').val(dataInicio); 
+	$('#final').val(dataFinal); 
+	$('#alterando').val("0"); 
+    $('#deletar').attr('type', 'hidden');
+},
 			droppable: true, // this allows things to be dropped onto the calendar !!!
-			drop: function(date, allDay) { // this function is called when something is dropped
-
-				// retrieve the dropped element's stored Event Object
-				var originalEventObject = $(this).data('eventObject');
-				
-				// we need to copy it, so that multiple events don't have a reference to the same object
-				var copiedEventObject = $.extend({}, originalEventObject);
-				
-				// assign it the date that was reported
-				copiedEventObject.start = date;
-				copiedEventObject.allDay = allDay;
-				
-				// render the event on the calendar
-				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-				
-				// is the "remove after drop" checkbox checked?
-				if ($('#drop-remove').is(':checked')) {
-					// if so, remove the element from the "Draggable Events" list
-					$(this).remove();
-				}
-				
-			},
+		
 			
 			events: 'php/Calendario/getDadoTabela.php',
 			allDay: false,
@@ -132,7 +162,7 @@
 		
 		
 	});
- 
+
 </script>
 <style>
 
@@ -235,13 +265,17 @@ body {
 							}
 
 							?>
-
-							<input type="submit" value="batata" id="botaoConsulta">
+							<input type="hidden" name="alterando" id="alterando">
+							<input type="button" name="deletar" id="deletar" value="Deletar">
+							<input type="hidden" name="codConsulta" id="codConsulta">
+							<input type="text" name="descricao" id="descricao">
+							
+							
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Close</button>
+							<input type="submit" value="Salvar" id="botaoConsulta" class="btn btn-primary">
 						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
 					</div>
 				</div>
 			</div>
