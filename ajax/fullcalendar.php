@@ -1,6 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+	 <?php
+
+require_once __DIR__.'/header.php';
+
+ ?>
 	<meta charset='utf-8' />
 	<link rel="icon" href="imagens/favicon.png">
 	<link href='css/fullcalendar.css' rel='stylesheet' />
@@ -29,6 +35,7 @@
 		z-index: 1051;
 	}
 </style>
+
 <script>
 
 	$(document).ready(function() {
@@ -167,7 +174,7 @@ select: function(start, end, allDay) {
 <style>
 
 body {
-	margin-top: 40px;
+	
 	text-align: center;
 	font-size: 14px;
 	font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
@@ -224,12 +231,12 @@ body {
 </style>
 </head>
 <body>
-	<div id='wrap'>
+	
 
+<div id="corpo-principal" class="fadeIn">
 		<div id='calendar'></div>
+</div>
 
-		<div style='clear:both'></div>
-	</div>
 
 
 
@@ -269,7 +276,7 @@ body {
 							<input type="button" name="deletar" id="deletar" value="Deletar">
 							<input type="hidden" name="codConsulta" id="codConsulta">
 							<input type="text" name="descricao" id="descricao">
-							
+							</select>
 							
 						</div>
 						<div class="modal-footer">
