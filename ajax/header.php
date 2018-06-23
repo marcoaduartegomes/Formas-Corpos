@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body onload="notificacaoConsulta()">
+  <body>
     <header >
       
       <!-- Navegação -->
@@ -164,9 +164,9 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/header.js"> </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>-->
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   </body>
   </html>

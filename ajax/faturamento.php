@@ -13,9 +13,7 @@
     <script src="jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"> </script>
     
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+
     
     <!-- Bootstrap-->
     <link href="CapaMelhorado.css" rel="stylesheet">
@@ -41,9 +39,13 @@
         <div id="tabela-faturamento" >
           
           <center>
-            <label id="periodo" for="data"> Digite o Período </label>
+            <label id="periodo" for="data"> Digite o Período </label> 
+            
             <input type ="text" id="data" name="data" class="pesquisar-tabela" placeholder="Ex.: 2018-05-11">
+            <input type="radio" name="pago" id="pago" value="pago"> Pagamentos Efetuados<br>
+            <input type="radio" name="pago" id="pago" value="naoPago"> Todos<br>
             <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
+            <button id="dataHoje" onclick="dataAtual()"">Hoje</button>
             <table  id="tabela-Cliente" class="table" width="100%">
 
         <thead>

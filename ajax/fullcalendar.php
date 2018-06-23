@@ -2,32 +2,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 <?php
 
-require_once __DIR__.'/header.php';
-
- ?>
 	<meta charset='utf-8' />
 	<link rel="icon" href="imagens/favicon.png">
 	<link href='css/fullcalendar.css' rel='stylesheet' />
 	<link href='css/fullcalendar.min.css' rel='stylesheet' />
 	<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
 	<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+	<?php
 
+	require_once __DIR__.'/header.php';
+
+	?>
 	<script src='jquery/moment.min.js'></script>
 	<script src='jquery/jquery.min.js'></script>
 	<script src='jquery/jquery-ui.min.js'></script>
 
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="/resources/demos/style.css">
-
-	<script src='js/fullcalendar.min.js'></script>
 	<script src='js/fullcalendarPersonalizado.js'></script>
+	<script src='js/fullcalendar.min.js'></script>
+	
 	<script src='js/locale-all.js'></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 	<style type="text/css">
 	.ui-autocomplete.ui-front
@@ -103,14 +106,24 @@ require_once __DIR__.'/header.php';
 				dataInicio = moment(calEvent.start).format('YYYY-MM-DD hh:mm:ss');
 				dataFinal = moment(calEvent.end).format('YYYY-MM-DD hh:mm:ss');
 				descricao = calEvent.description;
+				color = calEvent.color;
 				nome = calEvent.title;
+				servico = calEvent.Codservico;
 				$('#inicio').val(dataInicio); 
 				$('#final').val(dataFinal); 
 				$('#descricao').val(descricao); 
 				$('#nome').val(nome); 
+				$('#servico').val(servico); 
 				$('#alterando').val("1"); 
 				$('#codConsulta').val(calEvent.codigo); 
 				$('#deletar').attr('type', 'button');
+				if (color == "red") {
+
+					$( "#naoPago" ).prop( "checked", true );
+				}else{
+
+					$( "#pago" ).prop( "checked", true );
+				}
 
     // change the border color just for fun
     $(this).css('border-color', 'red');
@@ -156,10 +169,10 @@ select: function(start, end, allDay) {
 	$('#inicio').val(dataInicio); 
 	$('#final').val(dataFinal); 
 	$('#alterando').val("0"); 
-    $('#deletar').attr('type', 'hidden');
+	$('#deletar').attr('type', 'hidden');
 },
 			droppable: true, // this allows things to be dropped onto the calendar !!!
-		
+
 			
 			events: 'php/Calendario/getDadoTabela.php',
 			allDay: false,
@@ -232,10 +245,36 @@ body {
 </head>
 <body>
 	
+	<div id="corpo-principal" class="fadeIn">
+		<div class="row">
+			<div class="col-8">
+				<div id='calendar'></div>
+			</div>
+			<div class="col-4">
+				<select id="estatus">
+					<option value="pago">Pago</option>
+					<option value="naoPago">Não Pago</option>
+				</select>
+				<button id="muda" value=grafico onclick="reloadTable()">Atualizar</button>
+				<table  id="tabela-Consulta" class="table" width="100%">
 
-<div id="corpo-principal" class="fadeIn">
-		<div id='calendar'></div>
-</div>
+					<thead>
+						<tr>
+							<th style="width:50%;">Start</th>
+
+						</tr>
+					</thead>
+
+
+					<tbody id="tabela-Consulta-Body">
+
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
 
 
 
@@ -272,22 +311,34 @@ body {
 							}
 
 							?>
+							</select>
 							<input type="hidden" name="alterando" id="alterando">
-							<input type="button" name="deletar" id="deletar" value="Deletar">
+							
 							<input type="hidden" name="codConsulta" id="codConsulta">
 							<input type="text" name="descricao" id="descricao">
-							</select>
-							
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" id="return" data-dismiss="modal">Close</button>
-							<input type="submit" value="Salvar" id="botaoConsulta" class="btn btn-primary">
-						</form>
+						
+						<br>
+						<input type="radio" name="pago" id="pago" value="blue"> Pago<br>
+						<input type="radio" name="pago" id="naoPago" value="red"> Não pago<br>
+
 					</div>
+					<div class="modal-footer">
+						<input type="button" name="deletar" id="deletar" value="Deletar">
+						<button type="button" class="btn btn-secondary" name="return" id="return" data-dismiss="modal">Close</button>
+						<input type="submit" value="Salvar" id="botaoConsulta" class="btn btn-primary">
+					</form>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
-	</body>
-	</html>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<script src='js/sideBar.js'></script>
+
+</body>
+
+
+</html>

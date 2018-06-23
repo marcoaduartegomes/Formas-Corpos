@@ -30,38 +30,7 @@ $(document).ready(function(){
 	});
 });
 var value;
-$(function(){
-	$("#nssome").keyup(function() {
-		value = $('#nome').val();
-		$.ajax({  
-			url:"php/Calendario/validaCPF.php",  
-			method:"POST",  
-			data:{nome:value},
-			dataType:"json", 
 
-			success:function(data){
-				
-				if(value==valorAntigo){
-					alert("dsad");
-				}else{
-					$('#cpf').removeClass('is-valid');
-					$('#botaoModal').attr('disabled', 'disabled');
-					$('#cpf').addClass('is-invalid');}
-
-
-				},
-				error: function(data) { 
-					$('#botaoModal').removeAttr('disabled');
-					$('#cpf').removeClass('is-invalid');
-					$('#cpf').addClass('is-valid');
-				} 
-
-
-
-
-			}); 
-	});
-});
 $( function() {
 
 	$( "#nome" ).autocomplete({

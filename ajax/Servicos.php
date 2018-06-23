@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     
     <!-- Bootstrap-->
-    <link href="CapaMelhorado.css" rel="stylesheet">
+ 
     <link rel="stylesheet" type="text/css" href="css/Servicos.css"> 
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -75,7 +75,6 @@
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
   <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
-  <script src="js/personal.js"></script>
   <script src="js/servicos.js"></script>
 
 </div>

@@ -9,6 +9,7 @@ $servico = $_POST["servico"];
 $descricao = $_POST["descricao"];
 $alterando = $_POST["alterando"];
 $codConsulta = $_POST["codConsulta"];
+$pagamento = $_POST["pago"];
  // caso ele n exista, sera executado uma query para criar um novo produto
 $queryCodigo = "select codigo from cliente where nome = '$nome'";
 $codigo = mysqli_query($conn, $queryCodigo);   
@@ -23,14 +24,20 @@ if ($row[0]==NULL){
 if($alterando == "0")
 {
 $query = "  
-insert into consulta(start,end,codServico,codCliente,allDay,className,description)
-values ('$inicio','$final','$servico','$row[0]',false,'important','$descricao')";
+insert into consulta(start,end,codServico,codCliente,allDay,color,description,estatus)
+values ('$inicio','$final','$servico','$row[0]',false,'red','$descricao','naoPago')";
+}else{
+	if($pagamento == "red"){
+$query = "  
+update consulta
+set start ='$inicio' ,end = '$final',codServico = '$servico',codCliente = '$row[0]',color = 'red',description = '$descricao', estatus = 'naoPago'
+where codigo = '$codConsulta' ";
 }else{
 $query = "  
 update consulta
-set start ='$inicio' ,end = '$final',codServico = '$servico',codCliente = '$row[0]',className = 'important',description = '$descricao'
-where codigo = '$codConsulta' ";
+set start ='$inicio' ,end = '$final',codServico = '$servico',codCliente = '$row[0]',color = 'blue',description = '$descricao', estatus = 'pago' where codigo = '$codConsulta' ";
 
+}
 
 
 }
