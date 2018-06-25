@@ -16,17 +16,27 @@ body{
     background-color: rgb(247, 239, 247);
 }
 
-#botAdicionar{
-    box-shadow: 2px 5px 5px rgba(0,0,0, 0.65);
-    transition: box-shadow 0.10s linear 0s, margin 0.1s linear 0s;
+.listaEmail{
+    transition: font-weight 0.15s linear 0s, margin 0.15s linear 0s,color 0.2s linear 0s;
+}
+.listaEmail:hover{
+    font-weight: 500;
+    color: #6e3596;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
-#botAdicionar:hover{
+.botoesToolbar{
+    box-shadow: 2px 5px 5px rgba(0,0,0, 0.65);
+    transition: margin 0.25s linear 0s, box-shadow 0.10s linear 0s;
+}
+
+.botoesToolbar:hover{
     box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);
     margin-bottom: 7px;
 }
 
-#botAdicionar:active{
+.botoesToolbar:active{
     box-shadow: 2px 5px 5px rgba(0,0,0, 0.85);  
 }
 

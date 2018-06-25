@@ -82,7 +82,7 @@ $("#tabela-Cliente thead input").on( 'keyup change', function () {
 	.draw();
 } );
 
-$("div.toolbar").html("<button style='height:60px;position:fixed;bottom:10px;left: 85%; border-radius:50%;' class='btn btn-success' type='button' id='botAdicionar' data-toggle='modal' data-target='#clienteModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>");
+$("div.toolbar").html("<button style='height:60px;position:fixed;bottom:10px;left: 85%; border-radius:50%;' class='btn btn-success botoesToolbar' type='button' id='botAdicionar' data-toggle='modal' data-target='#clienteModal'  ><img style='height: 40px'  src='icons/plus.svg'></button>   <button style='height:60px;position:fixed;bottom:10px;left: 92%; border-radius:50%;' class='btn btn-success botoesToolbar' type='button' id='botAniversario' data-toggle='modal' data-target='#aniversarioModal'> <img style='height: 40px'  src='img/icone-aniversario.png'> </button>");
 } );
 
 function stopPropagation(evt) {
@@ -156,8 +156,12 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 
 }); 
 
+$(document).on('click', '#botAniversario', function(){  //Aniversariantes do dia
+	var txt_pre_definido='Achou que eu não ia mandar feliz aniversário? Achou certo, otário!!!!';
+	document.getElementById('MsgAniversario').value=txt_pre_definido;
+});
 
-$(document).on('click', '#botAdicionar', function(){  //Aletera os dados do formulario para ser criado um novo produto
+$(document).on('click', '#botAdicionar', function(){  //Altera os dados do formulario para ser criado um novo produto
 	$('#codigo').val("0"); 
 	$('#formularioEdit')[0].reset();
 	$('#botaoModal').val("Novo");  

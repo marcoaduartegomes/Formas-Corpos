@@ -199,6 +199,37 @@
     </div>
   </div>
 
+  <div class="modal fade" id="aniversarioModal" tabindex="-1" role="dialog" aria-labelledby="clienteModalaniversarioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="clienteModalaniversariolLabel" style="color:white;">Estes clientes fazem Aniversário hoje!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" id="formularioAniversario" name="formularioAniversario" action="php/Clientes/enviarAniversariantes.php">
+            <label style="font-weight:800;"> Clientes: </label> <br>
+            
+            <?php
+              include 'php/Clientes/aniversariantes.php';
+            ?>
+            
+            <br>
+            <label style="font-weight:800;"> Escreva uma mensagem para eles: </label> <br>
+            <textarea class="pesquisar-tabela" rows="5" name='msganiversario' id="MsgAniversario" autofocus></textarea>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" name="botaoEnviaAniversario" id="botaoEnviaAniversario" value="Enviar Mensagens" class="btn btn-success"> Enviar Mensagens </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="clienteModalMsg" tabindex="-1" role="dialog" aria-labelledby="clienteModalMsgLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">

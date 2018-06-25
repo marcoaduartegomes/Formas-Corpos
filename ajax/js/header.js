@@ -39,6 +39,3 @@ $('#botao-home').popover({
         return $('#conteudoPaginas').html();
     },
 });
-
-
-
