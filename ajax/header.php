@@ -108,26 +108,7 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <th> Marco Gomes</th>
-                                <th> (24) 9 9771-8822</th>
-                                <th> marcoagomes@gmail.com</th>
-                                <th> Fornecedor </th>
-                            </tr>
-
-                            <tr>
-                                <th> Caio Vieira </th>
-                                <th> (21) 8 1744-3872</th>
-                                <th> rabicadosanjos@gmail.com</th>
-                                <th> Fornecedor </th>
-                            </tr>
-
-                            <tr>
-                                <th> Buzininha Lopes </th>
-                                <th> (22) 9 1721-3125</th>
-                                <th> jvmunizlopes@gmail.com </th>
-                                <th> Cliente </th>
-                            </tr>
+                            
                         </tbody>
 
                     </table>

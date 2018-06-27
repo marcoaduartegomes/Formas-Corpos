@@ -159,6 +159,12 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 $(document).on('click', '#botAniversario', function(){  //Aniversariantes do dia
 	var txt_pre_definido='Achou que eu não ia mandar feliz aniversário? Achou certo, otário!!!!';
 	document.getElementById('MsgAniversario').value=txt_pre_definido;
+
+	var qtdAniversariantes = document.getElementById('listaEmail').value;
+	if(qtdAniversariantes =='0'){
+		$('#MsgAniversario').attr('disabled', 'disabled');
+		$('#botaoEnviaAniversario').attr('disabled', 'disabled');
+	}
 });
 
 $(document).on('click', '#botAdicionar', function(){  //Altera os dados do formulario para ser criado um novo produto

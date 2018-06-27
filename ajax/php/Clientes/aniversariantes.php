@@ -36,5 +36,6 @@
     echo("<input type='hidden' name='email' id='listaEmail' value='$listaEmail' class='form-control'/>");
   } else {
     echo ("<h3 style='cursor:default;'> Nenhum cliente cadastrado faz aniversário hoje </h3>");
+    echo("<input type='hidden' name='email' id='listaEmail' value='0' class='form-control'/>");
   }
 ?>

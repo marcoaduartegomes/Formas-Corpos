@@ -84,7 +84,7 @@ nav{
     background-attachment: fixed;
     background-size: cover;
     background-position-y: bottom; */
-
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
