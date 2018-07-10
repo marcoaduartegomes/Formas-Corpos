@@ -36,7 +36,6 @@
           <div id="caixa-menu">
             <center>
               <img id="botao-home" src='img/home_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/home_menu-clicked.png'" onmouseout="this.src='img/home_menu.png'" data-toggle="popover" data-placement="bottom"  data-html="true"  ondblclick="window.location.href='index.php'" />
-              <img id="botao-contatos" src='img/contatos_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/contatos_menu-clicked.png'" onmouseout="this.src='img/contatos_menu.png'" data-toggle="modal" data-target="#modal-contatos"/>
               <img id="botao-notificacao"  data-toggle="popover" data-placement="bottom" data-html="true" src='img/notification_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/notification_menu-clicked.png'" onmouseout="this.src='img/notification_menu.png'"/>
               <img id="help" style="cursor:help;" src='img/help_menu.png' class="icones-caixaMenu" onmouseover="this.src='img/help_menu-clicked.png'" onmouseout="this.src='img/help_menu.png'" onclick="window.location.href='help.php'"/>
             </center>

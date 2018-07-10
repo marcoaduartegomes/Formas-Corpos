@@ -14,9 +14,14 @@ $(document).ready(function(){
          if (title == 'Operações') {
              $(this).html( '' );       
          }
-     } ); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
+     }); // DataTable carregado por ajax  https://datatables.net/reference/option/ajax para mais informaçoes
+
+
 
     table = $('#tabela-servico').DataTable({
+
+		responsive: true,
+		
         orderCellsTop: true,
         language: {
             search: "Procurar",
@@ -31,7 +36,7 @@ $(document).ready(function(){
                 "next":       "Proximo",
                 "previous":   "Anterior"
             },
-            "lengthMenu":     "Mostrar _MENU_",
+            "lengthMenu":     "Mostrar _MENU_ Serviços",
         },
 
         "dom": '<"top"l><"toolbar">rt<"bottom"pi><"clear">',

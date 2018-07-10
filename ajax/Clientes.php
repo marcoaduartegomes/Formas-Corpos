@@ -88,31 +88,31 @@
         <!-- Modal body -->
         <div class="modal-body">
           <label class="labelFicha">Nomes</label>  
-          <input type="text" name="nome" id="Fichanome" class="form-control form-control-sm" Readonly/>
+          <input type="text" name="nome" id="Fichanome" class="formClienteInput inputFicha" Readonly/>
 
           <label class="labelFicha">CPF</label>  
 
-          <input type="text" name="cpf" id="Fichacpf" class="form-control form-control-sm" Readonly/>      
+          <input type="text" name="cpf" id="Fichacpf" class="formClienteInput inputFicha" Readonly/>      
           <label class="labelFicha">Email</label>  
-          <input type="email" name="email" id="Fichaemail" class="form-control form-control-sm" Readonly/>
+          <input type="email" name="email" id="Fichaemail" class="formClienteInput inputFicha" Readonly/>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label class="labelFicha">Telefone</label>
-              <input type="text" name="telefone" id="Fichatelefone" class="form-control form-control-sm" Readonly/>
+              <input type="text" name="telefone" id="Fichatelefone" class="formClienteInput inputFicha" Readonly/>
             </div>
             <div class="form-group col-md-6">
               <label class="labelFicha">Celular</label> 
-              <input type="text" name="celular" id="Fichacelular" class="form-control form-control-sm" Readonly/>
+              <input type="text" name="celular" id="Fichacelular" class="formClienteInput inputFicha" Readonly/>
             </div>
           </div> 
           <div class="form-row">
             <div class="form-group col-md-6">
               <label class="labelFicha">Ultima Consulta</label>
-              <input type="date" name="telefone" id="FichaUltimaConsulta" class="form-control form-control-sm" Readonly/>
+              <input type="date" name="telefone" id="FichaUltimaConsulta" class="formClienteInput inputFicha" Readonly/>
             </div>
             <div class="form-group col-md-6">
               <label class="labelFicha">Proxima Consulta</label> 
-              <input type="datetime" name="celular" id="FichaProximaConsulta" class="form-control form-control-sm" Readonly/>
+              <input type="datetime" name="celular" id="FichaProximaConsulta" class="formClienteInput inputFicha" Readonly/>
             </div>
           </div> 
           <div class="form-row">
@@ -123,7 +123,7 @@
 
             </div>
           </div> 
-          <input type="hidden" name="codigo" id="Fichacodigo" class="form-control form-control-sm" Readonly/>
+          <input type="hidden" name="codigo" id="Fichacodigo" class="form-control" Readonly/>
         </div>
         
       </div>
@@ -142,25 +142,25 @@
         <div class="modal-body">
           <form method="post" id="formularioEdit" name="formularioEdit" >  
             <label>Nome</label>  
-            <input type="text" name="nome" id="nome" class="form-control " />
+            <input type="text" name="nome" id="nome" class="formClienteInput" />
             <br />
             <label>CPF</label>  
 
-            <input type="text" name="cpf" id="cpf" class="form-control is-valid" />
+            <input type="text" name="cpf" id="cpf" class="is-valid formClienteInput" />
             <div class="invalid-feedback">
               CPF INVALIDO. Insira novamente ou confira os dados.
             </div>
             <br />
             <label>Email</label>  
-            <input type="email" name="email" id="email" class="form-control " />
+            <input type="email" name="email" id="email" class="formClienteInput" />
             <br />
             <label>Telefone</label>  
-            <input type="text" name="telefone" id="telefone" class="form-control " />
+            <input type="text" name="telefone" id="telefone" class="formClienteInput" />
             <br />
             <label>Celular</label>  
-            <input type="text" name="celular" id="celular" class="form-control " />
+            <input type="text" name="celular" id="celular" class="formClienteInput" />
 
-            <input type="hidden" name="codigo" id="codigo" class="form-control" /> 
+            <input type="hidden" name="codigo" id="codigo" class="formClienteInput" /> 
 
 
           </div>
@@ -243,13 +243,13 @@
         <div class="modal-body">
           <form method="post" id="formularioMsg" name="formularioEmail" action="php/Clientes/msgCliente.php">
             <label class="labelFicha"> Email </label>  
-            <input type="email" name="email" id="Fichaemail2" class="form-control form-control-sm" Readonly/>
+            <input type="email" name="email" id="Fichaemail2" class="formClienteInput inputFicha" Readonly/>
 
             <label class="labelFicha"> Assunto </label>
-            <input type="text" name="assunto" id="AssuntoEmail" class="form-control form-control-sm"/>
+            <input type="text" name="assunto" id="AssuntoEmail" class="formClienteInput"/>
 
             <label class="labelFicha"> Enviar Mensagem </label>
-            <textarea class="form-control" rows="5" id="mensagem" name="mensagem"></textarea>
+            <textarea class="formClienteInput" rows="5" id="mensagem" name="mensagem"></textarea>
 
 
           

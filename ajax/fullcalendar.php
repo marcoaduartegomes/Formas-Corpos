@@ -9,6 +9,7 @@
 	<link href='css/fullcalendar.min.css' rel='stylesheet' />
 	<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
 	<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+	<link href='css/Calendario.css' rel='stylesheet' type="text/css" />
 	<?php
 
 	require_once __DIR__.'/header.php';
@@ -232,6 +233,10 @@ body {
 	vertical-align: middle;
 }
 
+.fc-widget-content{
+	height:505px;
+}
+
 #calendar {
 	/* 		float: right; */
 	margin: 0 auto;
@@ -243,19 +248,19 @@ body {
 
 </style>
 </head>
-<body>
+<body style="background-color:rgba(0, 0, 0, 0.01);">
 	
 	<div id="corpo-principal" class="fadeIn">
 		<div class="row">
 			<div class="col-8">
-				<div id='calendar'></div>
+				<div id='calendar' style="margin-left:5px;padding:5px;"></div>
 			</div>
-			<div class="col-4">
+			<div class="col-4" style="padding:10px;">
 				<select id="estatus">
 					<option value="pago">Pago</option>
 					<option value="naoPago">Não Pago</option>
 				</select>
-				<button id="muda" value=grafico onclick="reloadTable()">Atualizar</button>
+				<button class="botao-calendario" id="muda" value=grafico onclick="reloadTable()">Atualizar</button>
 				<table  id="tabela-Consulta" class="table" width="100%">
 
 					<thead>
@@ -289,17 +294,22 @@ body {
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle"> Dados da Consulta</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<form  id="formConsulta" method="POST" name="formConsulta">
-						<input type="datetime" id="inicio" name="inicio" >
+					<form  id="formConsulta" style="text-align:left;margin-left:10px;" method="POST" name="formConsulta">
+						<label for="inicio"> Início&nbsp;&nbsp;&nbsp; </label>
+						<input type="datetime" id="inicio" name="inicio">
+						<label for="final"> Fim </label>
 						<input type="datetime" id="final" name="final">
-						<label for="nome">Nome: </label>
-						<input id="nome" name="nome" value="">
+						<br><br>
+						<label for="nome">Nome&nbsp;&nbsp;&nbsp; </label>
+						<input id="nome" name="nome" value="" style="width:360px;">
+						<br><br>
+						<label for="servico">Serviço </label>
 						<select id="servico" name="servico">
 							<?php
 							require_once __DIR__.'/php/Produtos/connect.php';
@@ -312,19 +322,26 @@ body {
 
 							?>
 							</select>
-							<input type="hidden" name="alterando" id="alterando">
+							<label style="margin-left:30px;"> Situação </label>
+							<input type="radio" name="pago" id="pago" value="blue"> 
+							<label class="opcoesPgto" for="pago"> Pago </label>
+							<input type="radio" name="pago" id="naoPago" value="red">
+							<label class="opcoesPgto" for="naoPago"> Não Pago </label>
 							
+							<input type="hidden" name="alterando" id="alterando">
 							<input type="hidden" name="codConsulta" id="codConsulta">
-							<input type="text" name="descricao" id="descricao">
+							
+							<br><br>
+							<label for="descricao"> Descrição </label><br>
+							<textarea cols="65" rows="6" type="text" name="descricao" id="descricao"> </textarea>
 						
 						<br>
-						<input type="radio" name="pago" id="pago" value="blue"> Pago<br>
-						<input type="radio" name="pago" id="naoPago" value="red"> Não pago<br>
+						
 
 					</div>
 					<div class="modal-footer">
 						<input type="button" name="deletar" id="deletar" value="Deletar">
-						<button type="button" class="btn btn-secondary" name="return" id="return" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" name="return" id="return" data-dismiss="modal">Fechar</button>
 						<input type="submit" value="Salvar" id="botaoConsulta" class="btn btn-primary">
 					</form>
 				</div>

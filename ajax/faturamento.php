@@ -39,17 +39,19 @@
       <div id="tabela-faturamento" >
 
         <center>
-          <label id="periodoInicio" for="dataInicio"> De </label> 
+          <label id="periodoInicio" for="dataInicio"> De&nbsp; </label> 
           <input type ="text" id="dataInicio" name="dataInicio" class="pesquisar-tabela" placeholder="Ex.: 2018/05/11">
           <br>
           <label id="periodoFim" for="dataFim"> Ate </label>           
           <input type ="text" id="dataFim" name="dataFim" class="pesquisar-tabela" placeholder="Ex.: 2018/05/11">
           <br>
-          <input type="radio" name="pago" id="pago" value="pago"> Pagamentos Efetuados<br>
-          <input type="radio" name="pago" id="pago" value="naoPago"> Pagamentos Não Efetuados<br>
-          <input type="radio" name="pago" id="pago" value="todos"> Todos<br>
-          <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
-          <button id="dataHoje" onclick="dataAtual()"">Hoje</button>
+        </center>
+          <input style="margin-left:25%; margin-top:7px;" type="radio" name="pago" id="pago" value="pago"> Pagamentos Efetuados<br>
+          <input style="margin-left:25%; margin-top:7px;" type="radio" name="pago" id="pago" value="naoPago"> Pagamentos Não Efetuados<br>
+          <input style="margin-left:25%; margin-top:10px;" type="radio" name="pago" id="pago" value="todos"> Todos<br>
+        <center>
+          <button class="botao-faturamento" id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
+          <button class="botao-faturamento" id="dataHoje" onclick="dataAtual()">Hoje</button>
           <table  id="tabela-Cliente" class="table" width="100%">
 
             <thead>

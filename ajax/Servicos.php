@@ -91,12 +91,12 @@
         
         <div class="modal-body">
           <form method="post" id="formularioEdit" name="formularioEdit" >  
-            <label> Nome do Serviço </label>
-            <input type="text" name="nome" id="nome" class="form-control " />
+            <label for="nome"> Nome do Serviço </label>
+            <input type="text" name="nome" id="nome" class="formServInput" />
             <br />
 
-            <label> Preço do Serviço </label>  
-            <input type="text" name="preco" id="preco" class="form-control" />
+            <label for="preco"> Preço do Serviço </label>  
+            <input type="text" name="preco" id="preco" class="formServInput" />
             <br />
             <input type="hidden" name="codigo" id="codigo" class="form-control" />
 

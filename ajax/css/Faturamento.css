@@ -39,7 +39,7 @@ td{
 	font-size: 18px;
 }
 
-#muda{
+.botao-faturamento{
 	padding: 7px;
 	margin: 5px;
 	box-sizing: border-box;
@@ -51,7 +51,7 @@ td{
 	transition:box-shadow 0.15s linear 0s, color 0.15s linear 0,margin-top 0.15s linear 0s;
 }
 
-#muda:active{
+.botao-faturamento:active{
 	background-color: #9f6899;
 	color:white;
 	border: 2px solid white;

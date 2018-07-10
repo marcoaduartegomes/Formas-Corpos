@@ -77,13 +77,13 @@ require_once __DIR__.'/header.php';
                     <div class="modal-body">
                       <form method="post" id="formularioEdit" name="formularioEdit" >  
                           <label for="nome">Nome</label>  
-                          <input type="text" name="nome" id="nome" class="form-control is-valid" required/>
+                          <input type="text" name="nome" id="nome" class="formProdInput" required/>
                           <div class="invalid-feedback">
                             Este Nome ja existe. Por favor escolha outro.
                           </div>  
                           <br />
-                          <label>Quantidade</label>  
-                          <input type="number" name="quantidade" id="quantidade" class="form-control " required />
+                          <label for="quantidade">Quantidade</label>  
+                          <input type="number" name="quantidade" id="quantidade" class="formProdInput " required />
                           <input type="hidden" name="codigo" id="codigo" class="form-control" /> 
                           
                         

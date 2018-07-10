@@ -39,27 +39,27 @@
     </header>
    
     <div style="margin-top: 150px" align="left">
-                <form>
-                    <b>Digite o Nome a ser procurado:</b>
+                <form style="padding:5px;margin-left:5px;">
+                    <label for="nome"> &nbsp; Digite o Nome a ser procurado:</label>
                     <br>
-                    <input class="InputForm"  type="text" >
+                    <input class="InputForm"  type="text" id="nome">
                     <br>
-                    <b>Digite aqui o dia da consulta:</b>
+                    <label for="data">&nbsp; Digite aqui o dia da consulta:</label>
                     <br>
-                    <input class="InputForm"  type="date">
+                    <input class="InputForm"  type="date" id="data">
                     <br>
-                    <b>Digite aqui o tipo de serviço:</b>
+                    <label for="servico">&nbsp; Digite aqui o tipo de serviço:</label>
                     <br>
-                    <select class="InputForm">
+                    <select class="InputForm" id="servico">
                         <option value="volvo">Servico 1</option>
                         <option value="saab">Servico 2</option>
                         <option value="mercedes">Servico 3</option>
                         <option value="audi">Servico 4</option>
                     </select>
                     <br>
-                    <b>Digite aqui a duração da consulta:</b>
+                    <label for="duracao">&nbsp; Digite aqui a duração da consulta:</label>
                     <br>
-                    <input class="InputForm"  type="number">
+                    <input class="InputForm"  type="number" id="duracao">
                     <br>
                     <button class="Botao" type="button">Salvar</button>
                     <button type="button" class="Botao" data-toggle="modal" data-target="#myModal">Procurar</button>

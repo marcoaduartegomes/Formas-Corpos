@@ -3,7 +3,18 @@ body{
     font-size: 18px;
 }
 
-.pesquisar-tabela {
+label{
+    font-size: 16px;
+    font-weight: 550;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.inputFicha{
+    background-color: lightgray;
+}
+
+.pesquisar-tabela, .formClienteInput  {
     padding: 5px;
     border: #6e3596 groove 2px; 
     border-radius: 5px;
@@ -11,7 +22,7 @@ body{
     transition: box-shadow 0.15s linear 0s,background-color 0.15s linear 0s;
 }
 
-.pesquisar-tabela:focus{
+.pesquisar-tabela:focus, .formClienteInput:focus{
     box-shadow:2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
     background-color: rgb(247, 239, 247);
 }
