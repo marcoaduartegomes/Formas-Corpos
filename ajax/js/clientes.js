@@ -93,9 +93,9 @@ function stopPropagation(evt) {
 	}
 }
 
-var cod_produto;
+var cod_cliente;
 $(document).on('click', '#botDeletar', function(){ // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
-	cod_produto = $(this).attr("value"); 			
+	cod_cliente = $(this).attr("value"); 			
 
 
 
@@ -105,7 +105,7 @@ $(document).on('click', '#botaoModalDeleta', function(){ // ao clicar no botão 
 	$.ajax({  
 		url:"php/Clientes/deletar.php",  
 		method:"POST",  
-		data:{codigo:cod_produto}, 
+		data:{codigo:cod_cliente}, 
 
 
 		success:function(data){
@@ -124,13 +124,13 @@ $(document).on('click', '#botaoModalDeleta', function(){ // ao clicar no botão 
 var valorAntigo;
 var value;
 $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
-	cod_produto = $(this).attr("value"); 	
+	cod_cliente = $(this).attr("value"); 	
 
 
 	$.ajax({  
 		url:"php/Clientes/fetch.php",  
 		method:"POST",   
-		data:{codigo:cod_produto}, 
+		data:{codigo:cod_cliente}, 
 		dataType:"json",   
 		beforeSend:function(data){  
 			$('#botaoModal').val("Inserir");  
@@ -152,6 +152,7 @@ $(document).on('click', '#botAlterar', function(){ // retorna os dados do fetch.
 			$('#cpf').addClass('is-valid');
 		}  
 	});
+	
 
 
 }); 
@@ -271,11 +272,14 @@ $(document).ready(function(){
 
 
 $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
-	cod_produto = $(this).attr("value"); 	
+	cod_cliente = $(this).attr("value"); 
+	
+	var box = $('#listaConsultas');
+	box.html('');
 	$.ajax({  
 		url:"php/Clientes/fetch.php",  
 		method:"POST",  
-		data:{codigo:cod_produto}, 
+		data:{codigo:cod_cliente}, 
 		dataType:"json",   
 		beforeSend:function(data){  
 			$('#batata').val("Inserir");  
@@ -285,28 +289,45 @@ $(document).on('click', '#botFicha', function(){ // retorna os dados do fetch.ph
 		success:function(data){  
 			
 			valorAntigo = data.CPF;
-		
+
 			$('#Fichanome').val(data.Nome); 
 			$('#Fichacpf').val(data.cpf); 
 			$('#Fichatelefone').val(data.Telefone);
 			$('#Fichacelular').val(data.Celular); 
 			$('#Fichaemail').val(data.email);
 			$('#Fichacodigo').val(data.codigo);
-			$('#FichaProximaConsulta').val(data.dataFim);
 
 		}  
 	});
+	$.ajax({  
+		url:"php/Clientes/fetchConsulta.php",  
+		method:"POST",   
+		data:{codigo:cod_cliente}, 
+		dataType:"json",   
+		beforeSend:function(data){  
+		},
+		success:function(data){  
 
+			
+			$.each(data, function(index) {
+
+				 box.html(box.html()+"<div>"+data[index].proximaConsulta+"</div>");
+				//alert(data[0].proximaConsulta);
+			});
+			
+			$('#FichaProximaConsulta').val(data[0].proximaConsulta);
+		}  
+	});
 
 }); 
 
 
 $(document).on('click', '#botMsg', function(){ // retorna os dados do fetch.php para preencher a tabela via ajax 
-	cod_produto = $(this).attr("value"); 	
+	cod_cliente = $(this).attr("value"); 	
 	$.ajax({  
 		url:"php/Clientes/fetch.php",  
 		method:"POST",  
-		data:{codigo:cod_produto}, 
+		data:{codigo:cod_cliente}, 
 		dataType:"json",   
 		beforeSend:function(data){  
 			$('#batata').val("Inserir");  

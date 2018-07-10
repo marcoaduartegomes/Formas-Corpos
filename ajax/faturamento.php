@@ -35,34 +35,38 @@
       ?>
     </header> 
 
-      <div id="container-faturamento" class="fadeIn">
-        <div id="tabela-faturamento" >
-          
-          <center>
-            <label id="periodo" for="data"> Digite o Período </label> 
-            
-            <input type ="text" id="data" name="data" class="pesquisar-tabela" placeholder="Ex.: 2018/05/11">
-            <input type="radio" name="pago" id="pago" value="pago"> Pagamentos Efetuados<br>
-            <input type="radio" name="pago" id="pago" value="naoPago"> Todos<br>
-            <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
-            <button id="dataHoje" onclick="dataAtual()"">Hoje</button>
-            <table  id="tabela-Cliente" class="table" width="100%">
+    <div id="container-faturamento" class="fadeIn">
+      <div id="tabela-faturamento" >
 
-        <thead>
-          <tr>
-            <th style="width:50%;">Nome</th>
-            <th style="width:25%;">Quantidade</th>
-            <th style="width:25%;">Total</th>
-          </tr>
-        </thead>
+        <center>
+          <label id="periodoInicio" for="dataInicio"> De </label> 
+          <input type ="text" id="dataInicio" name="dataInicio" class="pesquisar-tabela" placeholder="Ex.: 2018/05/11">
+          <br>
+          <label id="periodoFim" for="dataFim"> Ate </label>           
+          <input type ="text" id="dataFim" name="dataFim" class="pesquisar-tabela" placeholder="Ex.: 2018/05/11">
+          <br>
+          <input type="radio" name="pago" id="pago" value="pago"> Pagamentos Efetuados<br>
+          <input type="radio" name="pago" id="pago" value="naoPago"> Pagamentos Não Efetuados<br>
+          <input type="radio" name="pago" id="pago" value="todos"> Todos<br>
+          <button id="muda" value=grafico onclick="reloadTable();setTimeout(draw, 200)">Atualizar</button>
+          <button id="dataHoje" onclick="dataAtual()"">Hoje</button>
+          <table  id="tabela-Cliente" class="table" width="100%">
+
+            <thead>
+              <tr>
+                <th style="width:50%;">Nome</th>
+                <th style="width:25%;">Quantidade</th>
+                <th style="width:25%;">Total</th>
+              </tr>
+            </thead>
 
 
-        <tbody id="tabela-Cliente-Body">
+            <tbody id="tabela-Cliente-Body">
 
 
-        </tbody>
-      </table>
-          </center>
+            </tbody>
+          </table>
+        </center>
         </div>
         
         <div id="graficos-faturamento" >

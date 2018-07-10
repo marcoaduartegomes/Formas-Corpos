@@ -38,7 +38,7 @@
       ?>
     </header>
    
-    <div style="margin-top: 150px" align="center">
+    <div style="margin-top: 150px" align="left">
                 <form>
                     <b>Digite o Nome a ser procurado:</b>
                     <br>

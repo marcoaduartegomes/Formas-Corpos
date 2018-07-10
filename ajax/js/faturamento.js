@@ -33,7 +33,8 @@ document.getElementById('titulo-pagina').innerHTML="Faturamento";
         url: "php/Faturamentos/getDadoTabela.php",
         type: "POST",
         data: function ( d ) {
-            d.dia = document.getElementById("data").value;
+            d.diaInicio = document.getElementById("dataInicio").value;
+            d.diaFim = document.getElementById("dataFim").value;
             d.estatus = $('input[name=pago]:checked').val()
             
         }, 
@@ -162,5 +163,5 @@ function dataAtual() {
 
     }
     
-    document.getElementById('data').value = data;
+    document.getElementById('dataInicio').value = data;
 }

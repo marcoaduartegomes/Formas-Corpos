@@ -117,7 +117,8 @@
           </div> 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label class="labelFicha">Consultas</label>
+              <div class="labelFicha">Consultas</div>
+              <div class="labelFicha" id="listaConsultas">Consultas</div>
 
 
             </div>
