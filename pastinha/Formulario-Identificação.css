@@ -1,0 +1,158 @@
+body{
+    background-color: gray;
+}
+/*------------------------------------*/
+.InputNome{
+    width: 350px;
+}
+.Botao{
+    padding: 7px;
+    margin-bottom:3%;
+    width:200px;
+    margin-left:15px;
+    margin-right: 15px; 
+    height: 50px;  
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 700;
+    color: #6e3596;
+    border: 2px solid #6e3596;
+    border-radius: 8px;
+    transition:box-shadow 0.15s linear 0s, color 0.15s linear 0,margin-top 0.15s linear 0s;
+}
+.Botao:active{
+    background-color: #9f6899;
+    color:white;
+    border: 2px solid white;
+    box-shadow: 2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
+}
+.BackToTop{
+    padding: 7px;
+    margin-bottom:3%;
+    width:50px;
+    margin-left:8%;
+    margin-right: 15px; 
+    height: 50px;  
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 700;
+    color: #6e3596;
+    border: 2px solid #6e3596;
+    border-radius: 8px;
+    transition:box-shadow 0.15s linear 0s, color 0.15s linear 0,margin-top 0.15s linear 0s;
+    z-index: 99;  
+    cursor: pointer;  
+}
+.BackToTop:active{
+    background-color: #9f6899;
+    color:white;
+    border: 2px solid white;
+    box-shadow: 2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
+}
+
+.InputForm{
+    padding: 5px;
+    border: #6e3596 groove 2px; 
+    border-radius: 5px;
+    width: 300px;
+    margin:8px;
+    transition: box-shadow 0.15s linear 0s,background-color 0.15s linear 0s;
+}
+.InputForm:focus{
+    box-shadow:2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
+    background-color: rgb(247, 239, 247);
+}
+.ALinhamentoDiv1{
+    margin-top: 80px;
+    margin-left: 100px;
+    float: left;
+}
+.ALinhamentoDiv2{
+    float:left;
+    margin-top:80px;
+    margin-left: 35px; 
+    display: inline-block;
+}
+.ALinhamentoDiv3{
+    margin-top:80px;
+    margin-left: 40px; 
+    display: inline-block;
+}
+.SizeQPrin{
+    width: 300px;
+    height: 160px;
+}
+/*---------Formulario principal-----------*/
+#BotaoFormPrin{
+    margin-top: 100px;
+    margin-left: 350px;
+    height: 250px;
+    padding: 7px;
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 700;
+    color: #6e3596;
+    border: 2px solid #6e3596;
+    border-radius: 8px;
+    transition:box-shadow 0.15s linear 0s, color 0.15s linear 0,margin-top 0.15s linear 0s;
+}
+#BotaoFormPrin:active{
+    background-color: #9f6899;
+    color:white;
+    border: 2px solid white;
+    box-shadow: 2px 5px 5px #9f6899,-2px -5px 5px #9f6899;
+}
+.Bloco1{
+    margin-left:50px;
+    position: relative;
+}
+.Bloco2{
+    margin-top: 40px;
+    position: relative;
+}
+.Bloco3{
+    margin-top: 66%;
+    position: relative;
+}
+.Bloco4{
+    margin-top: 3%;
+    position:relative;
+}
+.Bloco5{
+     margin-top: 3%;
+    position:relative;
+}
+.Bloco6{
+     margin-top: 3%;
+    position:relative;
+}
+.ALinhamentoDiv4{
+    margin-top:5%;
+    margin-right: 6%;
+    position: relative;
+    float: right;
+    display: inline-block;
+}
+.ALinhamentoDiv5{
+    margin-top:1%;
+    margin-left:6%; 
+    position: relative;
+    float: left; 
+    display: inline-block;
+}
+.ALinhamentoDiv6{
+    position: relative;
+    margin-left: 40px; 
+}
+.ALinhamentoDiv7{
+    position: relative;
+    margin-left: 40px; 
+}
+.ALinhamentoDiv8{
+    position: relative;
+    margin-left: 40px; 
+}
+.ALinhamentoDiv9{
+    position: relative;
+    margin-left: 14%; 
+}
