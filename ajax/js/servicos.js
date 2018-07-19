@@ -36,7 +36,7 @@ $(document).ready(function(){
                 "next":       "Proximo",
                 "previous":   "Anterior"
             },
-            "lengthMenu":     "Mostrar _MENU_ Serviços",
+           
         },
 
         "dom": '<"top"l><"toolbar">rt<"bottom"pi><"clear">',
